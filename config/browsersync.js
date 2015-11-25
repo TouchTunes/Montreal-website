@@ -2,7 +2,7 @@
 
 module.exports = {
   server: {
-    baseDir:   'dest',
+    baseDir:   'dist',
     index:     'index.html'
   },
   startPath: '/home/',
