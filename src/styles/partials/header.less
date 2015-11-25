@@ -1,0 +1,48 @@
+.header {
+	display: block;
+	position: fixed;
+	z-index: 20;
+	overflow: hidden;
+	width: 100%;
+	height: 60px;
+	top: -1px;
+	background-image: url(../img/logo-black.png);
+	background-repeat: no-repeat;
+	background-position: center top 15px;
+	background-size: 110px 30px;
+	-webkit-transition: all 0.1s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+	transition: all 0.1s ease-in;
+
+	&.scrolled {
+		background-color: white;
+		-webkit-box-shadow: 0px 4px 16px -4px rgba(68,68,68,1);
+		-moz-box-shadow: 0px 4px 16px -4px rgba(68,68,68,1);
+		box-shadow: 0px 4px 16px -4px rgba(68,68,68,1);
+
+		@media(min-width: 450px) {
+			background-image: url(../img/logo-black.png);
+			background-position: center;
+		}
+
+		.menu-button {
+			background-image: url(../img/menu-icon.png);
+		}
+	}
+
+	@media(min-width: 450px) {
+		height: 80px;
+		background-size: initial;
+	}
+
+	.menu-button {
+		display: block;
+		float: left;
+		overflow: hidden;
+		width: 60px;
+		height: 100%;
+		background-image: url(../img/menu-icon.png);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 20px 18px;
+	}
+}

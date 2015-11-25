@@ -2,7 +2,6 @@
 title: Home page
 page: home
 date: 2015-11-23
-layout: default.html
+layout: home.html
 ---
 
-TouchTunes Montreal...

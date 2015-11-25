@@ -1,6 +1,6 @@
 'use strict'
 
 module.exports = {
-  pattern:             '**/*.less',
+  pattern:             'styles/*.less',
   useDynamicSourceMap: true
 }

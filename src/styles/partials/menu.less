@@ -1,0 +1,214 @@
+.menu {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	z-index: 30; 
+	background: @dark;
+	padding: 0 0 200px;
+	left: -100%;
+	-webkit-transition: all 0.3s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+	transition: all 0.3s ease-in;
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+	-ms-transform: translatez(0);
+	-o-transform: translatez(0);
+	transform: translatez(0);
+    -webkit-overflow-scrolling: touch;
+
+    @media(min-width: 450px) {
+    	width: 400px;
+    	left: -400px;
+    	border-right: 1px solid @medium-gray;
+    }
+
+    .container {
+    	padding: 0 20px;
+    }
+
+    .underline {
+    	background-position: center bottom;
+    }
+
+	&.menu-open {
+		left: 0;
+		-webkit-transition: all 0.3s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+		transition: all 0.3s ease-in;
+	}
+
+	.menu-header {
+		position: relative;
+		overflow: hidden;
+		width: 100%;
+		height: 90px;
+		background: url(../img/logo-white.png) no-repeat center;
+		background-size: 50%;
+
+		.close {			
+			display: block;
+			position: absolute;
+			float: left;
+			overflow: hidden;
+			width: 40px;
+			height: 40px;
+			top: 50%;
+			margin-top: -25px;
+			background: url(../img/close-menu.png) no-repeat center;
+			background-size: 15px;
+		}
+	}
+
+	.list {
+		padding: 0 0 50px;
+		margin: 0;
+		list-style-type: none;
+		text-align: center;
+
+		li {
+			overflow: hidden;
+
+			a {
+				display: block;
+				width: 100%;
+				font-size: 18px;
+				font-family: @bold;
+				color: white;
+				padding: 15px 0;
+				text-decoration: none;
+
+				&.active, &:hover, &:focus {
+					background: black;
+					outline: none;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
+	.image {
+		overflow: hidden;
+		position: relative;
+		padding-top: 170px;
+		padding-bottom: 90px;
+		background: @medium-gray;
+
+		.learn-more {
+			position: relative;
+			font-size: 15px;
+			font-family: @bold;
+			color: white;
+			text-align: center;
+
+			&:after {
+				content: '';
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				margin-left: -3px;
+				width: 0; 
+				height: 0; 
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 6px solid white;
+			}
+		}
+	}
+
+	.application {
+		padding-top: 40px;
+
+		h2 {
+			font-size: 30px;
+			font-family: @extrabold;
+			text-align: center;
+			color: white;
+			line-height: 20px;
+			margin-bottom: 25px;
+			padding-bottom: 25px;
+		}
+
+		p {
+			max-width: 90%;
+			margin: 0 auto;
+			font-size: 15px;
+			font-family: @regular;
+			color: white;
+			text-align: center;
+		}
+
+		form {
+			display: block;
+			overflow: hidden;
+			padding: 30px 0 0;
+
+			input {
+				width: 100%;
+				height: 35px;
+				font-size: 15px;
+				font-family: @semibold;
+				color: @dark;
+				margin-bottom: 20px;
+				border: none;
+
+				&.link {
+					background: white url(../img/link-icon.png) no-repeat center right 10px;
+					background-size: 25px 25px;
+					margin-bottom: 0;
+				}
+			}
+
+			textarea {
+				width: 100%;
+				height: 130px;
+				padding-top: 10px;
+				margin-bottom: 15px;
+				resize: none;
+			}
+
+			input, textarea {
+				padding-left: 12px;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				box-sizing: border-box;
+
+				&::-webkit-input-placeholder {
+				   color: #999999;
+				   font-family: @semibold;
+				   font-size: 15px;
+				}
+
+				&:-moz-placeholder { /* Firefox 18- */
+				   color: #999999;  
+				   font-family: @semibold;
+				   font-size: 15px;
+				}
+
+				&::-moz-placeholder {  /* Firefox 19+ */
+				   color: #999999; 
+				   font-family: @semibold;
+				   font-size: 15px; 
+				}
+
+				&:-ms-input-placeholder {  
+				   color: #999999;  
+				   font-family: @semibold;
+				   font-size: 15px;
+				}
+			}
+
+			label {
+				display: block;
+				font-size: 15px;
+				font-family: @semibold;
+				color: white;
+				margin-bottom: 20px;
+			}
+
+			.button {
+				display: block;
+				margin: 45px auto 0;
+			}
+		}
+	}
+}
