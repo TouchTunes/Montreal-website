@@ -2,7 +2,10 @@
   "name": "touchtunes-montreal",
   "version": "1.0.0",
   "description": "Website for TouchTunes Montreal office.",
-  "main": "index.js",
+  "main": "build.js",
+  "engines": {
+    "node": ">= 4"
+  },
   "scripts": {
     "start": "node build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
