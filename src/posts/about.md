@@ -1,7 +1,7 @@
 ---
 title: About page
 page: about
-template: default.html
+layout: about.html
 ---
 
 TouchTunes Montreal :: About page

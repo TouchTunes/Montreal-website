@@ -1,7 +1,7 @@
 ---
 title: Projects page
 page: projects
-template: default.html
+layout: default.html
 ---
 
 TouchTunes Montreal :: Projects page

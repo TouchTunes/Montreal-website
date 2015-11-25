@@ -1,7 +1,7 @@
 ---
 title: Careers page
 page: careers
-template: default.html
+layout: default.html
 ---
 
 TouchTunes Montreal :: Careers page
