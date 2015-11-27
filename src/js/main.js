@@ -31,20 +31,22 @@ var scrollSpeed = 25;
 // set the default position
 var current = 0;
 
+// target banner on home
+var banner = $('.home-wrapper .banner');
+
 function bgscroll(){
 
   // move the background with backgrond-position css properties
-  if($('.home-wrapper .banner').hasClass('swipe')) {
+  if($(banner).hasClass('swipe')) {
     current += 20;
-    $('.home-wrapper .banner').css("backgroundPosition", current+"px bottom");
+    $(banner).css("backgroundPosition", current+"px bottom");
   } else {
     current += 1;
-    $('.home-wrapper .banner').css("backgroundPosition", current+"px bottom");
+    $(banner).css("backgroundPosition", current+"px bottom");
   }
-    
-
 }
 
+//trigger big screen animation on click
 $('.home-wrapper .banner').on('click', function() {
   if($(window).width() >= 940) {  
     $(this).addClass('swipe');
@@ -52,14 +54,20 @@ $('.home-wrapper .banner').on('click', function() {
       $('.home-wrapper .banner').removeClass('swipe'); 
     }, 300)
   }
-})
-
-$('body').on("swiperight", function(){
-    if($(window).width() < 940) {      
-    $('.home-wrapper .banner').addClass('swipe');
-      console.log('ble');
-      setTimeout(function(){
-        $('.home-wrapper .banner').removeClass('swipe'); 
-      }, 300);
-    }
 });
+
+
+//trigger small screen animation on swipe
+$(banner).swipe( {
+    //Generic swipe handler for all directions
+    swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
+       if($(window).width() < 940) {      
+        $(banner).addClass('swipe');
+          setTimeout(function(){
+            $(banner).removeClass('swipe'); 
+          }, 300);
+        }
+    },
+    //Default is 75px, set to 0 for demo so any distance triggers swipe
+     threshold:0
+  });
