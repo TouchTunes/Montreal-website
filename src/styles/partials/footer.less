@@ -80,7 +80,7 @@
 		.half {
 			p.heading {
 				font-size: 14px;
-				font-family: @regular;
+				font-family: @semibold;
 				color: @medium-gray;
 			}
 
@@ -90,16 +90,24 @@
 				list-style-type: none;
 
 				li {
-					font-family: @regular;
+					font-family: @semibold;
 					font-size: 14px;
 					color: @dark;
 					margin-bottom: 14px;
 
+					@media(max-width: 1130px) {
+						font-size: 12px;
+					}
+
 					a {
-						font-family: @regular;
+						font-family: @semibold;
 						font-size: 14px;
 						color: @dark;
 						text-decoration: none;
+
+						@media(max-width: 1130px) {
+							font-size: 12px;
+						}
 
 						&:focus, &:hover {
 							text-decoration: none;
