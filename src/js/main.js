@@ -46,8 +46,20 @@ function bgscroll(){
 }
 
 $('.home-wrapper .banner').on('click', function() {
-  $(this).addClass('swipe');
-  setTimeout(function(){
-    $('.home-wrapper .banner').removeClass('swipe'); 
-  }, 300)
+  if($(window).width() >= 940) {  
+    $(this).addClass('swipe');
+    setTimeout(function(){
+      $('.home-wrapper .banner').removeClass('swipe'); 
+    }, 300)
+  }
 })
+
+$('body').on("swiperight", function(){
+    if($(window).width() < 940) {      
+    $('.home-wrapper .banner').addClass('swipe');
+      console.log('ble');
+      setTimeout(function(){
+        $('.home-wrapper .banner').removeClass('swipe'); 
+      }, 300);
+    }
+});
