@@ -1,0 +1,128 @@
+.contact-wrapper {
+	.banner {
+		position: relative;
+		overflow: hidden;
+
+		p, h1 {
+			position: relative;
+
+			@media(min-width: 450px) {
+				background-position: left bottom;
+			}
+		}
+
+		@media(min-width: 450px) {
+			background: none;
+		}
+
+		.text-container {
+			.small-screen {
+				@media(min-width: 450px) and (max-width: 768px) {
+					display: block;
+					position: relative;
+				}
+			}
+		}
+
+		.button.medium-screen {
+			float: left;
+			z-index: 10;
+			position: relative;
+			margin-top: 70px;
+		}
+
+		.gray-overlay {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			opacity: 0.8;
+			top: 0;
+			left: 0;
+
+			@media(min-width: 450px) {
+				background: @darkgray url(../img/contact-overlay.png) no-repeat center;
+				background-size: cover;
+			}
+		}
+
+		.button {
+			margin-top: 17px;
+			margin-bottom: 20px;
+		}
+
+		.cts {
+			padding-top: 6px;
+		}
+	}
+
+	.contact-map {
+		overflow: hidden;
+		width: 100%;
+		height: 160px;
+		margin-top: 30px;
+		z-index: -1;
+
+		@media(min-width: 450px) {
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			margin: 0;
+			-webkit-filter: grayscale(100%);
+			filter: grayscale(100%);
+		}
+	}	
+
+	.form {
+		padding-bottom: 65px;
+		text-align: center;
+
+		@media(min-width: 450px) {
+			max-width: 360px;
+			margin: 0 auto;
+			padding: 50px 0 100px;
+
+			h2 {
+				text-align: center;
+				color: @darkgray;
+				margin-bottom: 50px;
+				margin-top: 50px;
+
+				@media(min-width: 940px) {
+					font-size: 44px;
+				}
+			}
+		}
+
+		p {
+			font-size: 15px;
+
+			@media(min-width: 768px) {
+				font-size: 18px;
+				font-family: @semibold;
+			}
+		}
+		
+		form {
+			@media(min-width: 450px) {
+				padding: 0 10px;
+			}
+			input, select {
+				border: 1px solid @modal-dark;
+			}
+
+			textarea {
+				border: 1px solid @modal-dark;		
+				text-align: left;			
+			}
+		}
+	}
+
+	.devider {
+		height: 60px;
+		display: block;
+		overflow: hidden;
+		background: url(../img/devider-contact.png) no-repeat center;
+		background-size: cover;
+	}
+}
