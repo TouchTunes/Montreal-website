@@ -31,7 +31,9 @@
 
 	@media(min-width: 450px) {
 		height: 80px;
-		background-size: initial;
+		background-image: url(../img/logo-white@2x.png);
+		background-position: center;
+		background-size: 150px 40px;
 	}
 
 	@media(min-width: 600px) and (max-width: 940px) {
@@ -55,8 +57,32 @@
 		background-size: 20px 18px;
 		cursor: pointer;
 
+		@media(min-width: 450px) {
+			background-position: center;
+			background-image: url(../img/menu-white@2x.png);
+		}
+
 		@media(min-width: 940px) {
 			background-size: 30px;
+		}
+	}
+
+	.french {
+		float: right;
+		margin-top: 20px;
+		margin-right: 15px;
+		font-size: 16px;
+		font-family: @semibold;
+		color: @darkgray;
+		cursor: pointer;
+		text-decoration: none;
+
+		@media(min-width: 450px) {
+			color: white;
+			position: absolute;
+			top: 50%;
+			right: 5%;
+			margin-top: -5px;
 		}
 	}
 }
