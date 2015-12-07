@@ -1,0 +1,103 @@
+.job-modal {
+	display: block;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow-y: scroll;
+	z-index: 30; 
+	padding: 65px 0 200px;
+	background: white;
+	left: -100%;
+	-webkit-transition: all 0.3s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+	transition: all 0.3s ease-in;
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+	-ms-transform: translatez(0);
+	-o-transform: translatez(0);
+	transform: translatez(0);
+    -webkit-overflow-scrolling: touch;
+	color: @modal-dark;
+
+	&::-webkit-scrollbar {
+	      width: 3px;
+	} 
+
+	&::-webkit-scrollbar-track {
+	  background-color: @dirtywhite;
+	} /* the new scrollbar will have a flat appearance with the set background color */
+
+	&::-webkit-scrollbar-thumb {
+	  border-radius: 4px;
+	  background: @darkgray; 
+	} /* this will style the thumb, ignoring the track */
+
+	&.modal-open {
+		left: 0;
+		-webkit-transition: all 0.3s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+		transition: all 0.3s ease-in;
+	}
+
+	@media(min-width: 450px) {
+    	width: 400px;
+    	left: -400px;
+    	border-right: 1px solid @medium-gray;
+    }
+
+    .container {
+    	padding: 0 20px 0 30px;
+    }
+
+	h2 {
+		font-size: 30px;
+		font-family: @extrabold;
+		color: @darkgray;
+	}
+
+	.title {
+		font-size: 15px;
+		font-family: @semibold;
+		margin: 35px 0 30px;
+		color: @darkgray;
+	}
+
+	.content {
+
+		p {
+			font-size: 15px;
+			font-family: @regular;
+			text-align: left;
+			color: @darkgray;
+		}
+
+		form {
+			padding-top: 50px;
+
+			p {
+				font-family: @semibold;
+				margin-bottom: 3px;
+			}
+
+			span {
+				display: block;
+				font-family: @light;
+				margin-bottom: 25px;
+			}
+
+			input, textarea {
+				border: 1px solid @modal-dark;
+				border-radius: 2px;
+
+				&.link {
+					margin-bottom: 20px;
+				}
+			}
+
+			label {
+				font-size: 15px;
+				font-family: @semibold;
+				color: @darkgray;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
