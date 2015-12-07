@@ -6,7 +6,7 @@
 	</div>
 	<div class="content">
 		<ul class="list">
-			<li><a href="../home" class="active">Home</a></li>
+			<li><a href="../home" class="">Home</a></li>
 			<li><a href="../about">About us</a></li>
 			<li><a href="../technology">Technology</a></li>
 			<li><a href="../projects">Projects</a></li>
@@ -21,7 +21,14 @@
 				<form>
 					<input type="text" placeholder="First Name"/>
 					<input type="email" placeholder="Email"/>
-					<textarea placeholder="Resume text"></textarea>
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload resume</label>
+						<input class="uploadFile" placeholder="Upload resume" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="resume"/>
+						</div>
+					</div>
 
 					<label>Social Profile</label>
 					<input class="link" type="email" placeholder="Add link (i.e.: LinkedIn)"/>
