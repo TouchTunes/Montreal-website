@@ -2,7 +2,7 @@
 title: Technology page
 page: technology
 description: This is some meta description
-layout: default.html
+layout: technology.html
 ---
 
 TouchTunes Montreal :: Technology page

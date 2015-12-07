@@ -1,7 +1,7 @@
 ---
 title: Contact page
 page: contact
-layout: default.html
+layout: contact.html
 ---
 
 TouchTunes Montreal :: Contact page
