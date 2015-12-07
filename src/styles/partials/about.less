@@ -1,0 +1,402 @@
+.about-wrapper {
+	.header {
+		@media(min-width: 450px) {
+			background-image: url(../img/logo-white@2x.png);
+			background-position: center;
+			background-size: initial;
+		}
+
+		.menu-button {
+			@media(min-width: 450px) {
+				background-position: center;
+				background-image: url(../img/menu-white@2x.png);
+			}
+		}
+
+		@media(min-width: 600px) and (max-width: 940px) {
+			background-size: 200px 50px;
+		}
+
+		@media(min-width: 940px) {
+			background-size: 220px 53px;
+			background-position: center bottom;
+		}
+	}
+
+	.staff {
+		position: relative;
+		background: @dirtywhite;
+		padding: 50px 0;
+		text-align: center;
+
+		@media(min-width: 768px) {
+			display: block;
+		}
+
+		p.big-screen.big-screen {
+			@media(min-width: 768px) {
+				display: block !important;
+			}
+		}
+
+		@media(min-width: 1100px) {
+			padding: 140px 0;
+		}
+
+		h2 {
+			@media(min-width: 768px) {
+				padding-bottom: 25px;
+				background-position: left bottom;
+			}
+
+			@media(min-width: 940px) {
+				font-size: 42px;
+				color: @darkgray;
+			}
+		}
+
+		p {
+			@media(min-width: 768px) {
+				line-height: 26px;	
+			}
+
+			@media(min-width: 940px) {
+				font-size: 18px;
+				font-family: @semibold;
+				color: @darkgray;
+			}			
+		}
+
+
+		@media(min-width: 768px) {
+			.container {
+				padding: 0 50% 0 20px;
+				text-align: left;
+
+				@media(min-width: 940px) {
+					padding: 0 40% 0 0;
+				}
+			}
+			
+		}
+
+		.animation {
+			@media(min-width: 768px) {
+				position: absolute;
+				width: 50%;
+				top: 50%;
+				margin-top: -150px;
+				right: 0;
+			}
+
+			.panel {
+				background: @dirtywhite;
+				box-shadow: none;
+			}
+
+			.graph {
+				padding: 60px 0 75px;
+				background: @dirtywhite;
+
+				@media(min-width: 940px) {
+					padding: 10px 0 40px;
+				}
+
+				svg {
+				  height: auto;
+				  width: 100%;
+
+				  @media(min-width: 940px) {
+				  	height: 220px;
+				  	width: 220px;
+				  }
+				}
+
+				.graph-hd {
+				  margin-bottom: 20px;
+				}
+
+				.graph-bd {
+				  overflow: hidden;
+				}
+
+				.graph-bd-md {
+					float: left;
+					width: 50%;
+					overflow: hidden;
+
+					@media(min-width: 940px) {
+						width: 60%;
+						float: left;
+						text-align: center;
+					}
+				}
+
+				.graph-bd-text {
+					text-align: left;
+
+					@media(min-width: 940px) {
+						width: 30%;
+						float: left;
+					}
+
+
+					ul {
+						list-style-type: none;
+						margin-top: 0;
+
+						@media(min-width: 940px) {
+							padding-left: 0;
+							padding-top: 35px;
+						}
+
+						li {
+							font-size: 15px;
+							font-family: @regular;
+							margin-bottom: 15px;
+
+							@media(min-width: 940px) {
+								font-size: 18px;
+								font-family: @semibold;
+							}
+
+							&:last-child {
+								margin-bottom: 0;
+							}
+
+							span {
+								font-family: @bold;
+
+								@media(min-width: 940px) {
+									font-family: @extrabold;
+								}
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+
+	.worldwide {
+		padding: 75px 0;
+		overflow: hidden;
+		text-align: left;
+		background: url(../img/worldwide-bg.png) no-repeat center;
+		background-size: cover;
+		margin: 0;
+
+		@media(min-width: 940px) {
+			padding: 160px 0;
+			background: url(../img/worldwide-bg-big@2x.png) no-repeat center;
+			background-size: cover;
+		}
+
+		h2 {
+			font-size: 28px;
+			font-family: @extrabold;
+			color: white;
+			margin: 0;
+
+			@media(min-width: 940px) {
+				width: 80%;
+				font-size: 42px;
+			}
+		}
+	}
+
+	.band {
+		overflow: hidden;
+		padding: 90px 0 110px;
+		text-align: center;
+
+		.container {
+			position: relative;
+		}
+
+		@media(min-width: 1100px) {
+			padding-bottom: 150px;
+		}
+
+		h2 {
+			@media(min-width: 940px) {
+				font-size: 44px;
+				text-align: left;
+				color: @darkgray;
+				padding-bottom: 20px;
+			}
+		}
+
+		.member {
+			padding: 50px 0 0;
+			overflow: hidden;
+
+			@media(min-width: 940px) {
+				width: 14%;
+				height: 215px;
+				float: left;
+				padding-top: 0;
+			}
+
+			&:nth-child(even) {
+				.half {
+					padding-right: 0;
+				}
+			}
+
+			&:nth-child(odd) {
+				.half {
+					padding-left: 0;
+
+					&.img {
+						float: right;
+					}
+				}
+			}
+
+			p {
+				font-size: 15px;
+				font-family: @regular;
+				color: @dark;
+				margin: 0;
+
+				@media(min-width: 768px) {
+					font-size: 30px;
+				}
+
+				span {
+					font-family: @extrabold;
+						
+					@media(min-width: 940px) {
+						font-size: 24px;
+						color: @darkgray;
+					}
+
+					&.position {
+						color: @gray;
+						margin: 15px 0;
+						display: inline-block;
+						
+						@media(min-width: 940px) {
+							color: @darkgray;
+							font-size: 18px;
+						}
+					}
+
+					&.bio {
+						@media(min-width: 940px) {
+							font-size: 18px !important;
+							font-family: @extrabold;
+							margin-top: 20px;
+						}
+					}
+				}
+			}
+
+			.half {
+				height: auto;
+				float: left;
+				width: 50%;
+				text-align: left;
+				padding: 0 20px;
+				z-index: 2;
+
+				@media(min-width: 940px) {
+					display: none;
+					position: absolute;
+					width: 100%;
+					height: 215px;
+					margin-top: 215px;
+					left: 0;
+					background: white;
+					opacity: 0.95;
+					border-radius: 5px;
+					border: @gray;
+
+					p {
+						display: inline-block;
+						font-size: 18px;
+						font-family: @semibold;
+					}
+				}
+
+				&.img {
+					padding: 0 5px;
+
+					@media(min-width: 940px) {
+						display: block;
+						z-index: 1;
+						width: 100%;
+						top: initial;
+						left: initial;
+						opacity: 1;
+						background: white;
+						margin: 0;
+						cursor: pointer;
+						border-radius: none;
+						border: none;
+
+						&:hover {
+							& + .half, & {
+								display: block;
+							}
+						}
+					}
+				}
+
+				img {
+					max-width: 100%;
+					height: auto;
+				}
+			}
+
+			.bio {
+				clear: both;
+				text-align: left;
+				padding-top: 10px;
+				font-size: 15px;
+
+				@media(min-width: 940px) {
+					font-size: 18px !important;
+					font-family: @extrabold;
+					margin-top: 20px;
+				}
+
+			}
+		}
+	}
+
+	.counter {
+		padding: 110px 0 120px;
+		text-align: center;
+		background: url(../img/counter-bg.png) no-repeat center;
+		background-size: cover;
+
+		@media(min-width: 940px) {
+			clear: both;
+			background: url(../img/counter-bg-big@2x.png) no-repeat center;
+			background-size: cover;
+			text-align: left;
+			padding: 190px 0;
+		}
+
+		h3 {
+			font-size: 30px;
+			font-family: @extrabold;
+			color: white;
+
+			@media(min-width: 940px) {
+				font-size: 42px;
+			}
+
+			span {
+				display: block;
+				color: rgb(255, 209, 209);
+
+				@media(min-width: 940px) {
+					display: inline;
+				}
+			}
+		}
+	}
+}
