@@ -70,37 +70,15 @@
 			<h2 class="underline dark">Featured opportunities</h2>		
 			<p>We are always looking to add new talent to our roster. Check out our current opportunities below or fill out an application and tell us why we need you.</p>
 			<div class="positions">
-				<div>
-					<div class="text-container">
-						<p class="title">Coordinator, Music Marketing<span class="location"> - Montreal, QC</span></p>
-						<p class="description">TouchTunes is the largest in-venue interactive usic and entertainment a blah blah</p>
+				{{#each collections.jobs}}
+        <div>
+        	<div class="text-container">
+						<p class="title">{{this.title}}<span class="location"> - {{this.location}}</span></p>
+						{{{this.contents}}}
 					</div>
-					<a class="button apply" href="javascript:void()">Apply now</a>		
+					<a class="button apply" data-title="{{this.title}} - {{this.location}}" href="javascript:void()">Apply now</a>		
 				</div>
-
-				<div>
-					<div class="text-container">
-						<p class="title">Coordinator, Music Marketing<span class="location"> - Montreal, QC</span></p>
-						<p class="description">TouchTunes is the largest in-venue interactive usic and entertainment a blah blah</p>
-					</div>
-					<a class="button apply" href="javascript:void()">Apply now</a>		
-				</div>
-
-				<div>
-					<div class="text-container">
-						<p class="title">Coordinator, Music Marketing<span class="location"> - Montreal, QC</span></p>
-						<p class="description">TouchTunes is the largest in-venue interactive usic and entertainment a blah blah</p>
-					</div>
-					<a class="button apply" href="javascript:void()">Apply now</a>		
-				</div>
-
-				<div>
-					<div class="text-container">
-						<p class="title">Coordinator, Music Marketing<span class="location"> - Montreal, QC</span></p>
-						<p class="description">TouchTunes is the largest in-venue interactive usic and entertainment a blah blah</p>
-					</div>
-					<a class="button apply" href="javascript:void()">Apply now</a>		
-				</div>
+        {{/each}}
 			</div>
 			<a class="button gray" href="../careers">See more</a>
 		</div>
