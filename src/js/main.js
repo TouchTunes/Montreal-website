@@ -723,3 +723,5 @@ $(window).load(function() {
       Pizza.init();
   }    
 })
+
+$('.button.apply').on('click', function(){ var data = $(this).attr('data-title'); $('.job-modal .title').text(data); $('.job-modal .apply-for').val(data); });
