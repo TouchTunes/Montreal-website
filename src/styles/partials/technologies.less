@@ -146,51 +146,9 @@
 		}
 	}
 
-	.list {
-		text-align: center;
-		font-family: @regular;
-		font-size: 15px;
-		padding: 50px 0 70px;
-
-		@media(min-width: 940px) {
-			padding: 85px 0 90px;
-		}
-
-		p {
-			color: @darkgray;
-
-			@media(min-width: 940px) {
-				font-size: 18px;
-				font-family: @semibold;
-			}
-		}
-		ul {
-			padding-top: 45px;
-			width: 33%;
-			display: block;
-			float: left;
-			list-style-type: none;
-			color: @dark;
-			text-align: center;
-			padding: 45px 0 0;
-
-			@media(min-width: 940px) {
-				width: 20%;
-				color: @darkgray;
-			}
-
-			li {
-				@media(min-width: 940px) {
-					font-size: 18px;
-					font-family: @semibold;
-				}
-			}
-		}
-	}
-
 	.percentage{
 		position: relative;
-		background: @dirtywhite;
+		background: white;
 		padding: 50px 0;
 		text-align: center;
 
@@ -252,7 +210,7 @@
 				position: absolute;
 				width: 50%;
 				top: 50%;
-				margin-top: -150px;
+				margin-top: -200px;
 				right: 0;
 			}
 
@@ -283,17 +241,22 @@
 			}
 
 			.panel {
-				background: @dirtywhite;
+				background: white;
 				box-shadow: none;
+				margin-bottom: 0;
 			}
 
 			.graph {
-				padding: 60px 0 75px;
-				background: @dirtywhite;
+				padding: 30px 0 75px;
+				background: white;
 				border: none;
 
 				@media(min-width: 940px) {
 					padding: 10px 0 0px;
+				}
+				#svg {
+					padding: 20px 15px;
+					overflow: visible;
 				}
 
 				svg {
@@ -301,13 +264,15 @@
 				  width: 100%;
 
 				  @media(min-width: 940px) {
-				  	height: 220px;
-				  	width: 220px;
+				  	height: 280px;
+				  	width: 292px;
+				  	margin-bottom: 25px;
+				  	margin-top: -30px;
+				  	overflow: visible;
 				  }
 				}
 
 				.graph-hd {
-				  margin-bottom: 20px;
 				  border: none;
 				}
 
@@ -341,11 +306,10 @@
 						list-style-type: none;
 						margin-top: 0;
 						padding-right: 40px;
-						text-align: right;
+						text-align: left;
 
 						@media(min-width: 940px) {
 							padding-left: 0;
-							padding-top: 35px;
 						}
 
 						li {
@@ -421,8 +385,86 @@
 
 		@media(min-width: 940px) {
 			text-align: left;
-			background: url(../img/home-contact-big-bg.png) no-repeat center;;
+			background: url(../img/home-contact-big-bg@2x.png) no-repeat center;;
 			background-size: cover;
 		}
 	}
+}
+
+
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(0) {
+   color: #E24E7E;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(1) {
+  color: #E24E7E;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(2) {
+  color: #E87298;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(3) {
+  color: #ED93B0;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(4) {
+  color: #F0A3BC;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(5) {
+  color: #F5BCCF;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id] li:nth-child(6) {
+  color: #F5D5DF;
+}
+
+/* line 26, ../sass/pizza.scss */
+ul[data-pie-id] {
+  list-style: none;
+  padding: 10px;
+}
+
+
+[data-pie-id='my-cool-chart'] li:nth-child(0) {
+  color: #E24E7E;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(1) {
+  color: #ED769C;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(2) {
+  color: #F0A6BF;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(3) {
+  color: #F3D5DF;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(4) {
+  color: #DC4AA7;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(5) {
+  color: #ffaf8b;
+}
+
+/* line 20, ../sass/pizza.scss */
+[data-pie-id='my-cool-chart'] li:nth-child(6) {
+  color: #ffc8af;
 }
