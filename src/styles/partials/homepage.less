@@ -8,11 +8,15 @@
 	}
 
 	.header {
-		@media(min-width: 450px) {			
-			background-image: url(../img/logo-black@2x.png);
-			background-position: center;
+
+		.black {
+			display: block;
 		}
 
+		.white {
+			display: none;
+		}
+		
 		.menu-button {
 			@media(min-width: 450px) {
 				background-image: url(../img/menu-icon.png);
@@ -28,10 +32,21 @@
 		overflow: hidden;
 		width: 100%;
 		height: 325px;
-		padding-top: 80px;
-		background: url(../img/banner.jpg) repeat-x left center;
+		padding-top: 80px;/*
+		background: url(../img/banner@2x.png) repeat-x left center;*/
 		border-bottom: 3px solid @dirtywhite;
 		background-size: cover;
+		background: white;
+
+		img {
+			max-height: 100%;
+			position: absolute;
+			top: 0;
+			left: 100%;
+			height: 100%;
+			-webkit-transition: all 0.5s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+			transition: all 35s ease-in;
+		}
 
 		@media(min-width: 1100px) {
 			position: relative;
@@ -518,13 +533,13 @@
 		padding-top: 110px;
 		padding-bottom: 115px;
 		border-boottom: 3px solid @lightblue;
-		background: url(../img/home-contact-bg.png) no-repeat center;
+		background: url(../img/home-contact-bg@2x.png) no-repeat center;
 		background-size: cover;
 		text-align: center;
 
 		@media(min-width: 940px) {
 			text-align: left;
-			background: url(../img/home-contact-big-bg.png) no-repeat center;;
+			background: url(../img/home-contact-big-bg@2x.png) no-repeat center;;
 			background-size: cover;
 		}
 	
@@ -575,6 +590,9 @@
 		}
 
 		.small {
+			display: block;
+			margin-top: 3px;
+
 			@media(min-width: 768px) {
 				display: none;
 			}

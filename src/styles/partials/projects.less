@@ -1,0 +1,251 @@
+.project-wrapper {
+	.banner {
+		padding-bottom: 120px;
+	
+		.button {
+			margin-top: 30px;
+
+			@media(min-width: 940px) {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	.tech {
+		.wrap {
+			background-color: @dirtywhite;
+			padding: 50px 0;
+			text-align: center;
+
+			&:nth-child(even) {
+				background-color: white;
+			}
+
+			&.mobile {
+				h2 {
+					padding-left: 40px;
+					background: url(../img/stack-mobile-bg-dark.png) no-repeat center left;
+					background-size: 25px 35px;
+				}
+			}
+
+			&.platform {
+				h2 {
+					padding-right: 45px;
+					background: url(../img/stack-platform-bg.png) no-repeat center right;
+					background-size: 36px 27px;
+				}
+			}
+
+			&.tv {
+				h2 {
+					padding-left: 45px;
+					background: url(../img/stack-attract-bg-dark.png) no-repeat center left;
+					background-size: 32px 32px;
+				}
+			}
+
+			&.jukebox {
+				h2 {
+					padding-right: 45px;
+					background: url(../img/stack-jukebox-bg.png) no-repeat center right;
+					background-size: 32px 32px;
+				}
+			}
+
+			&.operations {
+				h2 {
+					padding-left: 45px;
+					background: url(../img/stack-operations-bg-dark.png) no-repeat center left;
+					background-size: 32px 32px;
+				}
+			}
+
+			.additional {
+				text-align: left;
+			}
+			
+			.embed {
+				float: left;
+				font-size: 42px;
+				font-family: @extrabold;
+				color: @darkgray;
+				padding: 0 20px 11px 0;
+				margin-bottom: 5px;
+				background: url(../img/dark-underline.png) no-repeat left bottom;
+			}
+
+			h2 {
+				text-align: center;
+				display: inline-block;
+				color: @darkgray;
+				margin: 0;
+			}
+
+			p {
+				@media(min-width: 940px) {
+					text-align: left;
+					font-size: 18px;
+					font-family: @semibold;
+				}
+
+				&.anthem, &.instruments {
+					margin-top: 25px;
+				}
+
+				&.instruments {
+					margin-bottom: 25px;
+				}
+			}
+
+			a.more {
+				font-size: 18px;
+				font-family: @bold;
+				color: @dark;
+
+				&:hover {
+					color: @dark;
+					text-decoration: none;
+				}
+			}
+
+			.links {
+				padding-top: 25px;
+				a {
+					color: @pink;
+					text-decoration: underline;
+					cursor: initial;
+				}
+			}
+
+			.section {
+				max-height: 410px;
+				overflow: hidden;
+				padding: 50px 0 0;
+				-webkit-transition: all 0.5s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+				transition: all 0.5s ease-in;
+				text-overflow: ellipsis;
+				text-align: left;
+
+				&.mobile, &.jukebox {
+					.images {
+						width: 140px;
+						height: auto;
+						overflow: hidden;
+						float: right;
+						text-align: right;
+						padding-bottom: 0;
+						margin: 0;
+
+						img {
+							width: 100%;
+							height: auto;
+							max-height: initial;
+						}
+					}
+				}
+
+				&.jukebox {
+					.images {
+						float: left;
+					}
+				}
+
+				&.expand {
+					max-height: 1000px;
+				}
+
+				@media(min-width: 940px) {
+					padding: 0;
+				}
+
+				p {
+					font-size: 15px;
+					font-family: @regular;
+
+					@media(min-width: 940px) {
+						overflow: hidden;
+						font-size: 18px;
+						font-family: @semibold;
+					}
+				}
+
+				.text-container {
+					float: left;
+				}
+
+				.images {
+					float: none;
+					width: 100%;
+					height: 210px;
+					padding: 0;
+					padding-bottom: 15px;
+					text-align: center;	
+
+					@media(min-width: 940px) {
+						float: none;
+						width: 100%;
+						padding: 0;
+						text-align: center;
+					}
+
+					img {
+						width: auto;
+						height: 100%;
+						margin-bottom: 30px;
+					}
+				}
+			}
+		}
+	}
+
+	.contact {
+		padding: 145px 0;
+		text-align: center;
+
+		h2 {
+			@media(min-width: 768px) {
+				color: white;
+				padding-bottom: 20px;	
+
+				&.underline {
+					background: url(../img/white-underline.png) no-repeat bottom center;
+				}		
+			}
+
+			@media(min-width: 940px) {
+				font-size: 44px;
+				font-family: @extrabold;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+
+				&.underline {
+					background: url(../img/white-underline.png) no-repeat bottom left;
+				}
+			}
+		}
+
+		p {
+			@media(min-width: 768px) {
+				color: white;			
+			}
+
+			@media(min-width: 940px) {
+				text-align: left;
+				font-size: 20px;
+			}
+		}
+
+		@media(min-width: 768px) {
+			background: url(../img/home-contact-bg.png) no-repeat center;
+			background-size: cover;
+			text-align: center;
+		}
+
+		@media(min-width: 940px) {
+			text-align: left;
+			background: url(../img/home-contact-big-bg.png) no-repeat center;;
+			background-size: cover;
+		}
+	}
+}
