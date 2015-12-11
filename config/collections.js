@@ -7,3 +7,12 @@ module.exports = {
     reverse: true
   }
 }
+
+module.exports = {
+  articles: {
+    pattern: 'tech/*.md',
+    sortBy: 'order',
+    reverse: false
+  }
+}
+
