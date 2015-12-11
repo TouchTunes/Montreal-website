@@ -1,7 +1,7 @@
 $(document).ready(function(){
   //Calls the scrolling function repeatedly
   if($('.home-wrapper').length) {
-    /*setInterval(bgscroll, scrollSpeed);*/
+   /* setInterval(bgscroll, scrollSpeed);*/
   }
 
   // fix for upload button look
@@ -342,7 +342,7 @@ $(".banner .cts").click(function() {
 }); 
 
 $('.tech .more').on('click', function() {
-  $(this).parent().prev('.section').toggleClass('expand');
+  $(this).parent().siblings('.section').toggleClass('expand');
   ($(this).text() == 'more')? $(this).text('less') : $(this).text('more');
 });
 
@@ -724,4 +724,8 @@ $(window).load(function() {
   }    
 })
 
-$('.button.apply').on('click', function(){ var data = $(this).attr('data-title'); $('.job-modal .title').text(data); $('.job-modal .apply-for').val(data); });
+$('.button.apply').on('click', function(){ 
+  var data = $(this).attr('data-title'); 
+  $('.job-modal .title').text(data); 
+  $('.job-modal .apply-for').val(data);
+});
