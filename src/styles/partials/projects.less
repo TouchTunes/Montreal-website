@@ -22,6 +22,7 @@
 			}
 
 			&.mobile {
+				
 				h2 {
 					padding-left: 40px;
 					background: url(../img/stack-mobile-bg-dark.png) no-repeat center left;
@@ -63,6 +64,12 @@
 
 			.additional {
 				text-align: left;
+
+				@media(min-width: 940px) {
+					padding-top: 20px;
+					max-width: 620px;
+					float: none;
+				}
 			}
 			
 			.embed {
@@ -127,6 +134,10 @@
 				text-overflow: ellipsis;
 				text-align: left;
 
+				@media(min-width: 1100px) {
+					overflow: visible;
+				}
+
 				&.mobile, &.jukebox {
 					.images {
 						width: 140px;
@@ -137,18 +148,82 @@
 						padding-bottom: 0;
 						margin: 0;
 
+						@media(min-width: 1100px) {
+							float: right;
+							width: auto;
+							max-width: 35%;
+						}
+
 						img {
 							width: 100%;
 							height: auto;
 							max-height: initial;
+
+							@media(min-width: 1100px) {
+								max-height: 400px;
+							}
 						}
 					}
 				}
 
 				&.jukebox {
+					@media(min-width: 1100px) {						
+						overflow: visible;
+						height: 200px;
+						position: relative;
+					}
 					.images {
 						float: left;
+
+						@media(min-width: 1100px) {
+							float: right;
+							position: absolute;
+							right: 30px;
+							width: auto;
+							max-width: 35%;
+							top: 50%;
+							margin-top: -100px;
+
+							img {
+								max-width: 200px;
+								max-height: 300px;
+							}
+						}
 					}
+				}
+
+				&.mobile {
+
+					.images {
+						padding: 0 10px;
+					}
+
+					@media(min-width: 1100px) {
+						max-height: 250px;
+						overflow: visible;
+
+						img {
+							max-width: 200px;
+						}
+					}
+				}
+
+				&.tv {
+					.images {
+						@media(min-width: 1100px){
+							padding: 0 0 0 30px;
+							margin-top: 5%;
+						}
+					}
+				}
+
+				&.operations {
+					.images {
+						@media(min-width: 1100px){
+							padding-left: 40px;
+							margin-top: 6%;	
+						}
+					}					
 				}
 
 				&.expand {
@@ -172,6 +247,10 @@
 
 				.text-container {
 					float: left;
+
+					@media(min-width: 1100px) {
+						width: 65%;
+					}
 				}
 
 				.images {
@@ -189,10 +268,23 @@
 						text-align: center;
 					}
 
+					@media(min-width: 1100px) {
+						float: right;
+						width: 35%;
+						padding: 0 20px 0 40px;
+					}
+
 					img {
 						width: auto;
 						height: 100%;
 						margin-bottom: 30px;
+
+						@media(min-width: 1100px) {
+							width: 100%;
+							margin: 0;
+							height: auto;
+							max-height: 400px;
+						}
 					}
 				}
 			}
@@ -244,7 +336,7 @@
 
 		@media(min-width: 940px) {
 			text-align: left;
-			background: url(../img/home-contact-big-bg.png) no-repeat center;;
+			background: url(../img/home-contact-big-bg@2x.png) no-repeat center;;
 			background-size: cover;
 		}
 	}
