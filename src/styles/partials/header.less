@@ -17,7 +17,7 @@
 		box-shadow: 0px 4px 16px -4px rgba(68,68,68,1);
 
 		.black {
-			display: block;
+			display: inline-block;
 		}
 
 		.white {
@@ -37,7 +37,7 @@
 
 	@media(max-width: 450px) {
 		.black {
-			display: block;
+			display: inline-block;
 		}
 
 		.white {
@@ -77,11 +77,16 @@
 		margin-top: 10px;
 
 		&.black {
-			display: none;
+			display: inline-block;
+
+			@media(min-width: 450px) {
+				display: none;
+			}
 		}
 	}
 
 	.french {
+		position: absolute;
 		float: right;
 		margin-top: 20px;
 		font-size: 16px;
@@ -91,10 +96,10 @@
 		text-decoration: none;
 		text-align: right;
 		margin-right: 15px;
+		right: 0;
 
 		@media(min-width: 450px) {
 			color: white;
-			position: absolute;
 			top: 50%;
 			right: 3%;
 			margin-top: -5px;
