@@ -10,19 +10,19 @@
 				<p>Personal information</p>
 				<span>* indicates a required field</span>
 
-				<input type="text" placeholder="First Name"/>
-				<input type="text" placeholder="Last Name"/>
-				<input type="text" placeholder="City"/>
-				<input type="text" placeholder="Country"/>
-				<input type="email" placeholder="Email"/>
-				<input type="text" placeholder="Phone"/>
+				<input type="text" placeholder="First Name" id="first-app" />
+				<input type="text" placeholder="Last Name" id="last-app" />
+				<input type="text" placeholder="City" id="city-app" />
+				<input type="text" placeholder="Country" id="country-app" />
+				<input type="email" placeholder="Email" id="email-app" />
+				<input type="text" placeholder="Phone" id="phone" />
 
 				<div class="file-wrapper">
 					<label class="ie-placeholder" style="">Upload resume</label>
 					<input class="uploadFile" placeholder="Upload resume" />
 					<div class="fileUpload">
 					    <span></span>
-					    <input type="file" class="upload uploadBtn" name="resume"/>
+					    <input type="file" class="upload uploadBtn" name="resume" id="resume-app" />
 					</div>
 				</div>
 
@@ -31,14 +31,14 @@
 					<input class="uploadFile" placeholder="Upload Coverletter" />
 					<div class="fileUpload">
 					    <span></span>
-					    <input type="file" class="upload uploadBtn" name="cover"/>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
 					</div>
 				</div>
 
 				<div class="social-info">
 					<label>Social Profile</label>
-					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)"/>
-					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)"/>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" />
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" />
 				</div>
 				<div class="bottom">
 					<div class="file-wrapper">
@@ -46,10 +46,10 @@
 						<input class="uploadFile" placeholder="Add Attachment" />
 						<div class="fileUpload">
 						    <span></span>
-						    <input type="file" class="upload uploadBtn" name="attachment"/>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
 						</div>
 					</div>
-					<a class="button pink">Send Application</a>
+					<a class="button pink" id="submit-application">Send Application</a>
 				</div>
 			</form>
 		</div>
