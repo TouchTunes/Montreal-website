@@ -14,14 +14,14 @@
 		</div>
 	</div>	
 	<div class="tech scroll-to">
-		<div class="wrap first">
+		<div class="wrap">
 			<div class="container">
 				<h2 class="small-screen">Products</h2>
 				<div class="section">
 					<div class="images">
-						<img class="small-scereen" src="../img/tech-icon-1.png">
-						<img class="small-screen" src="../img/tech-icon-2.png">
-						<img class="small-screen" src="../img/tech-icon-1.png">
+						<img  src="../img/tech-icon-6.png">
+						<img  src="../img/tech-icon-7.png">
+						<img  src="../img/tech-icon-8.png">
 					</div>
 
 					<p class="small-screen">Our product engineers are the battle-tested storm chasers of the company, the elite unit we send in to engage seas of code, tsunamis of audio signals, and hurricanes of pixels. They have become Zen warriors in their fight for clean and intelligent design.
@@ -39,14 +39,14 @@ These dedicated individuals come together to commune with the Linux kernel, be o
 				</div>
 			</div>
 		</div>
-		<div class="wrap second">
+		<div class="wrap">
 			<div class="container">
 				<h2 class="small-screen">Data</h2>
 				<div class="section">
 					<div class="images">
-						<img class="small-scereen" src="../img/tech-icon-3.png">
-						<img class="small-screen" src="../img/tech-icon-4.png">
-						<img class="small-screen" src="../img/tech-icon-5.png">
+						<img src="../img/tech-icon.png">
+						<img src="../img/tech-icon-1.png">
+						<img src="../img/tech-icon-2.png">
 					</div>
 
 					<p class="small-screen">"If a tree falls in a forest and nobody's around to hear it, does it make a sound?”  With our RabbitMQ server, the answer is yes - that falling tree notified our messaging system so that everyone knows. Better yet, we know when every leaf falls and where it's going to hit the forest floor. We are not talking about one lonely zen tree of information here, picture a rain forest with a torrential downpour of data whirling around constantly. Our messaging strategy is the backbone of our platform.  Our platform is the foundation of our products.  Our products are everywhere.  Do the math.</p>
@@ -61,15 +61,14 @@ These dedicated individuals come together to commune with the Linux kernel, be o
 				</div>
 			</div>
 		</div>
-
-		<div class="wrap third">
+		<div class="wrap">
 			<div class="container">
 				<h2 class="small-screen">Execution</h2>
 				<div class="section">
 					<div class="images">
-						<img class="small-scereen" src="../img/tech-icon-6.png">
-						<img class="small-screen" src="../img/tech-icon-7.png">
-						<img class="small-screen" src="../img/tech-icon-8.png">
+						<img src="../img/tech-icon-3.png">
+						<img src="../img/tech-icon-4.png">
+						<img src="../img/tech-icon-5.png">
 					</div>
 
 					<p class="small-screen">Ever spent time watching an ant colony self-organize around obstacles? We did (on the Internet), and it gave us (mostly the Lego maniacs) a few ideas. We started thinking, if ants had Lego, they would rule the world. Trust us, this is going somewhere.
@@ -77,8 +76,8 @@ We wanted to build resiliency and self-repair into our system, so we packed our 
 .</p>
 									<div class="text-container">
 					<p class="big-screen"><span class="embed">Execution</span>Ever spent time watching an ant colony self-organize around obstacles? We did (on the Internet), and it gave us (mostly the Lego maniacs) a few ideas. We started thinking, if ants had Lego, they would rule the world. Trust us, this is going somewhere.
-We wanted to build resiliency and self-repair into our system, so we packed our code inside Docker images and let the containers re-arrange themselves so that we wouldn’t have to. It's like automated Lego construction with data. All hail our ingenious ant overlords!
-</p>
+We wanted to build resiliency and self-repair into our system, so we packed our code inside Docker images and let the containers re-arrange themselves so that we wouldn’t have to. It's like automated Lego construction with data. All hail our ingenious ant overlords!</p>
+
 					</div>
 				</div>
 				<a class="more small-screen">more</a>
@@ -88,6 +87,40 @@ We wanted to build resiliency and self-repair into our system, so we packed our 
 				</div>
 			</div>
 		</div>
+
+
+		<!-- {{#each collections.tech}}
+       
+
+		<div class="wrap">
+			<div class="container">
+				<h2 class="small-screen">{{this.title}}</h2>
+				<div class="section">
+					<div class="images">
+						<img src="../img/{{this.img1}}.png">
+						<img src="../img/{{this.img2}}.png">
+						<img src="../img/{{this.img3}}.png">
+					</div>
+
+					<p class="small-screen">Ever spent time watching an ant colony self-organize around obstacles? We did (on the Internet), and it gave us (mostly the Lego maniacs) a few ideas. We started thinking, if ants had Lego, they would rule the world. Trust us, this is going somewhere.
+We wanted to build resiliency and self-repair into our system, so we packed our code inside Docker images and let the containers re-arrange themselves so that we wouldn’t have to. It's like automated Lego construction with data. All hail our ingenious ant overlords!
+.</p>
+									<div class="text-container">
+					<p class="big-screen"><span class="embed">{{this.title}}</span>{{{this.contents}}}
+</p>
+					</div>
+				</div>
+				<a class="more small-screen">more</a>
+
+				<div class="links">
+					<a>{{this.related}}</a>
+				</div>
+			</div>
+		</div>
+
+		 {{/each}} -->
+
+
 	</div>
 	<div class="percentage">
 		<div class="container">
@@ -108,11 +141,11 @@ We wanted to build resiliency and self-repair into our system, so we packed our 
 							<div data-pie-id="svg" class="graph-bd-text">
 								<ul data-pie-id="svg">
 									<li data-value="35"><span>35%</span> Java</li>
-									<li data-value="15"><span>15%</span> Python</li>
-									<li data-value="15"><span>15%</span> Amazon</li>
+									<li data-value="20"><span>20%</span> Python</li>
+									<li data-value="20"><span>20%</span> Amazon</li>
 									<li data-value="5"><span>5%</span> PowerPoint </li>
 									<li data-value="5"><span>5%</span> Air guitar</li>
-									<li data-value="25"><span>25%</span> Other</li>
+									<li data-value="15"><span>15%</span> Coffee</li>
 								</ul>
 								<div id="svg"></div>
 							</div>
