@@ -346,7 +346,6 @@ $('.tech .more').on('click', function() {
   ($(this).text() == 'more')? $(this).text('less') : $(this).text('more');
 });
 
-<<<<<<< HEAD
 var fileResume;
 var fileCover;
 var fileAttachment;
@@ -557,13 +556,6 @@ $('#submit-application').on('click', function() {
     
 });
 
-
-
-
-
-
-=======
-//
 
 (function ($, window, document, undefined) {
   'use strict';
@@ -942,4 +934,3 @@ $(window).load(function() {
 })
 
 $('.button.apply').on('click', function(){ var data = $(this).attr('data-title'); $('.job-modal .title').text(data); $('.job-modal .apply-for').val(data); });
->>>>>>> 281f7faa1ef800e0751db0fa5cd0f8064ba149e6
