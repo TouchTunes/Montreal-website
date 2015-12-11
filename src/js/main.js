@@ -481,6 +481,7 @@ $('#submit-application').on('click', function() {
   var phone = $('#phone').val();
   var facebook = $('#facebook').val();
   var linkedin = $('#linkedin').val();
+  var job = $('#job').val();
 
   var serverUrlResume = 'https://api.parse.com/1/files/' + fileResume.name;
   var serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
@@ -523,7 +524,7 @@ $('#submit-application').on('click', function() {
                   dataType: 'json',
                   contentType: 'application/json',
                   processData: false,
-                  data: '{ "type": "application", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'" }',
+                  data: '{ "type": "application", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'", "job": "'+job+'" }',
                   contentType: 'application/json',
                   success: function (data) {
                     alert(JSON.stringify(data));
