@@ -36,6 +36,7 @@
 		border-bottom: 3px solid @dirtywhite;
 		background-size: cover;
 		background: white;
+		position: relative;
 
 		@media(min-width: 1100px) {
 			position: relative;
@@ -43,12 +44,37 @@
 			z-index: 0;
 		}
 
+		.animation-holder {
+			width: 1000%;
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+			-webkit-transition: all .5s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+			transition: all .5s linear;
+
+
+			img {
+				position: absolute;
+				transform: translateX(1400px);
+				top: 10%;
+				z-index: 1;
+				width: 250px;
+				height: auto;
+
+				&.slide {
+					transform: translateX(-200px);
+					-webkit-transition: all 20s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+					transition: all 20s linear;
+				}
+			}
+		}
+
 		.white-overlay {
 			position: absolute;
 			display: none;
 			width: 100%;
 			height: 100%;
-			z-index: 1;
+			z-index: 2;
 			background: url(../img/white-overlay.png) no-repeat left top;
 			background-size: cover;
 
@@ -520,13 +546,13 @@
 		padding-top: 110px;
 		padding-bottom: 115px;
 		border-boottom: 3px solid @lightblue;
-		background: url(../img/home-contact-bg@2x.png) no-repeat center;
+		background: url(../img/home-contact-bg-retina.png) no-repeat center;
 		background-size: cover;
 		text-align: center;
 
 		@media(min-width: 940px) {
 			text-align: left;
-			background: url(../img/home-contact-big-bg@2x.png) no-repeat center;;
+			background: url(../img/home-contact-big-bg-retina.png) no-repeat center;;
 			background-size: cover;
 		}
 	
