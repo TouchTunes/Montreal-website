@@ -98,6 +98,7 @@ $(document).ready(function(){
   $("#contact, #modal-form, #form").submit(function(e){
       e.preventDefault();
   });
+  
   /*$('#contact').validate().form();*/
   $("#modal-form").validate().form();
   $("#form").validate().form();
