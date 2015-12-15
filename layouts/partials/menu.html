@@ -19,21 +19,24 @@
 				<p>Over 90 Montreal-based employees and growing. Come break some records with us!</p>	
 
 				<form id="menu">
-					<input type="text" placeholder="First Name" id="name"/>
-					<input type="email" placeholder="Email" id="email" />
+					<label class="ie-placeholder" style="">First Name</label>
+					<input required  type="text" placeholder="First Name" name="name" id="name"/>
+					<label class="ie-placeholder" style="">Email</label>
+					<input required  type="email" placeholder="Email" name="email" id="email" />
 					<div class="file-wrapper">
 						<label class="ie-placeholder" style="">Upload resume</label>
-						<input class="uploadFile" placeholder="Upload resume" />
+						<input  required class="uploadFile" placeholder="Upload resume" />
 						<div class="fileUpload">
 						    <span></span>
-						    <input type="file" class="upload uploadBtn" id="resume"/>
+						    <input  required type="file" class="upload uploadBtn" name="resume" id="resume"/>
 						</div>
 					</div>
 
 					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
 					<input class="link" type="email" placeholder="Add link (i.e.: LinkedIn)" id="link" />
 
-					<a class="button" id="submit-crew">Send Application</a>
+					<input type="submit" class="button" id="submit-crew" value="Send Application" />
 				</form>		
 			</div>
 		</div>

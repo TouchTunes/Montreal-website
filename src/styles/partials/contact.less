@@ -109,11 +109,22 @@
 			}
 			input, select {
 				border: 1px solid @modal-dark;
+
+				&.button {
+					border: none;
+
+					&:focus {
+						outline: none;
+					}
+				}
 			}
 
 			textarea {
 				border: 1px solid @modal-dark;		
-				text-align: left;			
+				text-align: left;	
+				font-family: @semibold;
+				font-size: 16px;
+				color: @dark;		
 			}
 		}
 	}

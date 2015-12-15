@@ -90,6 +90,15 @@
 				&.link {
 					margin-bottom: 20px;
 				}
+
+				&.button {
+					border: none;
+					border-radius: 22px;
+
+					&:focus {
+						outline: none;
+					}
+				}
 			}
 
 			label {
@@ -97,6 +106,10 @@
 				font-family: @semibold;
 				color: @darkgray;
 				margin-bottom: 25px;
+
+				&.error {
+					color: @pink;
+				}
 			}
 		}
 	}
