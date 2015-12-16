@@ -324,7 +324,7 @@ var fileCover;
 var fileAttachment;
 var fileResumeApp;
 
-$('#resume').bind("change", function(e) {
+$('#resume-crew').bind("change", function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileResume = files[0];
 });
@@ -338,8 +338,17 @@ $('#cover').bind("change", function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileCover = files[0];
 });
+$('#cover-crew').bind("change", function(e) {
+  var files = e.target.files || e.dataTransfer.files;
+  fileCover = files[0];
+});
 
 $('#attachment').bind("change", function(e) {
+  var files = e.target.files || e.dataTransfer.files;
+  fileAttachment = files[0];
+});
+
+$('#attachment-crew').bind("change", function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileAttachment = files[0];
 });
@@ -370,47 +379,82 @@ function uploadResume() {
 $('#submit-crew').on('click', function() {
 
   if($(this).parent().find('input.error').length) {
-      console.log('error');
-    } else {
-   
-    var name = $('#name').val();
-    var email = $('#email').val();
-    var link = $('#link').val();
+    console.log('error');
+  } else {
+     
+    var firstName = $('#first-crew').val();
+    var lastName = $('#last-crew').val();
+    var city = $('#city-crew').val();
+    var country = $('#country-crew').val();
+    var email = $('#email-crew').val();
+    var phone = $('#phone-crew').val();
+    var facebook = $('#facebook-crew').val();
+    var linkedin = $('#linkedin-crew').val();
 
-    var test = '';
+    var serverUrlResume = 'https://api.parse.com/1/files/' + fileResume.name;
+    var serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
+    var serverUrlAttachment = 'https://api.parse.com/1/files/' + fileAttachment.name;
+    var resumeUrl = '';
+    var coverUrl = '';
+    var attachmentUrl = '';
 
-    test = uploadResume();
-
-    console.log(test);
-
-     var serverUrl = 'https://api.parse.com/1/files/' + fileResume.name;
-     var resumeUrl = '';
       $.ajax({
         type: "POST",
         headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
-        url: serverUrl,
+        url: serverUrlResume,
         data: fileResume,
         processData: false,
         contentType: false,
         success: function(data) {
           resumeUrl = data.url;
-
-          $.ajax({
-            type: 'POST',
-            url: "https://api.parse.com/1/functions/mail",
+           $.ajax({
+            type: "POST",
             headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
-            dataType: 'json',
-            contentType: 'application/json',
+            url: serverUrlCover,
+            data: fileCover,
             processData: false,
-            data: '{ "type": "crew", "name": "'+name+'", "email": "'+email+'", "link": "'+link+'", "url": "'+resumeUrl+'"}',
-            contentType: 'application/json',
-            success: function (data) {
-              alert(JSON.stringify(data));
+            contentType: false,
+            success: function(data) {
+              coverUrl = data.url;
+              $.ajax({
+                type: "POST",
+                headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
+                url: serverUrlAttachment,
+                data: fileAttachment,
+                processData: false,
+                contentType: false,
+                success: function(data) {
+                  attachmentUrl = data.url;
+                  $.ajax({
+                    type: 'POST',
+                    url: "https://api.parse.com/1/functions/mail",
+                    headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    processData: false,
+                    data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'" }',
+                    contentType: 'application/json',
+                    success: function (data) {
+                      alert(JSON.stringify(data));
+                    },
+                    error: function(){
+                      alert("Cannot get data");
+                    }
+                });
+
+                },
+                error: function(data) {
+                  var obj = jQuery.parseJSON(data);
+                  alert(obj.error);
+                }
+              });
+
             },
-            error: function(){
-              alert("Cannot get data");
+            error: function(data) {
+              var obj = jQuery.parseJSON(data);
+              alert(obj.error);
             }
-        });
+          });
 
         },
         error: function(data) {
@@ -419,7 +463,9 @@ $('#submit-crew').on('click', function() {
         }
       });
     }
-  });
+    
+});
+
 
 $('#submit-contact').on('click', function() {
 
