@@ -4,6 +4,8 @@ $(document).ready(function(){
     setInterval(bgscroll, scrollSpeed);
   }
 
+  $('.animation-placeholder').addClass('slide');
+
   //validation 
   $("#contact").validate({
     rules: {
@@ -98,11 +100,14 @@ $(document).ready(function(){
   $("#contact, #modal-form, #form").submit(function(e){
       e.preventDefault();
   });
-  
+
   /*$('#contact').validate().form();*/
   $("#modal-form").validate().form();
-  $("#form").validate().form();
-  $('label[class^="error"]:not(.valid)').remove();
+
+  setTimeout(function() {
+    $('label[class^="error"]:not(.valid)').remove();
+  }, 500);
+ 
 
   // fix for upload button look
   if($('.uploadBtn').length){
@@ -186,6 +191,7 @@ $(window).scroll(function () {
 // trigger toggleMenu function
 $('.menu-button').on('click', function() {
 	toggleMenu();
+  $("#form").validate().form();
 })
 
 $('.button.apply, .close.modal').on('click', function(){
@@ -219,23 +225,23 @@ var banner = $('.home-wrapper .banner');
 var bl = -1;
 
 function bgscroll(){
-  $('.banner img').eq(bl-4).removeClass('slide');
+  $('.banner img').eq(bl-6).removeClass('slide').css('margin-left', 0); 
   if($('.banner img').length > bl) {
     bl ++;
   } else {
-    $('.banner img').removeClass('slide');
     bl = 0;
+    $('.animation-holder').css('margin-left', 0);
   }
-  $('.banner img').eq(bl).addClass('slide');
+  $('.banner img').eq(bl).addClass('slide').css('margin-left', 0);
 }
 
+var marg = 0;
 //trigger big screen animation on click
 $('.home-wrapper .banner').on('click', function() {
   if($(window).width() >= 940) {  
-    $(this).addClass('swipe');
-    setTimeout(function(){
-      $('.home-wrapper .banner').removeClass('swipe'); 
-    }, 300)
+    marg -= 150;
+    $(this).find('.animation-holder').css('margin-left', marg);
+    $(this).find('.animation-holder img').css('margin-left', - marg);
   }
 });
 
@@ -246,9 +252,9 @@ $(banner).swipe( {
   swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
      if($(window).width() < 940) {      
       $(banner).addClass('swipe');
-        setTimeout(function(){
-          $(banner).removeClass('swipe'); 
-        }, 300);
+        marg -= 150;
+        $('.animation-holder').css('margin-left', marg);
+        $('.animation-holder img').css('margin-left', - marg);
       }
   },
   //Default is 75px, set to 0 for demo so any distance triggers swipe
@@ -302,7 +308,7 @@ if($('.contact-map').length){
   google.maps.event.addDomListener(window, 'load', contactMap);
 }
 
-$(".banner .cts").click(function() {
+$(".cts").click(function() {
     $('html, body').animate({
         scrollTop: $(".scroll-to").offset().top - 50
     }, 600 );
@@ -606,3 +612,5 @@ preloadPictures( preloadingImages, function(){
 });
 
 // end of preload
+
+$(".member .img").mouseover(function() { $('.img').css('opacity', '0.5'); $(this).css('opacity', '1');}).mouseout(function() { $('.img').css('opacity', '1'); });
