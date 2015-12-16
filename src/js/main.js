@@ -1,10 +1,27 @@
 $(document).ready(function(){
   //Calls the scrolling function repeatedly
   if($('.home-wrapper').length) {
-    setInterval(bgscroll, scrollSpeed);
+    setTimeout(function(){
+      $('.animation-placeholder').fadeIn();
+      $('.animation-placeholder').addClass('slide');
+    }, 1000);  
+    resetAnimation();  
   }
 
-  $('.animation-placeholder').addClass('slide');
+function resetAnimation(){
+  var time = 330000;
+  if($(window).width() <= 940) {
+    time = 100000;
+  }
+  setTimeout(function() {
+    $('.animation-placeholder').removeClass('slide');
+    setTimeout(function(){
+     $('.animation-placeholder').addClass('slide');
+    }, 1000);
+    console.log('ble');
+    resetAnimation();
+  }, time);
+}
 
   //validation 
   $("#contact").validate({
@@ -214,7 +231,7 @@ function toggleMenu() {
 }
 
 // how many pixels at the time does the home animation move
-var scrollSpeed = 4530;
+var scrollSpeed = 3000;
   
 // set the default position
 var current = 0;
@@ -224,24 +241,15 @@ var banner = $('.home-wrapper .banner');
 
 var bl = -1;
 
-function bgscroll(){
-  $('.banner img').eq(bl-6).removeClass('slide').css('margin-left', 0); 
-  if($('.banner img').length > bl) {
-    bl ++;
-  } else {
-    bl = 0;
-    $('.animation-holder').css('margin-left', 0);
-  }
-  $('.banner img').eq(bl).addClass('slide').css('margin-left', 0);
-}
 
-var marg = 0;
 //trigger big screen animation on click
 $('.home-wrapper .banner').on('click', function() {
   if($(window).width() >= 940) {  
-    marg -= 150;
-    $(this).find('.animation-holder').css('margin-left', marg);
-    $(this).find('.animation-holder img').css('margin-left', - marg);
+    $(this).find('.animation-placeholder').removeClass('slide').addClass('swipe');
+
+    setTimeout(function(){
+      $('.animation-placeholder').removeClass('swipe').addClass('slide');
+    }, 700);
   }
 });
 
@@ -249,16 +257,26 @@ $('.home-wrapper .banner').on('click', function() {
 //trigger small screen animation on swipe
 $(banner).swipe( {
   //Generic swipe handler for all directions
+  swipeLeft:function(event, direction, distance, duration, fingerCount, fingerData) {
+     if($(window).width() < 940) {      
+      $('.animation-placeholder').removeClass('slide').addClass('swipe');
+
+      setTimeout(function(){
+        $('.animation-placeholder').removeClass('swipe').addClass('slide');
+      }, 800);
+    }
+  },
   swipeRight:function(event, direction, distance, duration, fingerCount, fingerData) {
      if($(window).width() < 940) {      
-      $(banner).addClass('swipe');
-        marg -= 150;
-        $('.animation-holder').css('margin-left', marg);
-        $('.animation-holder img').css('margin-left', - marg);
-      }
+      $('.animation-placeholder').removeClass('slide').addClass('back');
+
+      setTimeout(function(){
+        $('.animation-placeholder').removeClass('back').addClass('slide');
+      }, 400);
+    }
   },
   //Default is 75px, set to 0 for demo so any distance triggers swipe
-   threshold:0
+   threshold: 75
 });
 
 // How fast does counter increse
@@ -315,8 +333,15 @@ $(".cts").click(function() {
 }); 
 
 $('.tech .more').on('click', function() {
+  $(this).prev('.section').toggleClass('expand');
+  $(this).prev('.half').toggleClass('expand');
   $(this).parent().siblings('.section').toggleClass('expand');
   ($(this).text() == 'more')? $(this).text('less') : $(this).text('more');
+});
+
+$('.member .more').on('click', function() {
+    $(this).prev('.half').toggleClass('expand');
+    ($(this).text() == 'more')? $(this).text('less') : $(this).text('more');
 });
 
 var fileResume;
@@ -557,7 +582,7 @@ $('.button.apply').on('click', function(){
 });
 
 //function fo preloading images in the banner animation
-var preloadPictures = function(pictureUrls, callback) {
+/*var preloadPictures = function(pictureUrls, callback) {
     var i,
         j,
         loaded = 0;
@@ -609,7 +634,7 @@ preloadPictures( preloadingImages, function(){
         });
       });
     });
-});
+});*/
 
 // end of preload
 

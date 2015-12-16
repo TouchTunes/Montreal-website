@@ -32,7 +32,8 @@
 		overflow: hidden;
 		width: 100%;
 		height: 325px;
-		padding-top: 80px;
+		padding-top: 0;
+		padding-bottom: 0;
 		border-bottom: 3px solid @dirtywhite;
 		background-size: cover;
 		background: white;
@@ -44,24 +45,67 @@
 			z-index: 0;
 		}
 
+
+
 		.animation-placeholder {
 			position: absolute;
-			width: 200%;
-			height: 100%;
-			background: url(../img/animation-bg.png) no-repeat center left 400px;
-			top: 0;
-			left: 0;	
+			width: 2000%;
+			height: 80%;
+			background: url(../img/banner.jpg) repeat-x center left 400px;
+			background-size: auto 700px;
+			top: 100px;
+			left: 0;
+			display: none;	
 
-			@media(max-width: 400px) {
-				width: 500%;
+			@media(max-width: 1100px) {
+				width: 2000%;
+				height: 100%;
+				top: 0;
+				background-size: auto 400px;
 			}		
 
 			&.slide {
 				transform: translateX(-100%);
 				-webkit-transform: translateX(-100%);
 				 -ms-transform: translateX(-100%);
-	    		transition: all 27s linear;
-	    		-webkit-transition: all 27s linear;
+	    		transition: all 330s linear;
+	    		-webkit-transition: all 330s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 270s linear;
+		    		-webkit-transition: all 270s linear;
+	    		}
+
+	    		@media(max-width: 700px) {
+		    		transition: all 100s linear;
+		    		-webkit-transition: all 100s linear;
+	    		}
+			}
+
+			&.swipe {				
+				transform: translateX(-150%);
+				-webkit-transform: translateX(-150%);
+				 -ms-transform: translateX(-150%);
+	    		transition: all 50s linear;
+	    		-webkit-transition: all 50s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 20s linear;
+		    		-webkit-transition: all 20s linear;
+	    		}
+			}
+
+			&.back {				
+				transform: translateX(150%);
+				-webkit-transform: translateX(150%);
+				 -ms-transform: translateX(150%);
+	    		transition: all 80s linear;
+	    		-webkit-transition: all 80s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 20s linear;
+		    		-webkit-transition: all 20s linear;
+	    		}
 			}
 		}
 
