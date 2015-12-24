@@ -666,7 +666,7 @@ $('#submit-application').on('click', function() {
     var linkedin = $('#linkedin').val();
     var job = $('#job').val();
 
-    var serverUrlAttachment = 'https://api.parse.com/1/files/';
+    var serverUrlAttachment = '';
     var serverUrlResume = 'https://api.parse.com/1/files/' + fileResume.name;
     var serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
     var resumeUrl = '';
