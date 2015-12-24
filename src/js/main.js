@@ -823,10 +823,15 @@ var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 if(isAndroid) {
   $('.animation-placeholder').addClass('android');
 }
+var scrnSize = 410;
+
+if($(window).width() < 350) {
+  scrnSize = 394;
+}
 
 function hideMore() {
    $( ".section" ).each(function() {
-    if($( this ).height() < 360) {
+    if($( this ).outerHeight() < scrnSize) {
      $(this).next('.more').hide();
     $(this).siblings('.additional').children('.more').hide();
     };
