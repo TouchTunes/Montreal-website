@@ -518,10 +518,13 @@ $('#submit-crew').on('click', function() {
 
     var serverUrlResume = 'https://api.parse.com/1/files/' + fileResume.name;
     var serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
-    var serverUrlAttachment = 'https://api.parse.com/1/files/' + fileAttachment.name;
+    var serverUrlAttachment = '';
     var resumeUrl = '';
     var coverUrl = '';
     var attachmentUrl = '';
+    if(fileAttachment) {
+      serverUrlAttachment = 'https://api.parse.com/1/files/' + fileAttachment.name;
+    }
 
       $.ajax({
         type: "POST",
@@ -541,6 +544,7 @@ $('#submit-crew').on('click', function() {
             contentType: false,
             success: function(data) {
               coverUrl = data.url;
+              if(serverUrlAttachment != '') {
               $.ajax({
                 type: "POST",
                 headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
@@ -574,6 +578,24 @@ $('#submit-crew').on('click', function() {
                   alert(obj.error);
                 }
               });
+            } else {
+              $.ajax({
+                    type: 'POST',
+                    url: "https://api.parse.com/1/functions/mail",
+                    headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    processData: false,
+                    data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "" }',
+                    contentType: 'application/json',
+                    success: function (data) {
+                      alert(JSON.stringify(data));
+                    },
+                    error: function(){
+                      alert("Cannot get data");
+                    }
+                });
+            }
 
             },
             error: function(data) {
@@ -643,12 +665,15 @@ $('#submit-application').on('click', function() {
     var linkedin = $('#linkedin').val();
     var job = $('#job').val();
 
+    var serverUrlAttachment = 'https://api.parse.com/1/files/';
     var serverUrlResume = 'https://api.parse.com/1/files/' + fileResume.name;
     var serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
-    var serverUrlAttachment = 'https://api.parse.com/1/files/' + fileAttachment.name;
     var resumeUrl = '';
     var coverUrl = '';
     var attachmentUrl = '';
+    if(fileAttachment) {
+      serverUrlAttachment = 'https://api.parse.com/1/files/' + fileAttachment.name;
+    }
 
       $.ajax({
         type: "POST",
