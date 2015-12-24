@@ -694,6 +694,7 @@ $('#submit-application').on('click', function() {
             contentType: false,
             success: function(data) {
               coverUrl = data.url;
+              if(serverUrlAttachment != '') {
               $.ajax({
                 type: "POST",
                 headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
@@ -727,6 +728,26 @@ $('#submit-application').on('click', function() {
                   alert(obj.error);
                 }
               });
+            } else {
+              $.ajax({
+                    type: 'POST',
+                    url: "https://api.parse.com/1/functions/mail",
+                    headers: {'X-Parse-Application-Id':'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby','X-Parse-REST-API-Key':'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'},
+                    dataType: 'json',
+                    contentType: 'application/json',
+                    processData: false,
+                    data: '{ "type": "application", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "", "job": "'+job+'" }',
+                    contentType: 'application/json',
+                    success: function (data) {
+                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('.loader').fadeOut();
+                    },
+                    error: function(){
+                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                    }
+                });
+
+            }
 
             },
             error: function(data) {
