@@ -1,0 +1,35 @@
+.error-wrapper {
+	.banner {
+		background: url(../img/error-banner.png) no-repeat center;
+		background-size: cover;
+
+		h1, p {
+			@media(max-width: 450px) {
+				color: white;
+			}
+		}
+
+		.buttons {
+			padding-top: 45px;
+
+			a {
+				color: white;
+				font-size: 20px;
+				font-family: @bold;
+				margin-right: 65px;
+
+				@media(max-width: 450px) {
+					margin-right: 0;
+
+					&:nth-child(1) {
+						margin-right: 20px;
+					}
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
