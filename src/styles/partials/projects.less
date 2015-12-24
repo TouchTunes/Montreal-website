@@ -1,6 +1,12 @@
 .project-wrapper {
 	.banner {
 		padding-bottom: 120px;
+		background: url(../img/error-banner.png) no-repeat center;
+		background-size: cover;
+
+		@media(max-width: 450px) {
+			background: white;
+		}
 	
 		.button {
 			margin-top: 30px;
@@ -23,26 +29,31 @@
 
 			&.mobile {
 				
-				h2 {
+				h2, .embed {
 					padding-left: 40px;
 					background: url(../img/stack-mobile-bg-dark.png) no-repeat center left;
-					background-size: 25px 35px;
+					background-size: auto 30px;
 
 					@media(max-width: 340px) {
-						background-size: 20px 30px;
+						background-size: auto 30px;
 					}
 				}
 			}
 
 			&.platform {
-				h2 {
+				h2, .embed {
 					padding-right: 45px;
 					background: url(../img/stack-platform-bg.png) no-repeat center right;
-					background-size: 36px 27px;
+					background-size: auto 23px;
 
 					@media(max-width: 340px) {
-						background-size: 31px 22px;
+						background-size: auto 22px;
 					}
+				}
+
+				.embed {
+					background-position: left top 15px !important;
+					background-size: 40px !important;
 				}
 
 				.images {
@@ -54,14 +65,19 @@
 			}
 
 			&.tv {
-				h2 {
+				h2, .embed {
 					padding-left: 45px;
 					background: url(../img/stack-attract-bg-dark.png) no-repeat center left;
-					background-size: 32px 32px;
+					background-size: auto 28px;
 
 					@media(max-width: 340px) {
-						background-size: 25px 25px;
+						background-size: auto 25px;
 					}
+				}
+
+				.embed {
+					background-position: left top 11px !important;
+					background-size: 35px !important;
 				}
 
 				.images {					
@@ -72,26 +88,36 @@
 			}
 
 			&.jukebox {
-				h2 {
+				h2, .embed {
 					padding-right: 45px;
 					background: url(../img/stack-jukebox-bg.png) no-repeat center right;
-					background-size: 32px 32px;
+					background-size: auto 28px;
 
 					@media(max-width: 340px) {
-						background-size: 26px 26px;
+						background-size: auto 26px;
 					}
+				}
+
+				.embed {
+					background-position: left top 11px !important;
+					background-size: 32px !important;
 				}
 			}
 
 			&.operations {
-				h2 {
+				h2, .embed {
 					padding-left: 45px;
 					background: url(../img/stack-operations-bg-dark.png) no-repeat center left;
-					background-size: 32px 32px;
+					background-size: auto 28px;
 
 					@media(max-width: 340px) {
-						background-size: 26px 26px;
+						background-size: auto 26px;
 					}
+				}
+
+				.embed {
+					background-position: left top 16px !important;
+					background-size: 37px !important;
 				}
 
 				.images {
@@ -117,9 +143,12 @@
 				font-size: 42px;
 				font-family: @extrabold;
 				color: @darkgray;
-				padding: 0 20px 11px 0;
+				padding: 0 20px 11px 50px !important;
 				margin-bottom: 5px;
 				background: url(../img/dark-underline.png) no-repeat left bottom;
+				background-position: left top 7px !important;
+				background-size: 30px !important;
+				margin: 0;
 			}
 
 			h2 {
@@ -178,6 +207,10 @@
 					overflow: visible;
 				}
 
+				@media(max-width: 350px) {
+					max-height: 394px;
+				}
+
 				&.mobile, &.jukebox {
 					.images {
 						width: 140px;
@@ -201,6 +234,7 @@
 
 							@media(min-width: 1100px) {
 								max-height: 400px;
+								width: auto;
 							}
 						}
 					}
@@ -269,7 +303,7 @@
 				}
 
 				&.expand {
-					max-height: 1000px;
+					max-height: 1430px;
 				}
 
 				@media(min-width: 940px) {
@@ -284,6 +318,10 @@
 						overflow: hidden;
 						font-size: 18px;
 						font-family: @semibold;
+					}
+
+					@media(max-width: 350px) {
+						font-size: 14px;
 					}
 				}
 
