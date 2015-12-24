@@ -589,10 +589,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      alert(JSON.stringify(data));
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('.loader').fadeOut();
                     },
                     error: function(){
-                      alert("Cannot get data");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
             }
