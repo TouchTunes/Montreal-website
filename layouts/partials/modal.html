@@ -9,6 +9,7 @@
 			<form id="modal-form">
 				<p>Personal information</p>
 				<span>* indicates a required field</span>
+				<div class="loader"></div>
 
 				<input type="hidden" class="apply-for" value="" id="job" />
 				<label class="ie-placeholder" style="">First Name *</label>
@@ -29,16 +30,16 @@
 					<input class="uploadFile" placeholder="Upload resume" />
 					<div class="fileUpload">
 					    <span></span>
-					    <input type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
 					</div>
 				</div>
 
 				<div class="file-wrapper">
-					<label class="ie-placeholder" style="">Upload Coverletter</label>
-					<input class="uploadFile" placeholder="Upload Coverletter" />
+					<label class="ie-placeholder" style="">Upload Cover letter</label>
+					<input class="uploadFile" placeholder="Upload Cover letter" />
 					<div class="fileUpload">
 					    <span></span>
-					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					    <input required type="file" class="upload uploadBtn" name="cover" id="cover" />
 					</div>
 				</div>
 
@@ -55,7 +56,7 @@
 						<input class="uploadFile" placeholder="Add Attachment" />
 						<div class="fileUpload">
 						    <span></span>
-						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						    <input required type="file" class="upload uploadBtn" name="attachment" id="attachment" />
 						</div>
 					</div>
 					<input type="submit" class="button pink" id="submit-application" value="Send Application"/>

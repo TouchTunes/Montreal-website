@@ -51,34 +51,47 @@
 			position: absolute;
 			width: 2000%;
 			height: 80%;
-			background: url(../img/banner.jpg) repeat-x center left 400px;
+			background: url(../img/banner.jpg) repeat-x center left 100px;
 			background-size: auto 700px;
 			top: 100px;
-			left: 0;
+			left: 100%;
 			display: none;	
+			user-drag: none; 
+			-moz-user-select: none;
+			-webkit-user-drag: none;
 
 			@media(max-width: 1100px) {
 				width: 2000%;
 				height: 100%;
 				top: 0;
+				left: 0;
 				background-size: auto 400px;
+				
+				&.android {
+					width: 2000%;
+					height: 100%;
+					top: 0;
+					background: url(../img/banner-android.png);
+					background-repeat: repeat-x;
+					background-size: auto 90%;
+				}
 			}		
 
 			&.slide {
 				transform: translateX(-100%);
 				-webkit-transform: translateX(-100%);
 				 -ms-transform: translateX(-100%);
-	    		transition: all 330s linear;
-	    		-webkit-transition: all 330s linear;
+	    		transition: all 480s linear;
+	    		-webkit-transition: all 480s linear;
 
 	    		@media(max-width: 1100px) {
-		    		transition: all 270s linear;
-		    		-webkit-transition: all 270s linear;
+		    		transition: all 300s linear;
+		    		-webkit-transition: all 300s linear;
 	    		}
 
 	    		@media(max-width: 700px) {
-		    		transition: all 100s linear;
-		    		-webkit-transition: all 100s linear;
+		    		transition: all 150s linear;
+		    		-webkit-transition: all 150s linear;
 	    		}
 			}
 
@@ -665,6 +678,10 @@
 			@media(min-width: 768px) {
 				display: block;
 
+				&.button {
+					display: inline-block;
+				}
+
 				p {
 					font-size: 20px;
 					font-family: @regular;
@@ -679,10 +696,13 @@
 
 		.small {
 			display: block;
-			margin-top: 3px;
 
 			@media(min-width: 768px) {
 				display: none;
+			}
+
+			img {
+				margin-top: -3px;
 			}
 		}
 	}
