@@ -3,25 +3,35 @@ $(document).ready(function(){
   if($('.home-wrapper').length) {
     setTimeout(function(){
       $('.animation-placeholder').fadeIn();
-      $('.animation-placeholder').addClass('slide');
+      setTimeout(function(){
+        $('.animation-placeholder').addClass('slide');
+      }, 2000);  
     }, 1000);  
     resetAnimation();  
   }
 
-function resetAnimation(){
-  var time = 330000;
-  if($(window).width() <= 940) {
-    time = 100000;
+  function resetAnimation(){
+    var time = 480000;
+    if($(window).width() <= 940) {
+      time = 150000;
+    }
+    setTimeout(function() {
+      $('.animation-placeholder').removeClass('slide');
+      setTimeout(function(){
+       $('.animation-placeholder').addClass('slide');
+      }, 1000);
+      console.log('ble');
+      resetAnimation();
+    }, time);
   }
-  setTimeout(function() {
-    $('.animation-placeholder').removeClass('slide');
-    setTimeout(function(){
-     $('.animation-placeholder').addClass('slide');
-    }, 1000);
-    console.log('ble');
-    resetAnimation();
-  }, time);
-}
+
+  if($('.header').offset().top > 50) {
+    $('.header').addClass('scrolled');
+  }
+
+  if($('.section').length) {
+    hideMore();
+  }
 
   //validation 
   $("#contact").validate({
@@ -85,6 +95,15 @@ function resetAnimation(){
       'phone-app': {
         required: true,
         number: true
+      },
+      'resume-app': {
+        extension: "doc|docx|pdf"
+      },
+      'cover': {
+        extension: "doc|docx|pdf"
+      },
+      'attachment': {
+        extension: "doc|docx|pdf|png|jpg|jpeg"
       }
     },
 
@@ -108,13 +127,90 @@ function resetAnimation(){
       'phone-app': {
         required: "Please enter your phone",
         number: "Please enter a valid phone number"
+      },
+      'resume-app': {
+        extension: "Accepted files: doc,docx, pdf"
+      },
+      'cover': {
+        extension: "Accepted files: doc,docx, pdf"
+      },
+      'attachment': {
+       extension: "Accepted files: doc,docx, pdf, png, jpg, jpeg"
       }
     }
   });
 
 
 
-  $("#contact, #modal-form, #form").submit(function(e){
+  $("#menu").validate({
+    rules: {
+      'first-crew': {
+        required: true
+      },
+      'last-crew': {
+        required: true
+      },
+      'city-crew': {
+        required: true
+      },
+      'email-crew': {
+        required: true,
+        email: true
+      },
+      'country-crew': {
+        required: true
+      },
+      'phone-crew': {
+        required: true,
+        number: true
+      },
+      'resume': {
+        extension: "doc|docx|pdf"
+      },
+      'coverletter': {
+        extension: "doc|docx|pdf"
+      },
+      'attachment': {
+        extension: "doc|docx|pdf|png|jpg|jpeg"
+      }
+    },
+
+    messages: {
+     'first-crew': {
+          required: "Please enter your first name"
+      },
+      'last-crew': {
+          required: "Please enter your last name"
+      },
+      'city-crew': {
+        required: "Please enter the city"
+      },
+      'email-crew': {
+         required: "Please enter your email address",
+         email: "Please enter a valid email address"
+      },
+      'country-crew': {
+        required: "Please enter your country"
+      },
+      'phone-crew': {
+        required: "Please enter your phone",
+        number: "Please enter a valid phone number"
+      },
+      'resume': {
+        extension: "Accepted files: doc,docx, pdf"
+      },
+      'coverletter': {
+        extension: "Accepted files: doc,docx, pdf"
+      },
+      'attachment': {
+        extension: "Accepted files: doc,docx, pdf, png, jpg, jpeg"
+      }
+    }
+  });
+
+
+
+  $("#contact, #modal-form, #menu").submit(function(e){
       e.preventDefault();
   });
 
@@ -185,6 +281,7 @@ $(window).scroll(function () {
   var z = 50;
   var y = $('.header').offset().top;
   var scrolled = $(document).scrollTop() + 400;
+  var animated = 0;
   if (y >= z) {
     $(".header").addClass('scrolled');
   }
@@ -193,8 +290,9 @@ $(window).scroll(function () {
 	}
   if($('.staff').length){
     var animationOffset = $('.staff').offset().top;
-    if(animationOffset < scrolled) {
+    if(animationOffset < scrolled && animated == 0){
       graph();
+      animated ++;
     }
   }
    if($('.percentage').length){
@@ -208,7 +306,6 @@ $(window).scroll(function () {
 // trigger toggleMenu function
 $('.menu-button').on('click', function() {
 	toggleMenu();
-  $("#form").validate().form();
 })
 
 $('.button.apply, .close.modal').on('click', function(){
@@ -253,6 +350,9 @@ $('.home-wrapper .banner').on('click', function() {
   }
 });
 
+
+
+$(banner).swipe( { allowPageScroll:"vertical"} );
 
 //trigger small screen animation on swipe
 $(banner).swipe( {
@@ -328,7 +428,7 @@ if($('.contact-map').length){
 
 $(".cts").click(function() {
     $('html, body').animate({
-        scrollTop: $(".scroll-to").offset().top - 50
+        scrollTop: $(".scroll-to").offset().top -75
     }, 600 );
 }); 
 
@@ -460,10 +560,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      alert(JSON.stringify(data));
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('.loader').fadeOut();
                     },
                     error: function(){
-                      alert("Cannot get data");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
@@ -487,6 +588,7 @@ $('#submit-crew').on('click', function() {
           alert(obj.error);
         }
       });
+      $(this).parent().find('.loader').fadeIn();
     }
     
 });
@@ -514,12 +616,14 @@ $('#submit-contact').on('click', function() {
         data: '{ "type": "contact", "first": "'+firstName+'", "last": "'+lastName+'", "email": "'+email+'", "country": "'+country+'", "message": "'+message+'"}',
         contentType: 'application/json',
         success: function (data) {
-          alert(JSON.stringify(data));
+          $('#contact').append("<div class='ajax-success'>Your message has been successfully sent</div>");
+          $('.loader').fadeOut();
         },
         error: function(){
-          alert("Cannot get data");
+          $('#contact').append("<div class='ajax-error'>Errors while sending the message</div>");
         }
       });
+      $(this).parent().find('.loader').fadeIn();
     }
 });
 
@@ -583,10 +687,11 @@ $('#submit-application').on('click', function() {
                     data: '{ "type": "application", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'", "job": "'+job+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      alert(JSON.stringify(data));
+                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('.loader').fadeOut();
                     },
                     error: function(){
-                      alert("Cannot get data");
+                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
@@ -610,6 +715,7 @@ $('#submit-application').on('click', function() {
           alert(obj.error);
         }
       });
+      $(this).parent().siblings('.loader').fadeIn();
     }
     
 });
@@ -685,3 +791,18 @@ preloadPictures( preloadingImages, function(){
 // end of preload
 
 $(".member .img").mouseover(function() { $('.img').css('opacity', '0.5'); $(this).css('opacity', '1');}).mouseout(function() { $('.img').css('opacity', '1'); });
+
+var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+if(isAndroid) {
+  $('.animation-placeholder').addClass('android');
+}
+
+function hideMore() {
+   $( ".section" ).each(function() {
+    if($( this ).height() < 360) {
+     $(this).next('.more').hide();
+    $(this).siblings('.additional').children('.more').hide();
+    };
+  });
+}
