@@ -1,6 +1,12 @@
 .technology-wrapper {
 	.banner {
 		padding-bottom: 120px;
+		background: url(../img/technologies-banner.png) no-repeat center bottom;
+		background-size: initial;
+
+		@media(max-width: 450px) {
+			background: white;
+		}
 	
 		.button {
 			margin-top: 30px;
@@ -93,6 +99,8 @@
 
 				@media(min-width: 940px) {
 					padding: 0;
+					position: relative;
+					overflow: visible;
 				}
 
 				p {
@@ -119,19 +127,24 @@
 					padding-top: 9px;	
 
 					@media(min-width: 940px) {
+						position: absolute;
+						right: 0;
+						top: -30px;
 						float: right;
 						width: 140px;
 						padding: 0;
+						text-align: center;
 					}
 
 					img {
-						width: 90%;
-						max-height: 80px;
+						width: auto;
 						height: auto;
+						max-height: 90px;
+						max-width: 100%;
 						margin-bottom: 30px;
 
 						@media(min-width: 940px) {
-							float: left;
+							display: inline-block;
 						}
 					}
 				}
