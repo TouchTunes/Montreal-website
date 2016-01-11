@@ -23,6 +23,10 @@
 			padding: 50px 0;
 			text-align: center;
 
+			@media(min-width: 1100px) {
+				padding: 100px 0 50px 0;
+			}
+
 			&:nth-child(even) {
 				background-color: white;
 			}
@@ -225,6 +229,8 @@
 							float: right;
 							width: auto;
 							max-width: 35%;
+							height: 210px;
+							overflow: visible;
 						}
 
 						img {
@@ -281,6 +287,10 @@
 						img {
 							max-width: 200px;
 						}
+					}
+
+					@media(min-width: 768px) {
+						overflow: visible;
 					}
 				}
 
