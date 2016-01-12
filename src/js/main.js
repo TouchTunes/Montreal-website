@@ -12,7 +12,7 @@ $(document).ready(function(){
   }
 
   function resetAnimation(){
-    var time = 480000;
+    var time = 300000;
     if($(window).width() <= 940) {
       time = 150000;
     }
