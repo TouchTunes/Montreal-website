@@ -45,6 +45,18 @@
 			z-index: 0;
 		}
 
+		.ld {
+
+			background: white url(../img/rolling.gif) no-repeat center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			height: 80px;
+			width: 80px;
+			background-size: cover;
+		}
+
 
 
 		.animation-placeholder {
@@ -81,12 +93,12 @@
 				transform: translateX(-100%);
 				-webkit-transform: translateX(-100%);
 				 -ms-transform: translateX(-100%);
-	    		transition: all 480s linear;
-	    		-webkit-transition: all 480s linear;
+	    		transition: all 300s linear;
+	    		-webkit-transition: all 300s linear;
 
 	    		@media(max-width: 1100px) {
-		    		transition: all 300s linear;
-		    		-webkit-transition: all 300s linear;
+		    		transition: all 200s linear;
+		    		-webkit-transition: all 200s linear;
 	    		}
 
 	    		@media(max-width: 700px) {
@@ -363,8 +375,9 @@
 		.images {
 			overflow: hidden;
 			height: 130px;
-			background: url(../img/technology-images-placeholder.png) no-repeat center bottom;
+			background: url(../img/technology-big-screen.png) no-repeat center bottom;
 			background-size: contain;
+		    margin-top: 30px;
 
 			@media(min-width: 768px) {
 				background-size: 80%;
@@ -376,6 +389,7 @@
 				width: 50%;
 				height: 130px;
 				background: none;
+				margin-top: 0;
 			}
 		}
 

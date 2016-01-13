@@ -5,13 +5,14 @@ $(document).ready(function(){
       $('.animation-placeholder').fadeIn();
       setTimeout(function(){
         $('.animation-placeholder').addClass('slide');
+        $('.ld').hide();
       }, 2000);  
     }, 1000);  
     resetAnimation();  
   }
 
   function resetAnimation(){
-    var time = 480000;
+    var time = 300000;
     if($(window).width() <= 940) {
       time = 150000;
     }
@@ -81,7 +82,8 @@ $(document).ready(function(){
       },
       'email-app': {
         required: true,
-        email: true
+        email: true,
+        minlength: 5
       },
       'country-app': {
         required: true
@@ -149,7 +151,8 @@ $(document).ready(function(){
       },
       'email-crew': {
         required: true,
-        email: true
+        email: true,
+        minlength: 5
       },
       'country-crew': {
         required: true
@@ -209,12 +212,13 @@ $(document).ready(function(){
   });
 
   /*$('#contact').validate().form();*/
-  $("#modal-form").validate().form();
-
+  $("#menu").validate().form();
   setTimeout(function() {
     $('label[class^="error"]:not(.valid)').remove();
   }, 500);
  
+
+  $("#modal-form").validate().form();
 
   // fix for upload button look
   if($('.uploadBtn').length){
@@ -392,11 +396,11 @@ if($('.counter .count').length) {
 function contactMap() {
   var mapCanvas = document.getElementById('contact-map');
 
-  var myLatLng = {lat: 45.498752, lng: -73.576684};
+  var myLatLng = {lat: 45.509258, lng: -73.669293};
 
   var mapOptions = {
     center: myLatLng,
-    zoom: 15,
+    zoom: 17,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
     draggable: false,
@@ -709,7 +713,7 @@ $('#submit-contact').on('click', function() {
 
 
 $('#submit-application').on('click', function() {
-  if($(this).parent().find('input.error').length) {
+  if($(this).parent().parent().find('input.error').length) {
     console.log('error');
   } else {
      
@@ -963,10 +967,15 @@ var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
 if(isAndroid) {
   $('.animation-placeholder').addClass('android');
 }
+var scrnSize = 410;
+
+if($(window).width() < 350) {
+  scrnSize = 394;
+}
 
 function hideMore() {
    $( ".section" ).each(function() {
-    if($( this ).height() < 360) {
+    if($( this ).outerHeight() < scrnSize) {
      $(this).next('.more').hide();
     $(this).siblings('.additional').children('.more').hide();
     };
