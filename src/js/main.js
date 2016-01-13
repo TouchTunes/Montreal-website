@@ -567,11 +567,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "'+attachmentUrl+'", "job": "'+job+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
                       $('.loader').fadeOut();
                     },
                     error: function(){
-                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
@@ -592,11 +592,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "'+coverUrl+'", "attachmentUrl": "", "job": "'+job+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
                       $('.loader').fadeOut();
                     },
                     error: function(){
-                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
@@ -630,11 +630,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "/", "attachmentUrl": "'+attachmentUrl+'", "job": "'+job+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
                       $('.loader').fadeOut();
                     },
                     error: function(){
-                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
@@ -655,11 +655,11 @@ $('#submit-crew').on('click', function() {
                     data: '{ "type": "crew", "first": "'+firstName+'", "last": "'+lastName+'", "city": "'+city+'", "country": "'+country+'", "email": "'+email+'",  "phone": "'+phone+'", "facebook": "'+facebook+'", "linkedin": "'+linkedin+'", "resumeUrl": "'+resumeUrl+'",  "coverUrl": "/", "attachmentUrl": "/", "job": "'+job+'" }',
                     contentType: 'application/json',
                     success: function (data) {
-                      $('#modal-form').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
                       $('.loader').fadeOut();
                     },
                     error: function(){
-                      $('#modal-form').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                      $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                     }
                 });
 
