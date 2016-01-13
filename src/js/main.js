@@ -673,7 +673,7 @@ $('#submit-crew').on('click', function() {
           alert(obj.error);
         }
       });
-      $(this).parent().siblings('.loader').fadeIn();
+      $(this).parent().find('.loader').fadeIn();
     }
     
 });
