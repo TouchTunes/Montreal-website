@@ -47,9 +47,9 @@
 
 		img.single-member {
 			position: absolute;
-			left: 50%;
-			top: -45%;
-			max-height: 170%;
+			left: 60%;
+			top: -15%;
+			max-height: 120%;
 			width: auto;
 			margin-left: -125px;
 
@@ -210,6 +210,10 @@
 			padding: 0;
 			text-align: left;
 			z-index: 2;
+
+			&.single {
+				width: 550px;
+			}
 		}
 
 		.learn-more {
@@ -270,6 +274,10 @@
 			@media(min-width: 450px) {
 				width: 175px;
 				height: 40px;
+			}
+
+			@media(min-width: 700px) {
+				height: 70px;
 			}
 
 			@media(min-width: 940px) {
