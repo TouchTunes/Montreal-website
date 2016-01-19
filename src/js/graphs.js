@@ -2,21 +2,20 @@
   'use strict';
 
   var Pizza = {
-    version : '0.0.1',
+    version: '0.0.1',
 
-    settings : {
+    settings: {
       donut: false,
-      donut_inner_ratio: 0.4,   // between 0 and 1
-      percent_offset: 35,       // relative to radius
+      donut_inner_ratio: 0.4, // between 0 and 1
+      percent_offset: 35, // relative to radius
       stroke_color: '#333',
       stroke_width: 0,
-      show_percent: true,       // show or hide the percentage on the chart.
+      show_percent: true, // show or hide the percentage on the chart.
       animation_speed: 500,
-      animation_type: 'elastic' // options: backin, backout, bounce, easein, 
-                                //          easeinout, easeout, linear
+      animation_type: 'elastic' // options: backin, backout, bounce, easein
     },
 
-    init : function (scope, options) {
+    init: function (scope, options) {
       var self = this;
       this.scope = scope || document.body;
 
@@ -35,7 +34,7 @@
       this.events();
     },
 
-    events : function () {
+    events: function () {
       var self = this;
 
       $(window).off('.pizza').on('resize.pizza', self.throttle(function () {
@@ -44,10 +43,10 @@
 
       $(this.scope).off('.pizza').on('mouseenter.pizaa mouseleave.pizza touchstart.pizza', '[data-pie-id] li', function (e) {
         var parent = $(this).parent(),
-            path = Snap($('#' + parent.data('pie-id') + ' path[data-id="s' + $(this).index() + '"]')[0]),
-            text = Snap($(path.node).parent()
-              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]),
-            settings = $(this).parent().data('settings');
+          path = Snap($('#' + parent.data('pie-id') + ' path[data-id="s' + $(this).index() + '"]')[0]),
+          text = Snap($(path.node).parent()
+            .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]),
+          settings = $(this).parent().data('settings');
 
         if (/start/i.test(e.type)) {
           $(path.node).siblings('path').each(function () {
@@ -83,10 +82,11 @@
       });
     },
 
-    build : function(legends, options) {
+    build: function (legends, options) {
       var self = this;
 
-      var legend = legends, graph;
+      var legend = legends,
+        graph;
 
       legend.data('settings', $.extend({}, self.settings, options, legend.data('options')));
       self.data(legend, options || {});
@@ -94,22 +94,22 @@
       return self.update_DOM(self.pie(legend));
     },
 
-    data : function (legend, options) {
+    data: function (legend, options) {
       var data = [],
-          count = 0;
+        count = 0;
 
       $('li', legend).each(function () {
         var segment = $(this);
 
         if (options.data) {
           data.push({
-            value: options.data[segment.index()], 
+            value: options.data[segment.index()],
             color: segment.css('color'),
             segment: segment
           });
         } else {
           data.push({
-            value: segment.data('value'), 
+            value: segment.data('value'),
             color: segment.css('color'),
             segment: segment
           });
@@ -119,23 +119,23 @@
       return legend.data('graph-data', data);
     },
 
-    update_DOM : function (parts) {
+    update_DOM: function (parts) {
       var legend = parts[0],
-          graph = parts[1];
+        graph = parts[1];
 
       return $(this.identifier(legend)).html(graph);
     },
 
-    pie : function (legend) {
-      // pie chart concept from JavaScript the 
+    pie: function (legend) {
+      // pie chart concept from JavaScript the
       // Definitive Guide 6th edition by David Flanagan
       var settings = legend.data('settings'),
-          svg = this.svg(legend, settings),
-          data = legend.data('graph-data'),
-          total = 0,
-          angles = [],
-          start_angle = 0,
-          base = $(this.identifier(legend)).width() - 4;
+        svg = this.svg(legend, settings),
+        data = legend.data('graph-data'),
+        total = 0,
+        angles = [],
+        start_angle = 0,
+        base = $(this.identifier(legend)).width() - 4;
 
       for (var i = 0; i < data.length; i++) {
         total += data[i].value;
@@ -148,8 +148,8 @@
       for (var i = 0; i < data.length; i++) {
         var end_angle = start_angle + angles[i];
         var cx = (base / 2),
-            cy = (base / 2),
-            r = ((base / 2) * 0.85);
+          cy = (base / 2),
+          r = ((base / 2) * 0.85);
 
         if (!settings.donut) {
           // Compute the two points where our wedge intersects the circle
@@ -166,12 +166,12 @@
           if (end_angle - start_angle > Math.PI) big = 1;
 
           // This string holds the path details
-          var d = "M" + cx + "," + cy +  // Start at circle center
-              " L" + x1 + "," + y1 +     // Draw line to (x1,y1)
-              " A" + r + "," + r +       // Draw an arc of radius r
-              " 0 " + big + " 1 " +      // Arc details...
-              x2 + "," + y2 +            // Arc goes to to (x2,y2)
-              " Z";                      // Close path back to (cx,cy)
+          var d = 'M' + cx + ',' + cy + // Start at circle center
+            ' L' + x1 + ',' + y1 + // Draw line to (x1,y1)
+            ' A' + r + ',' + r + // Draw an arc of radius r
+            ' 0 ' + big + ' 1 ' + // Arc details...
+            x2 + ',' + y2 + // Arc goes to to (x2,y2)
+            ' Z'; // Close path back to (cx,cy)
         }
 
         var existing_path = $('path[data-id="s' + i + '"]', svg.node);
@@ -195,7 +195,7 @@
           });
         } else {
           var text = path.paper.text(cx + (r + settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2)),
-               cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2)), Math.ceil(percent) + '%');
+            cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2)), Math.ceil(percent) + '%');
         }
 
         var left_offset = text.getBBox().width / 2;
@@ -211,12 +211,17 @@
 
         if (settings.donut) {
           this.annular_sector(path.node, {
-            centerX:cx, centerY:cy,
-            startDegrees:start_angle, endDegrees:end_angle,
-            innerRadius: (r * settings.donut_inner_ratio), outerRadius:r
+            centerX: cx,
+            centerY: cy,
+            startDegrees: start_angle,
+            endDegrees: end_angle,
+            innerRadius: (r * settings.donut_inner_ratio),
+            outerRadius: r
           });
         } else {
-          path.attr({d:d});
+          path.attr({
+            d: d
+          });
         }
 
         path.attr({
@@ -236,13 +241,13 @@
       return [legend, svg.node];
     },
 
-    animate : function (el, cx, cy, settings) {
+    animate: function (el, cx, cy, settings) {
       var self = this;
 
       el.hover(function (e) {
         var path = Snap(e.target),
-            text = Snap($(path.node).parent()
-              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
+          text = Snap($(path.node).parent()
+            .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
 
         path.animate({
           transform: 's1.05 1.05 ' + cx + ' ' + cy
@@ -266,8 +271,8 @@
         }
       }, function (e) {
         var path = Snap(e.target),
-            text = Snap($(path.node).parent()
-              .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
+          text = Snap($(path.node).parent()
+            .find('text[data-id="' + path.node.getAttribute('data-id') + '"]')[0]);
 
         path.animate({
           transform: 's1 1 ' + cx + ' ' + cy
@@ -279,11 +284,11 @@
       });
     },
 
-    svg : function (legend, settings) {
+    svg: function (legend, settings) {
       var container = $(this.identifier(legend)),
-          svg = $('svg', container),
-          width = container.width(),
-          height = width;
+        svg = $('svg', container),
+        width = container.width(),
+        height = width;
 
       if (svg.length > 0) {
         svg = Snap(svg[0]);
@@ -293,69 +298,74 @@
 
       svg.node.setAttribute('width', width + settings.percent_offset);
       svg.node.setAttribute('height', height + settings.percent_offset);
-      svg.node.setAttribute('viewBox', '-' + settings.percent_offset + ' -' + settings.percent_offset + ' ' + 
-        (width + (settings.percent_offset * 1.5)) + ' ' + 
+      svg.node.setAttribute('viewBox', '-' + settings.percent_offset + ' -' + settings.percent_offset + ' ' +
+        (width + (settings.percent_offset * 1.5)) + ' ' +
         (height + (settings.percent_offset * 1.5)));
 
       return svg;
     },
 
     // http://stackoverflow.com/questions/11479185/svg-donut-slice-as-path-element-annular-sector
-    annular_sector : function (path, options) {
+    annular_sector: function (path, options) {
       var opts = optionsWithDefaults(options);
 
       var p = [ // points
-        [opts.cx + opts.r2*Math.sin(opts.startRadians),
-         opts.cy - opts.r2*Math.cos(opts.startRadians)],
-        [opts.cx + opts.r2*Math.sin(opts.closeRadians),
-         opts.cy - opts.r2*Math.cos(opts.closeRadians)],
-        [opts.cx + opts.r1*Math.sin(opts.closeRadians),
-         opts.cy - opts.r1*Math.cos(opts.closeRadians)],
-        [opts.cx + opts.r1*Math.sin(opts.startRadians),
-         opts.cy - opts.r1*Math.cos(opts.startRadians)],
+        [opts.cx + opts.r2 * Math.sin(opts.startRadians),
+          opts.cy - opts.r2 * Math.cos(opts.startRadians)
+        ],
+        [opts.cx + opts.r2 * Math.sin(opts.closeRadians),
+          opts.cy - opts.r2 * Math.cos(opts.closeRadians)
+        ],
+        [opts.cx + opts.r1 * Math.sin(opts.closeRadians),
+          opts.cy - opts.r1 * Math.cos(opts.closeRadians)
+        ],
+        [opts.cx + opts.r1 * Math.sin(opts.startRadians),
+          opts.cy - opts.r1 * Math.cos(opts.startRadians)
+        ]
       ];
 
       var angleDiff = opts.closeRadians - opts.startRadians;
-      var largeArc = (angleDiff % (Math.PI*2)) > Math.PI ? 1 : 0;
+      var largeArc = (angleDiff % (Math.PI * 2)) > Math.PI ? 1 : 0;
       var cmds = [];
-      cmds.push("M"+p[0].join());                                // Move to P0
-      cmds.push("A"+[opts.r2,opts.r2,0,largeArc,1,p[1]].join()); // Arc to  P1
-      cmds.push("L"+p[2].join());                                // Line to P2
-      cmds.push("A"+[opts.r1,opts.r1,0,largeArc,0,p[3]].join()); // Arc to  P3
-      cmds.push("z");                                // Close path (Line to P0)
-      path.setAttribute('d',cmds.join(' '));
+      cmds.push('M' + p[0].join()); // Move to P0
+      cmds.push('A' + [opts.r2, opts.r2, 0, largeArc, 1, p[1]].join()); // Arc to  P1
+      cmds.push('L' + p[2].join()); // Line to P2
+      cmds.push('A' + [opts.r1, opts.r1, 0, largeArc, 0, p[3]].join()); // Arc to  P3
+      cmds.push('z'); // Close path (Line to P0)
+      path.setAttribute('d', cmds.join(' '));
 
-      function optionsWithDefaults(o){
+      function optionsWithDefaults(o) {
         // Create a new object so that we don't mutate the original
         var o2 = {
-          cx           : o.centerX || 0,
-          cy           : o.centerY || 0,
-          startRadians : (o.startDegrees || 0),
-          closeRadians : (o.endDegrees   || 0),
+          cx: o.centerX || 0,
+          cy: o.centerY || 0,
+          startRadians: (o.startDegrees || 0),
+          closeRadians: (o.endDegrees || 0)
         };
 
-        var t = o.thickness!==undefined ? o.thickness : 100;
-        if (o.innerRadius!==undefined)      o2.r1 = o.innerRadius;
-        else if (o.outerRadius!==undefined) o2.r1 = o.outerRadius - t;
-        else                                o2.r1 = 200           - t;
-        if (o.outerRadius!==undefined)      o2.r2 = o.outerRadius;
-        else                                o2.r2 = o2.r1         + t;
+        var t = o.thickness !== undefined ? o.thickness : 100;
+        if (o.innerRadius !== undefined) o2.r1 = o.innerRadius;
+        else if (o.outerRadius !== undefined) o2.r1 = o.outerRadius - t;
+        else o2.r1 = 200 - t;
+        if (o.outerRadius !== undefined) o2.r2 = o.outerRadius;
+        else o2.r2 = o2.r1 + t;
 
-        if (o2.r1<0) o2.r1 = 0;
-        if (o2.r2<0) o2.r2 = 0;
+        if (o2.r1 < 0) o2.r1 = 0;
+        if (o2.r2 < 0) o2.r2 = 0;
 
         return o2;
       }
     },
 
-    identifier : function (legend) {
+    identifier: function (legend) {
       return '#' + legend.data('pie-id');
     },
 
-    throttle : function(fun, delay) {
+    throttle: function (fun, delay) {
       var timer = null;
       return function () {
-        var context = this, args = arguments;
+        var context = this,
+          args = arguments;
         clearTimeout(timer);
         timer = setTimeout(function () {
           fun.apply(context, args);
@@ -371,74 +381,74 @@
 // Function that creates a graph for the staff percentage
 function graph() {
 
-  var Graph = function(index, element, canvas) {
+  var Graph = function (index, element, canvas) {
     this.reference = canvas;
     this.$element = $(canvas);
-    
+
     this.circle = $(element);
     this.index = index;
-    
+
     this.canvasSize = null;
     this.centre = null;
     this.radius = null;
     this.startY = null;
-    
+
     this.init();
   };
-  
+
   // Alias Prototype
   var proto = Graph.prototype;
-  
+
   /**
    *
    *
    */
-  proto.init = function() {
+  proto.init = function () {
     this.createChildren()
-        .enable();
+      .enable();
   };
-  
+
   /**
    *
    *
    */
-  proto.createChildren = function() {
+  proto.createChildren = function () {
     this.$ring = $('.js-graphItem');
     this.canvas = Snap(this.reference);
-    
-    
-    
+
+
+
     return this;
   };
-  
+
   /**
    *
    *
    */
-  proto.enable = function() {
+  proto.enable = function () {
     this.getValue();
   };
-  
+
   /**
    *
    *
    */
-  proto.setValues = function() {  
+  proto.setValues = function () {
     this.canvasSize = this.$element.height();
     this.centre = this.canvasSize / 2;
     this.radius = (this.canvasSize * 0.8 / 2) - (15 * this.index);
     this.startY = this.centre - this.radius;
-    
+
     return this;
   };
-  
-  
+
+
   /**
    *
    *
    */
-  proto.getValue = function() {
-    this.setValues(); 
+  proto.getValue = function () {
+    this.setValues();
     var val = this.circle.attr('data-val');
     val = parseInt(val, 10);
     var percent = val / 100;
@@ -446,24 +456,24 @@ function graph() {
 
     this.animate(percent, color);
   };
-  
+
   /**
    *
    *
    */
-  proto.animate = function(percent, color) {
-    var self = this;    
+  proto.animate = function (percent, color) {
+    var self = this;
 
 
-    var path = "";
+    var path = '';
     var arc = this.canvas.path(path);
 
-    var endpoint = percent*360;
-    
-    Snap.animate(0, endpoint, function(val){
+    var endpoint = percent * 360;
+
+    Snap.animate(0, endpoint, function (val) {
 
       arc.remove();
-        
+
       path = self.formPath(val);
 
       arc = self.canvas.path(path);
@@ -472,33 +482,33 @@ function graph() {
         fill: 'none',
         strokeWidth: 15
       });
-      
-      
-      
-    }, 2000, mina.easeinout); 
-    
+
+
+
+    }, 2000, mina.easeinout);
+
   };
- 
-  
-  proto.formPath = function(val) {
+
+
+  proto.formPath = function (val) {
     var d = val;
     var dr = d - 90;
-    var radians = Math.PI*(dr)/180;
+    var radians = Math.PI * (dr) / 180;
     var endx = this.centre + this.radius * Math.cos(radians);
     var endy = this.centre + this.radius * Math.sin(radians);
-    var largeArc = d >180 ? 1 : 0;  
-    
+    var largeArc = d > 180 ? 1 : 0;
+
     if (endx === 99.99999999999999) {
-      var path = "M"+ this.centre + "," + this.startY + " A" + this.radius + "," + this.radius +" 0 "+largeArc+",1 99.99999," + endy + ' Z';
+      var path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 99.99999,' + endy + ' Z';
     } else {
-      var path = "M"+ this.centre + "," + this.startY + " A" + this.radius + "," + this.radius +" 0 "+largeArc+",1 " + endx + "," + endy;
+      var path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 ' + endx + ',' + endy;
     }
     return path;
   };
-  
-  
-  $('.js-graphItem').each(function(index, element){
+
+
+  $('.js-graphItem').each(function (index, element) {
     this.text = new Graph(index, element, '#svg');
   });
-  
+
 }
