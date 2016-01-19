@@ -18,6 +18,7 @@
     "space-return-throw-case":  2
   },
   "globals": {
-    "$": true
+    "$": true,
+    "jQuery": true
   }
 }
