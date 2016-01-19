@@ -8,6 +8,7 @@
   },
   "scripts": {
     "start": "node build.js",
+    "lint": "eslint src/js/*.js; exit 0;",
     "test": "echo \"Error: no test specified :(\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "eslint": "^1.10.3",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.0",
