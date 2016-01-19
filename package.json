@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node build.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified :(\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -18,11 +18,10 @@
     "touchtunes",
     "montreal"
   ],
-  "author": "Slobodan Stojanovic <slobodan@cloudhorizon.com> (http://slobodan.me/)",
+  "author": "Cloud Horizon <info@cloudhorizon.com> (http://cloudhorizon.com/)",
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "gulpsmith": "^0.5.5",
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
     "metalsmith-browser-sync": "^1.1.0",
