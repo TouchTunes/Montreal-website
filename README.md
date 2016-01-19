@@ -36,11 +36,10 @@ TBA
     │   └── vendor    // All vendor JS libraries
     ├── members       // All employees for employee landing pages
     ├── posts         // All pages (home, about, etc.)
-    ├── styles        // Less and fonts
-    │   ├── fonts     // All fonts for font-face
-    │   ├── partials  // Less partials
-    │   └── vendor    // 3rd party CSS libraries
-    └── tech          // All technologies listed on technology page
+    └── styles        // Less and fonts
+        ├── fonts     // All fonts for font-face
+        ├── partials  // Less partials
+        └── vendor    // 3rd party CSS libraries
 ```
 
 ## Commit style
