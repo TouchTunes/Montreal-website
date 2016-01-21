@@ -549,14 +549,14 @@ $('#submit-crew').on('click', function () {
                 '{"type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
                 function(data) {
                   $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                              $('.loader').fadeOut();
+                  $('.loader').fadeOut();
                 }, function() {
                   $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
                 }, true
               );
             }, function(data) {
               var obj = $.parseJSON(data);
-                        alert(obj.error);
+              alert(obj.error);
             });
           } else {
             doAjaxCall(
@@ -564,7 +564,7 @@ $('#submit-crew').on('click', function () {
               '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }', 
               function(data) {
                 $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                          $('.loader').fadeOut();
+                $('.loader').fadeOut();
               }, function() {
                 $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
               }, true
@@ -572,7 +572,7 @@ $('#submit-crew').on('click', function () {
           }
         }, function(data) {
           var obj = $.parseJSON(data);
-                alert(obj.error);
+          alert(obj.error);
         });
       } else {
         if (serverUrlAttachment != '') {
@@ -583,14 +583,14 @@ $('#submit-crew').on('click', function () {
               '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
               function(data) {
                 $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                          $('.loader').fadeOut();
+                $('.loader').fadeOut();
               }, function() {
                 $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
               }, true
             );
           }, function(data) {
             var obj = $.parseJSON(data);
-                    alert(obj.error);
+            alert(obj.error);
           });
         } else {
           doAjaxCall(
@@ -598,7 +598,7 @@ $('#submit-crew').on('click', function () {
             '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }', 
             function(data) {
               $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                      $('.loader').fadeOut();
+              $('.loader').fadeOut();
             }, function() {
               $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
             }, true
