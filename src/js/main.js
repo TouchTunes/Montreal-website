@@ -1,23 +1,23 @@
 function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
   var ajaxData = {
-        type: 'POST',
-        headers: {
-          'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-          'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-        },
-        url: url,
-        data: data,
-        processData: false,
-        contentType: false,
-        success: successCallback,
-        error: errorCallback
-    }
-    if (isJson) {
-      ajaxData.contentType = 'application/json';
-      ajaxData.dataType = 'json';
-    }
+    type: 'POST',
+    headers: {
+      'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
+      'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
+    },
+    url: url,
+    data: data,
+    processData: false,
+    contentType: false,
+    success: successCallback,
+    error: errorCallback
+  }
+  if (isJson) {
+    ajaxData.contentType = 'application/json';
+    ajaxData.dataType = 'json';
+  }
 
-    $.ajax(ajaxData)
+  $.ajax(ajaxData);
 }
 
 $(document).ready(function() {
@@ -256,7 +256,7 @@ $(document).ready(function() {
   }
 
   // ie9 fix for textarea placeholder
-  $('textarea').keyup(function() {
+  $('textarea').on('keyup', function() {
     $('textarea').prev('.ie-placeholder').hide();
     if ($('textarea').val() == '') {
       if ($('html').hasClass('no-csstransitions')) {
@@ -456,32 +456,32 @@ var fileCover;
 var fileAttachment;
 var fileResumeApp;
 
-$('#resume-crew').bind('change', function(e) {
+$('#resume-crew').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileResume = files[0];
 });
 
-$('#resume-app').bind('change', function(e) {
+$('#resume-app').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileResume = files[0];
 });
 
-$('#cover').bind('change', function(e) {
+$('#cover').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileCover = files[0];
 });
 
-$('#cover-crew').bind('change', function(e) {
+$('#cover-crew').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileCover = files[0];
 });
 
-$('#attachment').bind('change', function(e) {
+$('#attachment').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileAttachment = files[0];
 });
 
-$('#attachment-crew').bind('change', function(e) {
+$('#attachment-crew').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
   fileAttachment = files[0];
 });
@@ -532,9 +532,9 @@ $('#submit-crew').on('click', function () {
             doAjaxCall(serverUrlAttachment, fileAttachment, function(data) {
               attachmentUrl = data.url;
               doAjaxCall(
-                'https://api.parse.com/1/functions/mail', 
-                '{"type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
-                function(data) {
+                'https://api.parse.com/1/functions/mail',
+                '{"type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
+                function() {
                   $('#menu').append('<div class="ajax-success">Your application has been successfully submitted</div>');
                   $('.loader').fadeOut();
                 }, function() {
@@ -547,9 +547,9 @@ $('#submit-crew').on('click', function () {
             });
           } else {
             doAjaxCall(
-              'https://api.parse.com/1/functions/mail', 
-              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }', 
-              function(data) {
+              'https://api.parse.com/1/functions/mail',
+              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }',
+              function() {
                 $('#menu').append('<div class="ajax-success">Your application has been successfully submitted</div>');
                 $('.loader').fadeOut();
               }, function() {
@@ -566,9 +566,9 @@ $('#submit-crew').on('click', function () {
           doAjaxCall(serverUrlAttachment, fileAttachment, function(data) {
             attachmentUrl = data.url;
             doAjaxCall(
-              'https://api.parse.com/1/functions/mail', 
-              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
-              function(data) {
+              'https://api.parse.com/1/functions/mail',
+              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
+              function() {
                 $('#menu').append('<div class="ajax-success">Your application has been successfully submitted</div>');
                 $('.loader').fadeOut();
               }, function() {
@@ -581,9 +581,9 @@ $('#submit-crew').on('click', function () {
           });
         } else {
           doAjaxCall(
-            'https://api.parse.com/1/functions/mail', 
-            '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }', 
-            function(data) {
+            'https://api.parse.com/1/functions/mail',
+            '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }',
+            function() {
               $('#menu').append('<div class="ajax-success">Your application has been successfully submitted</div>');
               $('.loader').fadeOut();
             }, function() {
@@ -613,15 +613,15 @@ $('#submit-contact').on('click', function () {
     var message = $('#message').val();
 
     doAjaxCall(
-      'https://api.parse.com/1/functions/mail', 
-      '{ "type": "contact", "first": "' + firstName + '", "last": "' + lastName + '", "email": "' + email + '", "message": "' + message + '"}', 
-      function(data) {
+      'https://api.parse.com/1/functions/mail',
+      '{ "type": "contact", "first": "' + firstName + '", "last": "' + lastName + '", "email": "' + email + '", "message": "' + message + '"}',
+      function() {
         $('#contact').append('<div class="ajax-success">Your message has been successfully sent</div>');
         $('.loader').fadeOut();
-      }, 
+      },
       function() {
         $('#contact').append('<div class="ajax-error">Errors while sending the message</div>');
-      }, 
+      },
       true
     );
     $(this).parent().find('.loader').fadeIn();
@@ -668,24 +668,24 @@ $('#submit-application').on('click', function () {
               doAjaxCall(
                 'https://api.parse.com/1/functions/mail',
                 '{ "type": "application", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
-                function(data) {
+                function() {
                   $('#modal-form').append('<div class="ajax-success">Your application has been successfully submitted</div>');
-                              $('.loader').fadeOut();
+                  $('.loader').fadeOut();
                 }, function() {
                   $('#modal-form').append('<div class="ajax-error">Errors while submitting the application</div>');
                 }, true
               );
             }, function(data) {
               var obj = $.parseJSON(data);
-                      alert(obj.error);
+              alert(obj.error);
             });
           } else {
             doAjaxCall(
               'https://api.parse.com/1/functions/mail',
               '{ "type": "application", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }',
-              function(data) {
+              function() {
                 $('#modal-form').append('<div class="ajax-success">Your application has been successfully submitted</div>');
-                          $('.loader').fadeOut();
+                $('.loader').fadeOut();
               }, function() {
                 $('#modal-form').append('<div class="ajax-error">Errors while submitting the application</div>');
               }, true
@@ -693,7 +693,7 @@ $('#submit-application').on('click', function () {
           }
         }, function(data) {
           var obj = $.parseJSON(data);
-                alert(obj.error);
+          alert(obj.error);
         });
       } else {
         if (serverUrlAttachment != '') {
@@ -702,24 +702,24 @@ $('#submit-application').on('click', function () {
             doAjaxCall(
               'https://api.parse.com/1/functions/mail',
               '{ "type": "application", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
-              function(data) {
+              function() {
                 $('#modal-form').append('<div class="ajax-success">Your application has been successfully submitted</div>');
-                          $('.loader').fadeOut();
+                $('.loader').fadeOut();
               }, function() {
                 $('#modal-form').append('<div class="ajax-error">Errors while submitting the application</div>');
               }, true
             );
           }, function(data) {
             var obj = $.parseJSON(data);
-                    alert(obj.error);
+            alert(obj.error);
           });
         } else {
           doAjaxCall(
             'https://api.parse.com/1/functions/mail',
             '{ "type": "application", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }',
-            function(data) {
+            function() {
               $('#modal-form').append('<div class="ajax-success">Your application has been successfully submitted</div>');
-                      $('.loader').fadeOut();
+              $('.loader').fadeOut();
             }, function() {
               $('#modal-form').append('<div class="ajax-error">Errors while submitting the application</div>');
             }, true
@@ -728,18 +728,18 @@ $('#submit-application').on('click', function () {
       }
     }, function(data) {
       var obj = $.parseJSON(data);
-        alert(obj.error);
+      alert(obj.error);
     });
     $(this).parent().siblings('.loader').fadeIn();
   }
 });
 
 
-$(window).load(function() {
+$(window).on('load', function() {
   if ($('.technology-wrapper').length) {
     Pizza.init();
   }
-})
+});
 
 $('.button.apply').on('click', function() {
   var data = $(this).attr('data-title');
@@ -747,7 +747,12 @@ $('.button.apply').on('click', function() {
   $('.job-modal .apply-for').val(data);
 });
 
-$('.member .img').mouseover(function() {$('.img').css('opacity', '0.5'); $(this).css('opacity', '1');}).mouseout(function() {$('.img').css('opacity', '1');});
+$('.member .img').on('mouseover', function() {
+  $('.img').css('opacity', '0.5');
+  $(this).css('opacity', '1');
+}).on('mouseout', function() {
+  $('.img').css('opacity', '1');
+});
 
 var ua = navigator.userAgent.toLowerCase();
 var isAndroid = ua.indexOf('android') > -1; //&& ua.indexOf("mobile");
