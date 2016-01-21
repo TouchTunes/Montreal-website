@@ -1,3 +1,25 @@
+function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
+  var ajaxData = {
+        type: 'POST',
+        headers: {
+          'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
+          'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
+        },
+        url: url,
+        data: data,
+        processData: false,
+        contentType: false,
+        success: successCallback,
+        error: errorCallback
+    }
+    if (isJson) {
+      ajaxData.contentType = 'application/json';
+      ajaxData.dataType = 'json';
+    }
+
+    $.ajax(ajaxData)
+}
+
 $(document).ready(function() {
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
@@ -490,7 +512,7 @@ function uploadResume() {
 }
 $('#submit-crew').on('click', function () {
 
-  if ($(this).parent().find('input.error').length) {} else {
+  if (!$(this).parent().find('input.error').length) {
     var firstName = $('#first-crew').val();
     var lastName = $('#last-crew').val();
     var city = $('#city-crew').val();
@@ -514,166 +536,78 @@ $('#submit-crew').on('click', function () {
       serverUrlCover = 'https://api.parse.com/1/files/' + fileCover.name;
     }
 
-    $.ajax({
-      type: 'POST',
-      headers: {
-        'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-        'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-      },
-      url: serverUrlResume,
-      data: fileResume,
-      processData: false,
-      contentType: false,
-      success: function (data) {
-        resumeUrl = data.url;
-        if (serverUrlCover != '') {
-          $.ajax({
-            type: 'POST',
-            headers: {
-              'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-              'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-            },
-            url: serverUrlCover,
-            data: fileCover,
-            processData: false,
-            contentType: false,
-            success: function (data) {
-              coverUrl = data.url;
-              if (serverUrlAttachment != '') {
-                $.ajax({
-                  type: 'POST',
-                  headers: {
-                    'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                    'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-                  },
-                  url: serverUrlAttachment,
-                  data: fileAttachment,
-                  processData: false,
-                  contentType: false,
-                  success: function (data) {
-                    attachmentUrl = data.url;
-                    $.ajax({
-                      type: 'POST',
-                      url: 'https://api.parse.com/1/functions/mail',
-                      headers: {
-                        'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                        'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-                      },
-                      dataType: 'json',
-                      contentType: 'application/json',
-                      processData: false,
-                      data: '{"type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
-                      contentType: 'application/json',
-                      success: function (data) {
-                        $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                        $('.loader').fadeOut();
-                      },
-                      error: function () {
-                        $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
-                      }
-                    });
-                  },
-                  error: function (data) {
-                    var obj = jQuery.parseJSON(data);
-                    alert(obj.error);
-                  }
-                });
-              } else {
-                $.ajax({
-                  type: 'POST',
-                  url: 'https://api.parse.com/1/functions/mail',
-                  headers: {
-                    'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                    'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-                  },
-                  dataType: 'json',
-                  contentType: 'application/json',
-                  processData: false,
-                  data: '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }',
-                  contentType: 'application/json',
-                  success: function (data) {
-                    $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                    $('.loader').fadeOut();
-                  },
-                  error: function () {
-                    $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
-                  }
-                });
-              }
-            },
-            error: function (data) {
-              var obj = jQuery.parseJSON(data);
-              alert(obj.error);
-            }
-          });
-        } else {
+    doAjaxCall(serverUrlResume, fileResume, function(data) {
+      resumeUrl = data.url;
+      if (serverUrlCover != '') {
+        doAjaxCall(serverUrlCover, fileCover, function(data) {
+          coverUrl = data.url;
           if (serverUrlAttachment != '') {
-            $.ajax({
-              type: 'POST',
-              headers: {
-                'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-              },
-              url: serverUrlAttachment,
-              data: fileAttachment,
-              processData: false,
-              contentType: false,
-              success: function (data) {
-                attachmentUrl = data.url;
-                $.ajax({
-                  type: 'POST',
-                  url: 'https://api.parse.com/1/functions/mail',
-                  headers: {
-                    'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                    'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-                  },
-                  dataType: 'json',
-                  contentType: 'application/json',
-                  processData: false,
-                  data: '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }',
-                  contentType: 'application/json',
-                  success: function (data) {
-                    $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                    $('.loader').fadeOut();
-                  },
-                  error: function () {
-                    $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
-                  }
-                });
-              },
-              error: function (data) {
-                var obj = jQuery.parseJSON(data);
-                alert(obj.error);
-              }
+            doAjaxCall(serverUrlAttachment, fileAttachment, function(data) {
+              attachmentUrl = data.url;
+              doAjaxCall(
+                'https://api.parse.com/1/functions/mail', 
+                '{"type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
+                function(data) {
+                  $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                              $('.loader').fadeOut();
+                }, function() {
+                  $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
+                }, true
+              );
+            }, function(data) {
+              var obj = $.parseJSON(data);
+                        alert(obj.error);
             });
           } else {
-            $.ajax({
-              type: 'POST',
-              url: 'https://api.parse.com/1/functions/mail',
-              headers: {
-                'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-                'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-              },
-              dataType: 'json',
-              contentType: 'application/json',
-              processData: false,
-              data: '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }',
-              contentType: 'application/json',
-              success: function (data) {
+            doAjaxCall(
+              'https://api.parse.com/1/functions/mail', 
+              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "' + coverUrl + '", "attachmentUrl": "", "job": "' + job + '" }', 
+              function(data) {
                 $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
-                $('.loader').fadeOut();
-              },
-              error: function () {
+                          $('.loader').fadeOut();
+              }, function() {
                 $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
-              }
-            });
+              }, true
+            );
           }
+        }, function(data) {
+          var obj = $.parseJSON(data);
+                alert(obj.error);
+        });
+      } else {
+        if (serverUrlAttachment != '') {
+          doAjaxCall(serverUrlAttachment, fileAttachment, function(data) {
+            attachmentUrl = data.url;
+            doAjaxCall(
+              'https://api.parse.com/1/functions/mail', 
+              '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "' + attachmentUrl + '", "job": "' + job + '" }', 
+              function(data) {
+                $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                          $('.loader').fadeOut();
+              }, function() {
+                $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
+              }, true
+            );
+          }, function(data) {
+            var obj = $.parseJSON(data);
+                    alert(obj.error);
+          });
+        } else {
+          doAjaxCall(
+            'https://api.parse.com/1/functions/mail', 
+            '{ "type": "crew", "first": "' + firstName + '", "last": "' + lastName + '", "city": "' + city + '", "country": "' + country + '", "email": "' + email + '",  "phone": "' + phone + '", "facebook": "' + facebook + '", "linkedin": "' + linkedin + '", "resumeUrl": "' + resumeUrl + '",  "coverUrl": "/", "attachmentUrl": "/", "job": "' + job + '" }', 
+            function(data) {
+              $('#menu').append("<div class='ajax-success'>Your application has been successfully submitted</div>");
+                      $('.loader').fadeOut();
+            }, function() {
+              $('#menu').append("<div class='ajax-error'>Errors while submitting the application</div>");
+            }, true
+          );
         }
-      },
-      error: function (data) {
-        var obj = jQuery.parseJSON(data);
-        alert(obj.error);
       }
+    }, function(data) {
+      var obj = $.parseJSON(data);
+      alert(obj.error);
     });
 
     $(this).parent().find('.loader').fadeIn();
@@ -684,33 +618,25 @@ $('#submit-crew').on('click', function () {
 
 $('#submit-contact').on('click', function () {
 
-  if ($(this).parent().find('input.error').length) {} else {
+  if (!$(this).parent().find('input.error').length) {
 
     var firstName = $('#first-contact').val();
     var lastName = $('#last-contact').val();
     var email = $('#email-contact').val();
     var message = $('#message').val();
 
-    $.ajax({
-      type: 'POST',
-      url: 'https://api.parse.com/1/functions/mail',
-      headers: {
-        'X-Parse-Application-Id': 'evLCBWGMMNYELIUJSIogf0HZ7odir6gohyUepUby',
-        'X-Parse-REST-API-Key': 'T5sm7cB5buvWXsayD94YxK9cc1QM71blt8ZhMudQ'
-      },
-      dataType: 'json',
-      contentType: 'application/json',
-      processData: false,
-      data: '{ "type": "contact", "first": "' + firstName + '", "last": "' + lastName + '", "email": "' + email + '", "message": "' + message + '"}',
-      contentType: 'application/json',
-      success: function (data) {
+    doAjaxCall(
+      'https://api.parse.com/1/functions/mail', 
+      '{ "type": "contact", "first": "' + firstName + '", "last": "' + lastName + '", "email": "' + email + '", "message": "' + message + '"}', 
+      function(data) {
         $('#contact').append("<div class='ajax-success'>Your message has been successfully sent</div>");
         $('.loader').fadeOut();
-      },
-      error: function () {
+      }, 
+      function() {
         $('#contact').append("<div class='ajax-error'>Errors while sending the message</div>");
-      }
-    });
+      }, 
+      true
+    );
     $(this).parent().find('.loader').fadeIn();
   }
 });
