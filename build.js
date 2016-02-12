@@ -11,7 +11,14 @@ const metalsmith    = require('metalsmith'),
       define        = require('metalsmith-define'),
       date          = require('metalsmith-build-date'),
       uglify        = require('metalsmith-uglify'),
-      multiLanguage = require('metalsmith-multi-language')
+      multiLanguage = require('metalsmith-multi-language'),
+      Handlebars    = require('handlebars')
+
+Handlebars.registerHelper('ifCond', (v1, v2, options) => {
+  if(v1 === v2)
+    return options.fn(this)
+  return options.inverse(this)
+})
 
 // And run Metalsmith in a currend directory
 metalsmith(__dirname)
@@ -23,6 +30,11 @@ metalsmith(__dirname)
   .use(less(require('./config/less')))
   // Convert markdown posts to HTML pages
   .use(markdown(require('./config/markdown')))
+  // Set up multilanguage
+  .use(multiLanguage({
+    default: 'en',
+    locales: ['en', 'fr']
+  }))
   // And make collections for jobs and members
   .use(collections(require('./config/collections')))
   .use(date())
@@ -32,13 +44,12 @@ metalsmith(__dirname)
   .use(layouts(require('./config/layouts')))
   // Set `dist` folder as destination
   .destination('dist')
-  // Set up multilanguage
-  .use(multiLanguage({ default: 'en', locales: ['en', 'fr'] }))
   // Minify JS code
   .use(uglify())
   // Use browsersync for local watch of all files
   .use(browsersync(require('./config/browsersync')))
   // And do a final build
   .build(err => {
+    console.log(err);
     if (err) throw err
   })

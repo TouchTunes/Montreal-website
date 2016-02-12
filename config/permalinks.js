@@ -3,5 +3,5 @@
 module.exports = {
   // date: 'YYYY/MM',
   // relative: true,
-  pattern: ':page'
+  pattern: ':locale/:page'
 };
