@@ -1,0 +1,104 @@
+{{> htmlhead }}
+{{> menu }}
+{{> modal }}
+<div class="home-wrapper">
+	{{> header }}
+	<div class="banner">
+		<div class="white-overlay">
+			<span class="ld">
+				
+			</span>
+		</div>
+		<div class="animation-placeholder"></div>
+	</div>
+	<div class="container">
+		<div class="work">
+			<h2>FRENCH</h2>
+			<p>In tune with the digital revolution since 1998</p>
+			<a class="button" href="../about">Learn more</a>
+			<p class="learn-more cts">learn more</p>
+		</div>
+	</div>
+	<div class="about scroll-to">
+		<div class="container">
+			<img class="underline" src="../img/logo-white-retina.png"/>
+			<div class="text-container small">
+				<p>TouchTunes has rapidly become a go-to music and entertainment platform since introducing the first fully digital jukebox. Over the years we have grown in numbers, with powerhouse teams in Montreal, New York, Chicago and London as well as over 71,000 product locations across North America and Europe. Our Montreal office is the production and operations engine of TouchTunes Corp. and our squad shows no signs of slowing down while developing multiple interactive projects contributing to a fast-paced era. </p>
+			</div>
+			<a class="button white" href="../about">About us</a>
+		</div>
+	</div>
+	<div class="technology">
+		<div class="container">
+			<h2 class="underline dark">Technology: <span>Le geek, c’est chic</span></h2>
+			<div class="text-container small">
+				<p>As self-proclaimed geeks, there’s nothing we love more than utilizing all the latest, most progressive technologies to optimize the quality our projects.</p>
+			</div>
+			<div class="images">
+				
+			</div>
+			<a class="button blue" href="../technology">See more</a>
+		</div>
+	</div>
+	<div class="projects">
+		<div class="container">
+			<h2 class="underline dark">Projects</h2>
+			<div class="text-container small">
+				<p>TouchTunes has many working parts that fit together to run an end-to-end interactive entertainment solution.</p>
+			</div>
+			<div class="stacks">
+				<a href="../projects/#mobile" class="stack mobile">
+					<span>Mobile</span>
+				</a>
+
+				<a href="../projects/#platform" class="stack platform">
+					<span>Platform</span>
+				</a>
+
+				<a href="../projects/#tv" class="stack attract">
+					<span>Attract <span class="light">TV<span></span>
+				</a>
+
+				<a href="../projects/#jukebox" class="stack jukebox">
+					<span>Jukebox</span>
+				</a>
+
+				<a href="../projects/#operations" class="stack operations">
+					<span>Operations</span>
+				</a>
+			</div>
+			<a class="button blue" href="../projects">See Projects</a>
+		</div>
+	</div>
+	<div class="opportunities">
+		<div class="container">
+			<h2 class="underline dark">Featured opportunities</h2>		
+			<p>We are always looking to add new talent to our roster. Check out our current opportunities below or fill out an application and tell us why we need you.</p>
+			<div class="positions">
+				{{#each collections.jobs}}
+        <div>
+        	<div class="text-container">
+						<p class="title">{{this.title}}<span class="location"> - {{this.location}}</span></p>
+						{{{this.contents}}}
+					</div>
+					<a class="button apply" data-title="{{this.title}} - {{this.location}}" href="javascript:void(0)">Apply now</a>		
+				</div>
+        {{/each}}
+			</div>
+			<a class="button gray" href="../careers">See more</a>
+		</div>
+	</div>
+	<div class="contact-mail">
+		<div class="container">
+			<h2 class="underline white">Get in Touch</h2>
+			<div class="big text-container">
+				<p> If you have any questions about TouchTunes MTL, we likely have the answers and if you’ve got ideas, we’re all ears. We want to hear from you.</p>
+			</div>
+			<a class="button blue" href="../contact">
+				<span class="small"><img src="../img/mail-icon.png"/></span>
+				<span class="big">Contact us</span>
+			</a>
+		</div>	
+	</div>
+</div>
+{{> footer }}

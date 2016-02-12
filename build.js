@@ -1,16 +1,17 @@
 'use strict'
 
 // Require all modules we need
-const metalsmith  = require('metalsmith'),
-      markdown    = require('metalsmith-markdown'),
-      layouts     = require('metalsmith-layouts'),
-      less        = require('metalsmith-less'),
-      browsersync = require('metalsmith-browser-sync'),
-      permalinks  = require('metalsmith-permalinks'),
-      collections = require('metalsmith-collections'),
-      define      = require('metalsmith-define'),
-      date        = require('metalsmith-build-date'),
-      uglify      = require('metalsmith-uglify')
+const metalsmith    = require('metalsmith'),
+      markdown      = require('metalsmith-markdown'),
+      layouts       = require('metalsmith-layouts'),
+      less          = require('metalsmith-less'),
+      browsersync   = require('metalsmith-browser-sync'),
+      permalinks    = require('metalsmith-permalinks'),
+      collections   = require('metalsmith-collections'),
+      define        = require('metalsmith-define'),
+      date          = require('metalsmith-build-date'),
+      uglify        = require('metalsmith-uglify'),
+      multiLanguage = require('metalsmith-multi-language')
 
 // And run Metalsmith in a currend directory
 metalsmith(__dirname)
@@ -31,6 +32,8 @@ metalsmith(__dirname)
   .use(layouts(require('./config/layouts')))
   // Set `dist` folder as destination
   .destination('dist')
+  // Set up multilanguage
+  .use(multiLanguage({ default: 'en', locales: ['en', 'fr'] }))
   // Minify JS code
   .use(uglify())
   // Use browsersync for local watch of all files
