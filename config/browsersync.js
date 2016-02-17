@@ -7,7 +7,7 @@ module.exports = {
     index:     'index.html'
   },
   // Use `/home` as a default path
-  startPath: '/home/',
+  startPath: '/en/home/',
   // And watch following folders for changes
   files: ['src/**/*.*', 'layouts/**/*.html']
 }
