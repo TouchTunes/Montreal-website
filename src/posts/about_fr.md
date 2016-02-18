@@ -1,7 +1,7 @@
 ---
-title: About page
+title: À propos de nous
 page: about
-layout: about.html
+layout: about_fr.html
 ---
 
 TouchTunes Montreal :: About page

@@ -1,0 +1,74 @@
+{{> htmlhead }}
+{{> menu_fr }}
+{{> modal }}
+
+<div class="careers-wrapper">
+	{{> header_fr }}
+	<div class="banner">
+		<div class="container">
+			<div class="text-container small">
+   				{{{contents}}}
+			</div>
+
+			<a class="button cts" href="javascript:void(0)">Consulter les offres d’emplois</a>		
+			<p class="cts learn-more small-screen">Pour en apprendre davantage</p>
+		</div>
+	</div>
+	<div class="opportunities scroll-to">
+		<div class="container">
+			<h2 class="underline dark">Toutes les offres</h2>		
+			<p>Nous sommes à la recherche de sang neuf. Consultez les offres d’emploi du studio de Montréal.</p>
+			<div class="positions">
+				{{#each collections.jobs_fr}}
+        <div>
+        	<div class="text-container">
+						<p class="title">{{this.title}}<span class="location"> - {{this.location}}</span></p>
+						{{{this.contents}}}
+					</div>
+					<a class="more fr" href="javascript:void(0)">En savoir plus</a>
+					<a class="button apply" data-title="{{this.title}} - {{this.location}}" href="javascript:void(0)">Postuler</a>
+				</div>
+        {{/each}}
+			</div>
+		</div>
+	</div>
+	<div class="process">
+		<div class="container">
+			<h2 class="underline">Notre processus</h2>
+			<p>Notre délire comporte une logique. Nous ne voulons pas de solutions temporaires, mais des contributeurs à long terme qui se sentiront à leur place au sein de notre équipe. Ne vous inquiétez pas : nous ne sommes pas là pour vous faire passer un interrogatoire, mais plutôt pour apprendre à vous connaître.</p>	
+			<div class="devider">
+				<div class="quarter">
+					<span class="circle">1</span>
+					<h3>Bavardons</h3>
+					<p>Nous commençons par une entrevue téléphonique afin de pouvoir vous présenter TouchTunes et en apprendre plus à votre sujet.</p>
+				</div>
+				<div class="quarter">
+					<span class="circle">2</span>
+					<h3>Venez faire un tour</h3>
+					<p>Venez visiter nos bureaux pour passer une deuxième entrevue et pour vous faire une idée de la culture de notre société.</p>
+				</div>
+				<div class="quarter">
+					<span class="circle">3</span>
+					<h3>Rencontrez l’équipe</h3>
+					<p>La troisième rencontre dépend entièrement de vous. Vous pouvez demander de rencontrer des personnes précises ou des collègues éventuels et voir ce sur quoi ils travaillent.</p>
+				</div>
+				<div class="quarter">
+					<span class="circle">4</span>
+					<h3>Joignez-vous à nous</h3>
+					<p>Vous êtes charmés. Nous sommes séduits. Bienvenue parmi nous!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="container">
+			<div class="text-container">
+				<h2 class="underline">Votre spécialité ne figure pas au sein des offres d’emploi?</h2>
+				<p>Si votre profil ne correspond à aucune des offres actuelles, postulez tout de même! Soyez celui que nous ne savions même pas que nous recherchions!!</p>
+				<a class="button blue apply" data-title="" >Postuler</a>
+			</div>			
+		</div>
+	</div>	
+</div>
+
+{{> footer_fr }}
