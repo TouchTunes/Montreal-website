@@ -8,7 +8,7 @@ date: 2015-11-09
 The Linux Systems and Cloud Automation Engineer is responsible for finding innovative ways to further automate and improve resiliency and performance of our online product platform. TouchTunes infrastructure is composed mainly of Linux systems running Oracle, apache, Tomcat, MySQL and many in-house developed applications written in Java, PHP, Python etc. 
 
 
-Responsibilities
+Responsibilities:
 
 - Maintain and improve applications developed in Perl, Python or Java by the IT department for automation of processes
 - Work with the Linux system administration team to develop and integrate solution to automate IT processes
@@ -25,7 +25,7 @@ Responsibilities
 - Maintain appropriate communication with all customers and internal teams
 
 
-Requirements
+### Requirements:
 
 - Bachelors’ degree in Computer Science or equivalent technology degree
 - 3+ years  experience in a System Administration or equivalent role in a large infrastructure Linux environments with custom in-house applications
@@ -36,7 +36,7 @@ Requirements
 - Bilingual (French and English)
 
 
-Preferences:
+### Preferences:
 
 - Experience in developing and operationalizing RESTful APIs in PHP/Python/JAVA for a high traffic service (> 150 requests per seconds)
 - Experience with multiple database vendors, such as Oracle, Mysql and NoSQL
@@ -46,6 +46,6 @@ Preferences:
 - Jenkins experience a major plus
 
 
-Special Position Requirements:
+### Special Position Requirements:
 
 - Light travel, when necessary

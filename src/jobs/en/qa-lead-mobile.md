@@ -7,12 +7,12 @@ date: 2015-11-09
 
 TouchTunes is looking for a charismatic and motivated individual to lead its Mobile Quality Control team.  Are you calm under pressure? A fast learner who is motivated to continue your career arc? If so, read on!
  
-Responsibilities:
+### Responsibilities:
  
 - Ensuring the stewardship and quality of TouchTunes Mobile App, as well as the coordination of work among its internal and external QC technicians.
  
 
-Required Qualifications:
+### Required Qualifications:
 
 - Bachelor’s or DEC in Computer Science or relevant diploma
 - Minimum 5 years in software QC with 3 years in Mobile Applications

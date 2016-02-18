@@ -11,9 +11,9 @@ L’appli mobile de TouchTunes est déjà l’un des principaux leviers de crois
  
 Il devra également travailler en étroite collaboration avec l’équipe de gestion de la production (en poste à New York), pour planifier et mettre en œuvre la stratégie opérationnelle et l’évolution des produits de l’application mobile.
  
-Compétences et expérience souhaitées :
+### Compétences et expérience souhaitées :
  
-Le producteur, mobile doit détenir une expérience avérée de leadership charismatique, d’expertise technique et un sens aigu des affaires, incluant :
+- Le producteur, mobile doit détenir une expérience avérée de leadership charismatique, d’expertise technique et un sens aigu des affaires, incluant
 - 5 à 10 années d’expérience en gestion de projets et d’équipes, incluant le travail en étroite collaboration avec d’autres équipes au sein de l’organisation (Produits, AQ, marketing, ventes, etc.)
 - L’expertise technique dans le développement d’applications mobile et en conception UI/UX en ligne
 - Une excellente compréhension des relations client/serveur, pour travailler avec l’équipe de la plateforme à Montréal, qui développe les interfaces API TouchTunes

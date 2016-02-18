@@ -13,7 +13,7 @@ The backend infrastructure is mainly built on Java, Spring, hibernate and runnin
 The candidate will also be involved in the transition of legacy systems into this new architecture.
 
 
-Responsibilities:
+### Responsibilities:
 
 - Reporting to the Director of Service Platform, the candidate will be involved in designing and building the new RESTful API service platform
 - Analyze & break down technical specifications into work items
@@ -25,7 +25,7 @@ Responsibilities:
 - Review code submitted by fellow developers, ensuring software is developed to acceptable quality levels according to acknowledged best practices
 - Work with software quality assurance teams to facilitate the testing of the APIs
 
-Skills and Competencies:
+### Skills and Competencies:
 
 - Degree in computer science or similar discipline
 - 7+ years professional experience in software development

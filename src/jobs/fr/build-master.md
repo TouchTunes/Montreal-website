@@ -5,10 +5,10 @@ location: Montreal, QC
 date: 2015-11-09
 ---
 
-Description de poste : TouchTunes est à la recherche d’un Build Master / Spécialiste de la configuration logiciel pour travailler dans l’équipe de plate-forme de services.
+TouchTunes est à la recherche d’un Build Master / Spécialiste de la configuration logiciel pour travailler dans l’équipe de plate-forme de services.
 Le Build Master collabore avec les architectes, les responsables de production, les responsables techniques, les développeurs et le personnel TI, pour analyser, développer et créer les infrastructures de développement, de dépôt de code et d’examen des systèmes, de logiciels de conteneurisation et de déploiement pour la plate-forme des services de TouchTunes.
 
-Responsabilités :
+### Responsabilités :
 
 -  Entretenir et faire évoluer divers processus de conception : application mobile, serveur d’arrière-plan et REST API sur AWS
 -  Collaborer à la conception, aux essais et à la configuration de notre prochaine génération de plate-forme de services micro-conteneurisée (Docker)
@@ -20,7 +20,7 @@ Responsabilités :
 -  Soutenir divers groupes de développement et d’exploitation en leur fournissant un processus normalisé, allant de la promotion du code au déploiement
 
 
-Compétences requises:
+### Compétences requises:
  
 - D.E.C. ou BAC en informatique ou en ingénierie
 - 2 à 5 ans d’expérience au minimum

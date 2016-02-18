@@ -10,7 +10,7 @@ TouchTunes is looking for a Software Build Master / Configuration Specialist to 
 The Build Master will work with architects, production leads, technical leads, developers and IT staff to analyze, develop and create the development infrastructures, code repository and review systems, containerization and deployment software for the TouchTunes Services Platform.
 
 
-Responsibilities:
+### Responsibilities:
 
 - Maintain and evolve various build processes: Mobile Application, Backend Server and REST APIs on AWS
 - Help design, build, test and configure our next generation containerized micro services platform (Docker)

@@ -8,7 +8,7 @@ date: 2015-11-09
 Si vous avez des antécédents avérés en test d’applications d’infrastructure de haute qualité et êtes enthousiaste à l’idée de participer à un environnement où la culture organisationnelle évolue rapidement, ce poste est pour vous*. Vous êtes également axé sur l’excellence technique et souhaitez être entouré d’une équipe de personnes expérimentées, dévouées et motivées. À titre de membre de l’équipe d’exploitation des plateformes de service, votre mission consistera à assurer la qualité de nos serveurs d’infrastructure par le biais de l’utilisation de technologies d’automatisation de tests et de test de chargement.
 
 
-Responsabilités:
+### Responsabilités:
 
 - Fournir des compétences techniques et du feedback pour améliorer la qualité des produits logiciels, notamment aux services qualité de l’organisation, du développement et de la gestion des produits.
 - Assurer une expérience de la plus haute qualité aux utilisateurs.
@@ -25,14 +25,14 @@ Responsabilités:
 - Mettre en œuvre des paramètres pour mesurer la qualité des produits et projets.
 
 
-Exigences d’emploi:
+### Exigences d’emploi:
 
 - DEC en informatique
 - Deux (2) ans d’expérience au minimum en logiciels de test ou une expérience pertinente
 - Expérience en techniques de tests de charge / stress
  
 
-Compétences souhaitées:
+### Compétences souhaitées:
  
 - Excellentes compétences en communication orale et écrite
 - Esprit d’analyse et bonnes aptitudes à la résolution de problèmes

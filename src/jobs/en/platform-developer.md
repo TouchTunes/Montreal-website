@@ -8,7 +8,7 @@ date: 2015-11-09
 The Platform Web Developer is responsible for developing web applications for a wide array of clients and purposes. He/she will have to interface closely with other teams to research, design, develop and maintain existing or new web-based applications to support various products and clients. The ideal candidate is a self-starter with the ability to work both independently and as part of a team, on multiple projects in a fast paced development environment.
 
 
-Responsibilities:
+### Responsibilities:
  
 - Reporting to the Director, Platform Services, the candidate will be involved in most of the software development life cycle of web applications
 - Analyze & break down technical specifications into work items
@@ -21,7 +21,7 @@ Responsibilities:
 - Work with software quality assurance teams to facilitate the testing of web applications
 
 
-Skills and competencies:
+### Skills and competencies:
 
 - Degree in computer science or similar discipline
 5+ years developing for the web: JavaScript, HTML5, CSS, Java

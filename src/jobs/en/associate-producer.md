@@ -12,7 +12,7 @@ We are responsible for the creation and maintenance of the service infrastructur
 The Associate Producer, Platform Services reporting to the Senior Producer, Platform Services, will assist with the production of our server software development team. The ideal candidate is a highly organized individual with outstanding communications abilities, hands on experience acting as a scrum master and a demonstrated aptitude for project management. 
 
 
-Responsibilities:
+### Responsibilities:
 
 - Reporting to the Senior Producer,  Platform Services, the candidate will create and track schedules for software analysis, development, testing and delivery
 - Manage the daily tracking of all development activities

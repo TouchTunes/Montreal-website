@@ -5,10 +5,10 @@ location: Montreal, QC
 date: 2015-11-09
 ---
 
-Description du poste: Le développeur Web plate-forme est responsable du développement des applications web pour un large éventail de clients. Il devra collaborer étroitement avec d’autres équipes pour concevoir, développer et accueillir des applications nouvelles et existantes, ou effectuer des recherches sur celles-ci, pour appuyer divers produits et clients. Le candidat idéal est un débrouillard ayant la capacité de travailler à la fois de façon autonome, et comme membre d’une équipe, sur plusieurs projets dans un environnement exigeant.
+Le développeur Web plate-forme est responsable du développement des applications web pour un large éventail de clients. Il devra collaborer étroitement avec d’autres équipes pour concevoir, développer et accueillir des applications nouvelles et existantes, ou effectuer des recherches sur celles-ci, pour appuyer divers produits et clients. Le candidat idéal est un débrouillard ayant la capacité de travailler à la fois de façon autonome, et comme membre d’une équipe, sur plusieurs projets dans un environnement exigeant.
 
 
-Responsabilités :
+### Responsabilités :
 
 - Relevant du Directeur, plate-forme de services, le candidat couvrira pratiquement tous les aspects du développement logiciel des applications Web
 - Analyser et fractionner les spécifications techniques en tâches
@@ -21,7 +21,7 @@ Responsabilités :
 - Collaborer avec les équipes d’assurance de qualité logicielle pour faciliter l’essai d’applications Web
  
 
-Compétences et expérience souhaitées :
+### Compétences et expérience souhaitées :
 
 - Diplôme en informatique ou d’une discipline semblable
 - Plus de cinq (5) ans d’expérience en développement pour le Web : JavaScript, HTML5, CSS, Java

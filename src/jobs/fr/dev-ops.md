@@ -8,7 +8,7 @@ date: 2015-11-09
 L’ingénieur Systèmes Linux et automatisation Cloud (Nuage) est responsable de la recherche de moyens novateurs pour automatiser davantage et améliorer la résilience et le rendement de notre plateforme de produits en ligne. L’infrastructure de TouchTunes est composée principalement de systèmes Linux tournant sur Oracle, apache, Tomcat, MySQL et sur un grand nombre d’applications développées à l’interne, écrites en Java, PHP, Python etc. 
  
 
-Responsabilités:
+### Responsabilités:
 
 - Maintenir et améliorer les applications développées par le service TI en Perl, Python ou Java, aux fins d’automatisation des processus
 - Collaborer avec l’équipe d’administration des systèmes Linux pour développer et intégrer la solution d’automatisation des processus TI
@@ -25,7 +25,7 @@ Responsabilités:
 - Maintenir des communications appropriées avec tous les clients et toutes les équipes internes 
 
 
-Exigences:
+### Exigences:
 
 - Baccalauréat en informatique ou diplôme équivalent en technologie
 - 3 années d’expérience au minimum en administration des systèmes ou un rôle équivalent dans un environnement Linux, doté d’une grande infrastructure et d’applications internes personnalisées

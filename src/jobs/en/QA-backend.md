@@ -8,7 +8,8 @@ date: 2015-11-09
 If you have a proven track record testing world-class back-end applications and are excited about being part of a fast-paced culture, this position is for you. You are also driven to technical excellence and have a desire to be surrounded by a team of experienced, committed, and driven individuals. Working as part of the Service Operations team, your mission will be to ensure the quality of our back-end services through the use of test automation and load testing technologies.  
  
 
-Responsibilities:
+
+### Responsibilities:
 
 - Provide technical input and feedback driving the quality of software deliverables both to those in the quality organization, development, and product management.
 - Ensure a high quality user experience.
@@ -25,7 +26,7 @@ Responsibilities:
 Implement metrics for product and project quality measurement.
  
 
-Required Qualifications:
+### Required Qualifications:
 
 - DEC in Computer Science
 - Minimum 2 years of experience related to software testing or relevant experience
