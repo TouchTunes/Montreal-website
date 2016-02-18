@@ -4,6 +4,15 @@
 			display: none !important;
 		}
 	}
+
+	.addresses {
+		text-align: center;
+
+		div.medium-screen {
+			display: inline-block;
+			margin-right: 30px;
+		}
+	}
 	
 	.banner {
 		position: relative;
@@ -84,7 +93,6 @@
 		text-align: center;
 
 		@media(min-width: 450px) {
-			max-width: 360px;
 			margin: 0 auto;
 			padding: 50px 0 100px;
 
@@ -112,6 +120,8 @@
 		form {
 			@media(min-width: 450px) {
 				padding: 0 10px;
+				margin: 0 auto;
+				max-width: 360px;
 			}
 			input, select {
 				border: 1px solid @modal-dark;

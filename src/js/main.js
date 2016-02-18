@@ -773,3 +773,12 @@ function hideMore() {
     }
   });
 }
+
+$('.positions .more').on('click', function() {
+  $(this).siblings('.text-container').toggleClass('extend');
+  ($(this).text() == 'Read more')? $(this).text('Read less') : $(this).text('Read more');
+
+  if($(this).hasClass('fr')){
+    ($(this).text() == 'En savoir plus')? $(this).text('Moins') : $(this).text('En savoir plus');
+  }
+});
