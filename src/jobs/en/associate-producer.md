@@ -4,12 +4,12 @@ collection: jobs
 location: Montreal, QC
 date: 2015-11-09
 ---
+ 
+The Associate Producer, Platform Services reporting to the Senior Producer, Platform Services, will assist with the production of our server software development team. The ideal candidate is a highly organized individual with outstanding communications abilities, hands on experience acting as a scrum master and a demonstrated aptitude for project management. 
 
 The platform services team consists of 25 individuals, developers, testers and analysts in our Montreal offices and 13 offshore developers and testers.
  
 We are responsible for the creation and maintenance of the service infrastructure of TouchTunes client systems which currently consists of TouchTunes digital jukebox, the Attract TV, the TouchTunes mobile application and our B2B web services.
- 
-The Associate Producer, Platform Services reporting to the Senior Producer, Platform Services, will assist with the production of our server software development team. The ideal candidate is a highly organized individual with outstanding communications abilities, hands on experience acting as a scrum master and a demonstrated aptitude for project management. 
 
 
 ### Responsibilities:

@@ -1,5 +1,5 @@
 ---
-title: Responsable technique plate-forme de service
+title: Responsable technique Plateforme de service
 collection: jobs_fr
 location: Montreal, QC
 date: 2015-11-09
