@@ -10,7 +10,7 @@ Responsable de superviser le développement de l’architecture RESTFUL web serv
 L’infrastructure est principalement construite avec les technologies Java, Spring, Hibernate et s’exécute sur Amazon Web Services (le nuage). Chaque jour l’infrastructure répond à plusieurs millions de requêtes. Le candidat idéal a besoin de comprendre comment élaborer des systèmes hautement évolutifs, conçus avec un mécanisme de redondance,  AWS et pouvoir mettre au point et livrer des systèmes à haut volume et les gérer efficacement. Le candidat participera également à la transition d’anciens systèmes vers cette nouvelle architecture.
  
 
-### Responsabilités :
+### Responsabilités:
 
 - Participer à la conception et à la réalisation de la nouvelle plateforme de service API RESTful
 - Analyser et fractionner les spécifications techniques en tâches
@@ -23,7 +23,7 @@ L’infrastructure est principalement construite avec les technologies Java, Spr
 - Collaborer avec les équipes d’assurance de qualité logicielle pour faciliter l’essai des API
 
 
-### Compétences et expérience souhaitées :
+### Compétences et expérience souhaitées:
 
 - Diplôme en informatique ou d’une discipline semblable
 - Plus de sept (7) ans d’expérience professionnelle en développement de logiciels
