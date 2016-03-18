@@ -10,10 +10,36 @@
 
 		div.medium-screen {
 			display: inline-block;
-			margin-right: 30px;
+			margin-right: 50px;
+			max-width: 400px;
+			height: auto;
+			vertical-align: top;
+
+			@media(min-width: 450px) and (max-width: 768px) {
+				margin: 0;
+			}
+
+			&:nth-child(2) {
+				margin-right: 0;
+				margin-left: 50px;
+
+				@media(min-width: 450px) and (max-width: 768px) {
+					margin-left: 0;
+				}
+			}
+
+			h2 {
+				font-size: 44px;
+				margin-bottom: 2px;
+			}
 
 			@media(max-width: 450px) {
 				display: none;
+			}
+
+			span {
+				margin-bottom: 5px;
+				display: block;
 			}
 		}
 	}
@@ -39,6 +65,15 @@
 				@media(min-width: 450px) and (max-width: 768px) {
 					display: block;
 					position: relative;
+				}
+			}
+
+			&.small.cont {				
+				padding-top: 25px;
+				margin-bottom: 20px;
+
+				h2 {
+					margin-bottom: 0;
 				}
 			}
 		}
