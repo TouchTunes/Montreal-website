@@ -2,14 +2,14 @@
 <html>
   <head>
     <meta name="description" content="{{description}}">
-    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
     <title>{{title}}</title>
-    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
-    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap-select.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
-    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <link rel="stylesheet" type="text/css" href="../../../styles/index.css"> 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   </head>
   <body>
@@ -21,12 +21,12 @@
 		</div>
 		<div class="content">
 			<ul class="list">
-				<li><a href="../../home" class="">Home</a></li>
-				<li><a href="../../about">About us</a></li>
-				<li><a href="../../technology">Technology</a></li>
-				<li><a href="../../projects">Projects</a></li>
-				<li><a href="../../careers">Careers</a></li>
-				<li><a href="../../contact">Contact</a></li>
+				<li><a href="../../../en/home" class="">Home</a></li>
+				<li><a href="../../../en/about">About us</a></li>
+				<li><a href="../../../en/technology">Technology</a></li>
+				<li><a href="../../../en/projects">Projects</a></li>
+				<li><a href="../../../en/careers">Careers</a></li>
+				<li><a href="../../../en/contact">Contact</a></li>
 			</ul>
 			<div class="container">
 				<div class="application">
@@ -67,9 +67,9 @@
 
 						<label>Social Profile</label>
 						<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
-						<input class="link" type="text" placeholder="Add link (i.e.: LinkedIn)" id="linkedin-crew" />
+						<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
 						<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
-						<input class="link" type="text" placeholder="Add link (i.e.: Facebook)" id="facebook-crew" />
+						<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook-crew" name="facebook-crew" />
 
 						<div class="file-wrapper">
 							<label class="ie-placeholder" style="">Add attachment</label>
@@ -128,16 +128,16 @@
 						<input class="uploadFile" placeholder="Upload Cover letter" />
 						<div class="fileUpload">
 						    <span></span>
-						    <input required type="file" class="upload uploadBtn" name="cover" id="cover" />
+						    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
 						</div>
 					</div>
 
 					<div class="social-info">
 						<label>Social Profile</label>
 						<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
-						<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" />
+						<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" name="linkedin" />
 						<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
-						<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" />
+						<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" name="facebook" />
 					</div>
 					<div class="bottom">
 						<div class="file-wrapper">
@@ -161,20 +161,19 @@
 				<a class="menu-button">
 					
 				</a>
-				<a href="../../home"><img class="white" src="../../img/logo-white-retina.png"/>
-				<img class="black" src="../../img/logo-black-retina.png"/></a>
+				<a href="../../../en/home"><img class="white" src="../../../img/logo-white-retina.png"/>
+				<img class="black" src="../../../img/logo-black-retina.png"/></a>				
 
 
-				<a class="french">FR</a>
+				<a href="../../fr/{{this.url}}" class="french">FR</a>
 			</div>
 
 		<div class="banner">
-			<img class="single-member" src="../../img/members/{{image}}">
+			<img class="single-member" src="../../../img/members/{{image}}">
 		</div>
 		<div class="container">
 			<div class="work single">
-				<h2>I love working at
-TouchTunes Montreal</h2>
+				<h2>Proud member of the best band in Montreal</h2>
 				<p>Come join me and the rest of the team at TouchTunes MTL.
 You get to work with great people on amazing projects.
 </p>
@@ -187,11 +186,11 @@ You get to work with great people on amazing projects.
 		</div>
 		<div class="about scroll-to">
 			<div class="container">
-				<img class="underline" src="../../img/logo-white-retina.png"/>
+				<img class="underline" src="../../../img/logo-white-retina.png"/>
 				<div class="text-container small">
 					<p>TouchTunes has rapidly become a go-to music and entertainment platform since introducing the first fully digital jukebox. Over the years we have grown in numbers, with powerhouse teams in Montreal, New York, Chicago and London as well as over 71,000 product locations across North America and Europe. Our Montreal office is the production and operations engine of TouchTunes Corp. and our squad shows no signs of slowing down while developing multiple interactive projects contributing to a fast-paced era. </p>
 				</div>
-				<a class="button white" href="../../about">About us</a>
+				<a class="button white" href="../../../en/about">About us</a>
 			</div>
 		</div>
 		<div class="contact-mail">
@@ -200,8 +199,8 @@ You get to work with great people on amazing projects.
 				<div class="big text-container">
 					<p> If you have any questions about TouchTunes MTL, we likely have the answers and if you’ve got ideas, we’re all ears. We want to hear from you.</p>
 				</div>
-				<a class="button blue" href="../../contact">
-					<span class="small"><img src="../../img/mail-icon.png"/></span>
+				<a class="button blue" href="../../../en/contact">
+					<span class="small"><img src="../../../img/mail-icon.png"/></span>
 					<span class="big">Contact us</span>
 				</a>
 			</div>	
@@ -213,12 +212,12 @@ You get to work with great people on amazing projects.
 			<div class="container">
 				<ul>
 					<li class="small">Touchtunes</li>
-					<li><a href="../../home">Home</a></li>
-					<li class="active"><a href="../about">About us</a></li>
-					<li><a href="../../technology">Technology</a></li>
-					<li><a href="../../projects">Projects</a></li>
-					<li><a href="../../careers">Careers</a></li>
-					<li><a href="../../contact">Contact</a></li>
+					<li><a href="../../../en/home">Home</a></li>
+					<li class="active"><a href="../../../en/about">About us</a></li>
+					<li><a href="../../../en/technology">Technology</a></li>
+					<li><a href="../../../en/projects">Projects</a></li>
+					<li><a href="../../../en/careers">Careers</a></li>
+					<li><a href="../../../en/contact">Contact</a></li>
 				</ul>
 			</div>
 		</div>
@@ -226,7 +225,7 @@ You get to work with great people on amazing projects.
 			<div class="container">
 				<div class="half left">
 					<div class="half logo">
-						<img src="../../img/logo-black-retina.png"/>
+						<img src="../../../img/logo-black-retina.png"/>
 					</div>
 					<div class="half footer-contact">
 						<p class="heading">Contact</p>
@@ -252,19 +251,19 @@ You get to work with great people on amazing projects.
 			</div>
 		</div>
 	</div>
-	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
-	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src="../../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../../js/vendor/modernizr-2.8.0.dev.js"></script>
 	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
 	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
-	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="../../../js/vendor/jquery.touchSwipe.min.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js"></script>
-	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="../../../js/vendor/bootstrap.min.js"></script>	
 	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
-	<script src="../../js/vendor/jquery.validate.min.js"></script>
-	<script src="../../js/vendor/bootstrap-select.min.js"></script>
-	<script src="../../js/vendor/additional-methods.min.js"></script>
-	<script src="../../js/graphs.js"></script>
-	<script src="../../js/main.js"></script>
+	<script src="../../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../../js/graphs.js"></script>
+	<script src="../../../js/main.js"></script>
 
 	</body>
 	
