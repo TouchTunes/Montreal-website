@@ -12,13 +12,19 @@ const metalsmith    = require('metalsmith'),
       date          = require('metalsmith-build-date'),
       uglify        = require('metalsmith-uglify'),
       multiLanguage = require('metalsmith-multi-language'),
-      Handlebars    = require('handlebars')
+      Handlebars    = require('handlebars'),
+       _            = require('lodash')
 
 Handlebars.registerHelper('ifCond', (v1, v2, options) => {
   if(v1 === v2)
     return options.fn(this)
   return options.inverse(this)
 })
+
+Handlebars.registerHelper('limit', function (arr, limit) {
+  if (!_.isArray(arr)) { return []; } // remove this line if you don't want the lodash/underscore dependency
+  return arr.slice(0, limit);
+});
 
 // And run Metalsmith in a currend directory
 metalsmith(__dirname)
