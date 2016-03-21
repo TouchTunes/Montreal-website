@@ -7,7 +7,7 @@ date: 2015-11-09
  
 Le producteur associé, plate-form de services qui relèvera du producteur principal, plate-forme de services, aidera à la production de notre équipe de développement de logiciel. Le candidat idéal est une personne très organisée  avec des capacités de communication exceptionnelles, qui possède de l’expérience pratique, et démontre une aptitude pour la gestion de projet.
 
-l'équipe de plate-form de services  se compose de 25 personnes: les développeurs, les testeurs et les analystes dans notre bureau de Montréal et de 13 développeurs et testeurs travaillant à l’extérieur (offshore).
+Description du poste: l'équipe de plate-form de services  se compose de 25 personnes: les développeurs, les testeurs et les analystes dans notre bureau de Montréal et de 13 développeurs et testeurs travaillant à l’extérieur (offshore).
  
 Nous sommes responsables de la création et de l'entretien de l'infrastructure de services de systèmes clients TouchTunes, qui se compose actuellement de juke-box numérique , l’Attract TV, les applications mobiles TouchTunes et nos services web B2B.
 

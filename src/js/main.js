@@ -19,7 +19,7 @@ function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
 
   $.ajax(ajaxData);
 }
-
+ 
 $(document).ready(function() {
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
@@ -30,7 +30,7 @@ $(document).ready(function() {
         $('.animation-placeholder').addClass('slide');
         $('.ld').hide();
       }, 2000);
-    }, 1000);
+    }, 2000);
     resetAnimation();
   }
 
