@@ -19,6 +19,12 @@ function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
 
   $.ajax(ajaxData);
 }
+
+var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+
+if(is_firefox == true) {
+  $('body').addClass('mozilla');
+}
  
 $(document).ready(function() {
   //Calls the scrolling function repeatedly
@@ -30,7 +36,7 @@ $(document).ready(function() {
         $('.animation-placeholder').addClass('slide');
         $('.ld').hide();
       }, 2000);
-    }, 2000);
+    }, 3000);
     resetAnimation();
   }
 
