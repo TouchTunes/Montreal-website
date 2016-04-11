@@ -1,3 +1,4 @@
+/* exported uploadResume */
 function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
   var ajaxData = {
     type: 'POST',
@@ -22,10 +23,10 @@ function doAjaxCall(url, data, successCallback, errorCallback, isJson) {
 
 var is_firefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
 
-if(is_firefox == true) {
+if (is_firefox == true) {
   $('body').addClass('mozilla');
 }
- 
+
 $(document).ready(function() {
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
@@ -64,374 +65,371 @@ $(document).ready(function() {
   }
 
   //validation
-   if ($('#contact').hasClass('fr')) {
-   $('#contact').validate({
-     rules: {
-       'first-contact': {
-         required: true
-       },
-       'last-contact': {
-         required: true
-       },
-       'email-contact': {
-         required: true,
-         email: true
-       },
-       'message': {
-         required: true
-       }
-     },
+  if ($('#contact').hasClass('fr')) {
+    $('#contact').validate({
+      rules: {
+        'first-contact': {
+          required: true
+        },
+        'last-contact': {
+          required: true
+        },
+        'email-contact': {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+        'first-contact': {
+          required: 'S\'il vous plaît entrez votre prénom'
+        },
+        'last-contact': {
+          required: 'S\'il vous plaît entrez votre surnom'
+        },
+        'email-contact': {
+          required: 'S\'il vous plaît entrez votre courriel',
+          email: 'Veuillez fournir une adresse courriel valide'
+        },
+        message: {
+          required: 'S\'il vous plaît entrer un message'
+        }
+      }
+    });
+  } else {
+    $('#contact').validate({
+      rules: {
+        'first-contact': {
+          required: true
+        },
+        'last-contact': {
+          required: true
+        },
+        'email-contact': {
+          required: true,
+          email: true
+        },
+        message: {
+          required: true
+        }
+      },
+      messages: {
+        'first-contact': {
+          required: 'Please enter your first name'
+        },
+        'last-contact': {
+          required: 'Please enter your last name'
+        },
+        'email-contact': {
+          required: 'Please enter your email address',
+          email: 'Please enter a valid email address'
+        },
+        message: {
+          required: 'Please enter a message'
+        }
+      }
+    });
+  }
 
-     messages: {
-       'first-contact': {
-         required: 'S\'il vous plaît entrez votre prénom'
-       },
-       'last-contact': {
-         required: 'S\'il vous plaît entrez votre surnom'
-       },
-       'email-contact': {
-         required: 'S\'il vous plaît entrez votre courriel',
-         email: 'Veuillez fournir une adresse courriel valide'
-       },
-       'message': {
-         required: 'S\'il vous plaît entrer un message'
-       }
-     }
-   });
+  if ($('#modal-form').hasClass('fr')) {
+    $('#modal-form').validate({
+      rules: {
+        'first-app': {
+          required: true
+        },
+        'last-app': {
+          required: true
+        },
+        'city-app': {
+          required: true
+        },
+        'email-app': {
+          required: true,
+          email: true,
+          minlength: 5
+        },
+        'country-app': {
+          required: true
+        },
+        'phone-app': {
+          required: true,
+          number: true
+        },
+        'resume-app': {
+          extension: 'doc|docx|pdf'
+        },
+        cover: {
+          extension: 'doc|docx|pdf'
+        },
+        attachment: {
+          extension: 'doc|docx|pdf|png|jpg|jpeg'
+        }
+      },
 
- } else {
-   $('#contact').validate({
-     rules: {
-       'first-contact': {
-         required: true
-       },
-       'last-contact': {
-         required: true
-       },
-       'email-contact': {
-         required: true,
-         email: true
-       },
-       'message': {
-         required: true
-       }
-     },
-
-     messages: {
-       'first-contact': {
-         required: 'Please enter your first name'
-       },
-       'last-contact': {
-         required: 'Please enter your last name'
-       },
-       'email-contact': {
-         required: 'Please enter your email address',
-         email: 'Please enter a valid email address'
-       },
-       'message': {
-         required: 'Please enter a message'
-       }
-     }
-   });
- }
-
- if ($('#modal-form').hasClass('fr')) {
-   $('#modal-form').validate({
-     rules: {
-       'first-app': {
-         required: true
-       },
-       'last-app': {
-         required: true
-       },
-       'city-app': {
-         required: true
-       },
-       'email-app': {
-         required: true,
-         email: true,
-         minlength: 5
-       },
-       'country-app': {
-         required: true
-       },
-       'phone-app': {
-         required: true,
-         number: true
-       },
-       'resume-app': {
-         extension: 'doc|docx|pdf'
-       },
-       'cover': {
-         extension: 'doc|docx|pdf'
-       },
-       'attachment': {
-         extension: 'doc|docx|pdf|png|jpg|jpeg'
-       }
-     },
-
-     messages: {
-       'first-app': {
-         required: 'S\'il vous plaît entrez votre prénom'
-       },
-       'last-app': {
-         required: 'S\'il vous plaît entrez votre surnom'
-       },
-       'city-app': {
-         required: 'S\'il vous plaît entrez votre ville'
-       },
-       'email-app': {
-         required: 'S\'il vous plaît entrez votre courriel',
-         email: 'Veuillez fournir une adresse courriel valide'
-       },
-       'country-app': {
-         required: 'S\'il vous plaît entrez votre pays'
-       },
-       'phone-app': {
-         required: 'S\'il vous plaît entrez votre téléphone',
-         number: 'Veuillez fournir une telephone valide'
-       },
-       'resume-app': {
-         required: 'S\'il vous plaît entrez votre résumé',
-         extension: 'Accepte les fichiers: doc,docx, pdf'
-       },
-       'cover': {
-         extension: 'Accepte les fichiers: doc,docx, pdf'
-       },
-       'attachment': {
-         extension: 'Accepte les fichiers: doc,docx, pdf, png, jpg, jpeg'
-       },
-       'facebook': {
+      messages: {
+        'first-app': {
+          required: 'S\'il vous plaît entrez votre prénom'
+        },
+        'last-app': {
+          required: 'S\'il vous plaît entrez votre surnom'
+        },
+        'city-app': {
+          required: 'S\'il vous plaît entrez votre ville'
+        },
+        'email-app': {
+          required: 'S\'il vous plaît entrez votre courriel',
+          email: 'Veuillez fournir une adresse courriel valide'
+        },
+        'country-app': {
+          required: 'S\'il vous plaît entrez votre pays'
+        },
+        'phone-app': {
+          required: 'S\'il vous plaît entrez votre téléphone',
+          number: 'Veuillez fournir une telephone valide'
+        },
+        'resume-app': {
+          required: 'S\'il vous plaît entrez votre résumé',
+          extension: 'Accepte les fichiers: doc,docx, pdf'
+        },
+        cover: {
+          extension: 'Accepte les fichiers: doc,docx, pdf'
+        },
+        attachment: {
+          extension: 'Accepte les fichiers: doc,docx, pdf, png, jpg, jpeg'
+        },
+        facebook: {
           url: 'S\'il vous plaît entrer une URL valide ( doit commencer par http: // ou https: // )'
-       },
-       'linkedin': {
+        },
+        linkedin: {
           url: 'S\'il vous plaît entrer une URL valide ( doit commencer par http: // ou https: // )'
-       }
-     }
-   });
- } else {
-   $('#modal-form').validate({
-     rules: {
-       'first-app': {
-         required: true
-       },
-       'last-app': {
-         required: true
-       },
-       'city-app': {
-         required: true
-       },
-       'email-app': {
-         required: true,
-         email: true,
-         minlength: 5
-       },
-       'country-app': {
-         required: true
-       },
-       'phone-app': {
-         required: true,
-         number: true
-       },
-       'resume-app': {
-         extension: 'doc|docx|pdf'
-       },
-       'cover': {
-         extension: 'doc|docx|pdf'
-       },
-       'attachment': {
-         extension: 'doc|docx|pdf|png|jpg|jpeg'
-       }
-     },
+        }
+      }
+    });
+  } else {
+    $('#modal-form').validate({
+      rules: {
+        'first-app': {
+          required: true
+        },
+        'last-app': {
+          required: true
+        },
+        'city-app': {
+          required: true
+        },
+        'email-app': {
+          required: true,
+          email: true,
+          minlength: 5
+        },
+        'country-app': {
+          required: true
+        },
+        'phone-app': {
+          required: true,
+          number: true
+        },
+        'resume-app': {
+          extension: 'doc|docx|pdf'
+        },
+        cover: {
+          extension: 'doc|docx|pdf'
+        },
+        attachment: {
+          extension: 'doc|docx|pdf|png|jpg|jpeg'
+        }
+      },
 
-     messages: {
-       'first-app': {
-         required: 'Please enter your first name'
-       },
-       'last-app': {
-         required: 'Please enter your last name'
-       },
-       'city-app': {
-         required: 'Please enter the city'
-       },
-       'email-app': {
-         required: 'Please enter your email address',
-         email: 'Please enter a valid email address'
-       },
-       'country-app': {
-         required: 'Please enter your country'
-       },
-       'phone-app': {
-         required: 'Please enter your phone',
-         number: 'Please enter a valid phone number'
-       },
-       'resume-app': {
-         extension: 'Accepted files: doc,docx, pdf'
-       },
-       'cover': {
-         extension: 'Accepted files: doc,docx, pdf'
-       },
-       'attachment': {
-         extension: 'Accepted files: doc,docx, pdf, png, jpg, jpeg'
-       },
-       'facebook': {
+      messages: {
+        'first-app': {
+          required: 'Please enter your first name'
+        },
+        'last-app': {
+          required: 'Please enter your last name'
+        },
+        'city-app': {
+          required: 'Please enter the city'
+        },
+        'email-app': {
+          required: 'Please enter your email address',
+          email: 'Please enter a valid email address'
+        },
+        'country-app': {
+          required: 'Please enter your country'
+        },
+        'phone-app': {
+          required: 'Please enter your phone',
+          number: 'Please enter a valid phone number'
+        },
+        'resume-app': {
+          extension: 'Accepted files: doc,docx, pdf'
+        },
+        cover: {
+          extension: 'Accepted files: doc,docx, pdf'
+        },
+        attachment: {
+          extension: 'Accepted files: doc,docx, pdf, png, jpg, jpeg'
+        },
+        facebook: {
           url: 'Please enter a valid url ( must start with http:// or https://)'
-       },
-       'linkedin': {
+        },
+        linkedin: {
           url: 'Please enter a valid url ( must start with http:// or https://)'
-       }
-     }
-   });
- }
+        }
+      }
+    });
+  }
 
- if ($('#menu').hasClass('fr')) {
-   $('#menu').validate({
-     rules: {
-       'first-crew': {
-         required: true
-       },
-       'last-crew': {
-         required: true
-       },
-       'city-crew': {
-         required: true
-       },
-       'email-crew': {
-         required: true,
-         email: true,
-         minlength: 5
-       },
-       'country-crew': {
-         required: true
-       },
-       'phone-crew': {
-         required: true,
-         number: true
-       },
-       'resume': {
-         extension: 'doc|docx|pdf'
-       },
-       'coverletter': {
-         extension: 'doc|docx|pdf'
-       },
-       'attachment': {
-         extension: 'doc|docx|pdf|png|jpg|jpeg'
-       }
-     },
+  if ($('#menu').hasClass('fr')) {
+    $('#menu').validate({
+      rules: {
+        'first-crew': {
+          required: true
+        },
+        'last-crew': {
+          required: true
+        },
+        'city-crew': {
+          required: true
+        },
+        'email-crew': {
+          required: true,
+          email: true,
+          minlength: 5
+        },
+        'country-crew': {
+          required: true
+        },
+        'phone-crew': {
+          required: true,
+          number: true
+        },
+        resume: {
+          extension: 'doc|docx|pdf'
+        },
+        coverletter: {
+          extension: 'doc|docx|pdf'
+        },
+        attachment: {
+          extension: 'doc|docx|pdf|png|jpg|jpeg'
+        }
+      },
 
-     messages: {
-       'first-crew': {
-         required: 'S\'il vous plaît entrez votre prénom'
-       },
-       'last-crew': {
-         required: 'S\'il vous plaît entrez votre surnom'
-       },
-       'city-crew': {
-         required: 'S\'il vous plaît entrez votre ville'
-       },
-       'email-crew': {
-         required: 'S\'il vous plaît entrez votre courriel',
-         email: 'Veuillez fournir une adresse courriel valide'
-       },
-       'country-crew': {
-         required: 'S\'il vous plaît entrez votre pays'
-       },
-       'phone-crew': {
-         required: 'S\'il vous plaît entrez votre téléphone',
-         number: 'Veuillez fournir une telephone valide'
-       },
-       'resume': {
-         required: 'S\'il vous plaît entrez votre résumé',
-         extension: 'Accepte les fichiers: doc,docx, pdf'
-       },
-       'coverletter': {
-         extension: 'Accepte les fichiers: doc,docx, pdf'
-       },
-       'attachment': {
-         extension: 'Accepte les fichiers: doc,docx, pdf, png, jpg, jpeg'
-       },
-       'facebook-crew': {
+      messages: {
+        'first-crew': {
+          required: 'S\'il vous plaît entrez votre prénom'
+        },
+        'last-crew': {
+          required: 'S\'il vous plaît entrez votre surnom'
+        },
+        'city-crew': {
+          required: 'S\'il vous plaît entrez votre ville'
+        },
+        'email-crew': {
+          required: 'S\'il vous plaît entrez votre courriel',
+          email: 'Veuillez fournir une adresse courriel valide'
+        },
+        'country-crew': {
+          required: 'S\'il vous plaît entrez votre pays'
+        },
+        'phone-crew': {
+          required: 'S\'il vous plaît entrez votre téléphone',
+          number: 'Veuillez fournir une telephone valide'
+        },
+        resume: {
+          required: 'S\'il vous plaît entrez votre résumé',
+          extension: 'Accepte les fichiers: doc,docx, pdf'
+        },
+        coverletter: {
+          extension: 'Accepte les fichiers: doc,docx, pdf'
+        },
+        attachment: {
+          extension: 'Accepte les fichiers: doc,docx, pdf, png, jpg, jpeg'
+        },
+        'facebook-crew': {
           url: 'S\'il vous plaît entrer une URL valide ( doit commencer par http: // ou https: // )'
-       },
-       'linkedin-crew': {
+        },
+        'linkedin-crew': {
           url: 'S\'il vous plaît entrer une URL valide ( doit commencer par http: // ou https: // )'
-       }
-     }
-   });
- } else {
-   $('#menu').validate({
-     rules: {
-       'first-crew': {
-         required: true
-       },
-       'last-crew': {
-         required: true
-       },
-       'city-crew': {
-         required: true
-       },
-       'email-crew': {
-         required: true,
-         email: true,
-         minlength: 5
-       },
-       'country-crew': {
-         required: true
-       },
-       'phone-crew': {
-         required: true,
-         number: true
-       },
-       'resume': {
-         extension: 'doc|docx|pdf'
-       },
-       'coverletter': {
-         extension: 'doc|docx|pdf'
-       },
-       'attachment': {
-         extension: 'doc|docx|pdf|png|jpg|jpeg'
-       }
-     },
+        }
+      }
+    });
+  } else {
+    $('#menu').validate({
+      rules: {
+        'first-crew': {
+          required: true
+        },
+        'last-crew': {
+          required: true
+        },
+        'city-crew': {
+          required: true
+        },
+        'email-crew': {
+          required: true,
+          email: true,
+          minlength: 5
+        },
+        'country-crew': {
+          required: true
+        },
+        'phone-crew': {
+          required: true,
+          number: true
+        },
+        resume: {
+          extension: 'doc|docx|pdf'
+        },
+        coverletter: {
+          extension: 'doc|docx|pdf'
+        },
+        attachment: {
+          extension: 'doc|docx|pdf|png|jpg|jpeg'
+        }
+      },
 
-     messages: {
-       'first-crew': {
-         required: 'Plese enter your first name'
-       },
-       'last-crew': {
-         required: 'Please enter your last name'
-       },
-       'city-crew': {
-         required: 'Please enter the city'
-       },
-       'email-crew': {
-         required: 'Please enter your email address',
-         email: 'Please enter a valid email address'
-       },
-       'country-crew': {
-         required: 'Please enter your country'
-       },
-       'phone-crew': {
-         required: 'Please enter your phone',
-         number: 'Please enter a valid phone number'
-       },
-       'resume': {
-         extension: 'Accepted files: doc,docx, pdf'
-       },
-       'coverletter': {
-         extension: 'Accepted files: doc,docx, pdf'
-       },
-       'attachment': {
-         extension: 'Accepted files: doc,docx, pdf, png, jpg, jpeg'
-       },
-       'facebook-crew': {
+      messages: {
+        'first-crew': {
+          required: 'Plese enter your first name'
+        },
+        'last-crew': {
+          required: 'Please enter your last name'
+        },
+        'city-crew': {
+          required: 'Please enter the city'
+        },
+        'email-crew': {
+          required: 'Please enter your email address',
+          email: 'Please enter a valid email address'
+        },
+        'country-crew': {
+          required: 'Please enter your country'
+        },
+        'phone-crew': {
+          required: 'Please enter your phone',
+          number: 'Please enter a valid phone number'
+        },
+        resume: {
+          extension: 'Accepted files: doc,docx, pdf'
+        },
+        coverletter: {
+          extension: 'Accepted files: doc,docx, pdf'
+        },
+        attachment: {
+          extension: 'Accepted files: doc,docx, pdf, png, jpg, jpeg'
+        },
+        'facebook-crew': {
           url: 'Please enter a valid url ( must start with http:// or https://)'
-       },
-       'linkedin-crew': {
+        },
+        'linkedin-crew': {
           url: 'Please enter a valid url ( must start with http:// or https://)'
-       }
-     }
-   });
- }
+        }
+      }
+    });
+  }
   //end of validation
 
   $('#contact, #modal-form, #menu').submit(function(e) {
@@ -522,7 +520,7 @@ $(window).scroll(function () {
   }
 
   if ($('.percentage').length) {
-    var animationOffset = $('.percentage').offset().top;
+    animationOffset = $('.percentage').offset().top;
     if (animationOffset < scrolled) {
       graph();
     }
@@ -628,18 +626,18 @@ function contactMap() {
 
   var map = new google.maps.Map(mapCanvas, mapOptions);
 
-  var marker = new google.maps.Marker({
+  new google.maps.Marker({
     position: myLatLng,
     map: map
   });
 
-  var currCenter = map.getCenter();
+  // var currCenter = map.getCenter();
 }
 
 if ($('.contact-map').length) {
   setTimeout(function() {
     $('#contact').validate().form();
-  }, 500);  
+  }, 500);
   google.maps.event.addDomListener(window, 'load', contactMap);
 }
 
@@ -664,7 +662,6 @@ $('.member .more').on('click', function() {
 var fileResume;
 var fileCover;
 var fileAttachment;
-var fileResumeApp;
 
 $('#resume-crew').on('change', function(e) {
   var files = e.target.files || e.dataTransfer.files;
@@ -707,6 +704,7 @@ function uploadResume() {
   });
   return url;
 }
+
 $('#submit-crew').on('click', function () {
 
   if (!$(this).parent().find('input.error').length) {
@@ -715,6 +713,7 @@ $('#submit-crew').on('click', function () {
     var city = $('#city-crew').val();
     var country = $('#country-crew').val();
     var email = $('#email-crew').val();
+    var job = $('#job').val();
     var phone = $('#phone-crew').val();
     var facebook = $('#facebook-crew').val();
     var linkedin = $('#linkedin-crew').val();
@@ -841,7 +840,7 @@ $('#submit-contact').on('click', function () {
 
 $('#submit-application').on('click', function () {
   if ($(this).parent().parent().find('input.error').length) {
-    console.log('error');
+    // console.log('error');
   } else {
 
     var firstName = $('#first-app').val();
@@ -986,13 +985,13 @@ function hideMore() {
 
 $('.more').on('click', function() {
   $(this).siblings('.text-container').toggleClass('extend');
-  if($(this).text() == 'Read more') { 
+  if ($(this).text() == 'Read more') {
     $(this).text('Read less');
-  } else if($(this).text() == 'En savoir plus') {
-      $(this).text('En savoir moins') 
-    } else if($(this).text() == 'En savoir moins') {
-      $(this).text('En savoir plus') 
-    } else {
-      $(this).text('Read more'); 
-    }
+  } else if ($(this).text() == 'En savoir plus') {
+    $(this).text('En savoir moins');
+  } else if ($(this).text() == 'En savoir moins') {
+    $(this).text('En savoir plus');
+  } else {
+    $(this).text('Read more');
+  }
 });
