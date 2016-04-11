@@ -2,6 +2,7 @@
 
 // Require all modules we need
 const metalsmith    = require('metalsmith'),
+      path          = require('path'),
       ifThen        = require('metalsmith-if'),
       argv          = require('optimist').argv,
       ghPages       = require('gh-pages'),
@@ -62,7 +63,7 @@ metalsmith(__dirname)
     if (err) throw err
  
     if (argv.publish)
-      ghpages.publish(path.join(__dirname, 'dist'), {
+      ghPages.publish(path.join(__dirname, 'dist'), {
         message: 'chore(dist): auto-publish on Github pages'
       }, err => {
         if (err) throw err
