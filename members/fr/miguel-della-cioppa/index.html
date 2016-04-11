@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Miguel Della Cioppa</title>
+    <link rel="stylesheet" type="text/css" href="../../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	  <div class="menu">
+		<div class="container">
+			<div class="menu-header">
+				<a class="close menu-button" href="javascript:void(0)"></a>	
+			</div>
+		</div>
+		<div class="content">
+			<ul class="list">
+				<li><a href="../../../fr/home" class="">Accueil </a></li>
+				<li><a href="../../../fr/about">À propos</a></li>
+				<li><a href="../../../fr/technology">Technologies</a></li>
+				<li><a href="../../../fr/projects">Projets</a></li>
+				<li><a href="../../../fr/careers">Carrières </a></li>
+				<li><a href="../../../fr/contact">Contact</a></li>
+			</ul>
+			<div class="container">
+				<div class="application">
+					<h2 class="underline">Faites partie du groupe</h2>
+					<p>Le studio de Montréal compte plus de 90 employés et leur nombre ne cesse de croître. Venez fracasser les records en notre compagnie!</p>	
+
+					<form id="menu" class="fr">
+						<div class="loader"></div>
+						<label class="ie-placeholder" style="">Prénom</label>
+						<input required  type="text" placeholder="Prénom" name="first-crew" id="first-crew"/>
+						<label class="ie-placeholder" style="">Surnom</label>
+						<input required  type="text" placeholder="Surnom" name="last-crew" id="last-crew"/>
+						<label class="ie-placeholder" style="">Ville</label>
+						<input required  type="text" placeholder="Ville" name="city-crew" id="city-crew"/>
+						<label class="ie-placeholder" style="">Pays</label>
+						<input required  type="text" placeholder="Pays" name="country-crew" id="country-crew"/>
+						<label class="ie-placeholder" style="">Téléphone</label>
+						<input required  type="text" placeholder="Téléphone" name="phone-crew" id="phone-crew"/>
+						<label class="ie-placeholder" style="">Courriel</label>
+						<input required  type="text" placeholder="Courriel" name="email-crew" id="email-crew" />
+						<div class="file-wrapper">
+							<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+							<input  class="uploadFile" placeholder="Télécharger votre résumé"  />
+							<div class="fileUpload">
+							    <span></span>
+							    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+							</div>
+						</div>
+
+						<div class="file-wrapper">
+							<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+							<input  class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+							<div class="fileUpload">
+							    <span></span>
+							    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+							</div>
+						</div>
+
+						<label>Réseaux sociaux</label>
+						<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+						<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+						<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+						<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook-crew" name="facebook-crew" />
+
+						<div class="file-wrapper">
+							<label class="ie-placeholder" style="">Ajouté des documents</label>
+							<input class="uploadFile" placeholder="Ajouté des documents" />
+							<div class="fileUpload">
+							    <span></span>
+							    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+							</div>
+						</div>
+
+						<input type="submit" class="button" id="submit-crew" value="Envoyer une demande d’emploi" />
+					</form>		
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="job-modal">
+		<div class="container">
+			<a class="close modal" href="javascript:void(0)"></a>
+			<h2>Postulez un emploi à TouchTunes</h2>
+			<p class="title"></p>
+			<div class="content">
+				<p>Nous vous remercions d’envisager de faire carrière à Touchtunes.
+	Prendre quelques minutes pour remplir le formulaire suivant. Quand vous
+	aurez terminé, un courriel contenant tous les renseignements sur la
+	manière de vérifier l’état de votre demande vous sera envoyé.</p>
+
+				<form id="modal-form" class="fr">
+					<p>Informations personnelles</p>
+					<span>* indique un champ obligatoire</span>
+					<div class="loader"></div>
+
+					<input type="hidden" class="apply-for" value="" id="job" />
+					<label class="ie-placeholder" style="">Prénom *</label>
+					<input type="text" placeholder="Prénom *" name="first-app" id="first-app" />
+					<label class="ie-placeholder" style="">Surnom *</label>
+					<input type="text" placeholder="Surnom *" name="last-app" id="last-app" />
+					<label class="ie-placeholder" style="">Ville *</label>
+					<input type="text" placeholder="Ville *" name="city-app" id="city-app" />
+					<label class="ie-placeholder" style="">Pays *</label>
+					<input type="text" placeholder="Pays *" name="country-app" id="country-app" />
+					<label class="ie-placeholder" style="">Courriel *</label>
+					<input type="text"placeholder="Courriel *" name="email-app" id="email-app" />
+					<label class="ie-placeholder" style="">Téléphone *</label>
+					<input type="text" placeholder="Téléphone *" name="phone-app" id="phone" />
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+						<input class="uploadFile" placeholder="Télécharger votre résumé" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+						<input class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+						</div>
+					</div>
+
+					<div class="social-info">
+						<label>Réseaux sociaux</label>
+						<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+						<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin" name="linkedin"/>
+						<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+						<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook" name="facebook" />
+					</div>
+					<div class="bottom">
+						<div class="file-wrapper">
+							<label class="ie-placeholder" style="">Ajouté des documents</label>
+							<input class="uploadFile" placeholder="Ajouté des documents" />
+							<div class="fileUpload">
+							    <span></span>
+							    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+							</div>
+						</div>
+						<input type="submit" class="button pink" id="submit-application" value="Envoyer une demande d’emploi"/>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+	<div class="home-wrapper">
+			<div class="overlay"></div>
+			<div class="header">
+				<a class="menu-button">
+					
+				</a>
+				<a href="../../../fr/home"><img class="white" src="../../../img/logo-white-retina.png"/>
+				<img class="black" src="../../../img/logo-black-retina.png"/></a>
+
+
+				<a href="../../en/miguel-della-cioppa" class="french">EN</a>
+			</div>
+
+		<div class="banner">
+			<img class="single-member" src="../../../img/members/Miguel Della Cioppa.jpg">
+		</div>
+		<div class="container">
+			<div class="work single">
+				<h2>Fier membre du meilleur groupe à Montréal</h2>
+				<p>Joignez-vous à moi et au reste de l’équipe de TouchTunes Montréal. Vous aurez ainsi la chance de travailler sur de formidables projets en compagnie de personnes exceptionnelles.
+</p>
+				<a class="button apply">Postuler</a>
+
+				
+
+				
+			</div>
+		</div>
+		<div class="about scroll-to">
+			<div class="container">
+				<img class="underline" src="../../../img/logo-white-retina.png"/>
+				<div class="text-container small">
+					<p>TouchTunes est rapidement devenue une plateforme de musique et de divertissement incontournable depuis le lancement du premier juke-box entièrement numérique. Au cours des années, la société a affiché une importante croissance, et elle a maintenant des équipes énergiques situées à Montréal, à New York, à Chicago et à Londres. Elle offre ses produits dans plus de 71 000 emplacements en Amérique du Nord et en Europe. Le studio de Montréal constitue le cœur de la production et des opérations de TouchTunes Corp. L’équipe travaille sans relâche à la conception de nombreux projets interactifs, lui permettant ainsi de participer et de laisser sa marque à une époque où tout évolue à un rythme effréné.</p>
+				</div>
+				<a class="button white" href="../../../fr/about">À propos</a>
+			</div>
+		</div>
+		<div class="contact-mail">
+			<div class="container">
+				<h2 class="underline white">Communiquez avec TouchTunes</h2>
+				<div class="big text-container">
+					<p> Si vous avez des questions au sujet de TouchTunes Montréal, nous avons probablement les réponses, et si vous avez des idées, nous sommes curieux de les connaître. Nous voulons vous entendre.</p>
+				</div>
+				<a class="button blue" href="../../../fr/contact">
+					<span class="small"><img src="../../../img/mail-icon.png"/></span>
+					<span class="big">Courriel</span>
+				</a>
+			</div>	
+		</div>
+	</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li><a href="../../../fr/home" class="">Accueil </a></li>
+					<li><a href="../../../fr/about">À propos</a></li>
+					<li><a href="../../../fr/technology">Technologies</a></li>
+					<li><a href="../../../fr/projects">Projets</a></li>
+					<li><a href="../../../fr/careers">Carrières </a></li>
+					<li><a href="../../../fr/contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Envoyez-nous un message</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Coordonnées</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../../js/graphs.js"></script>
+	<script src="../../../js/main.js"></script>
+
+	</body>
+	
+</html>
+

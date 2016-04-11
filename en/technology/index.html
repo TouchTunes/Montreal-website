@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="This is some meta description">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Technology page</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div class="overlay"></div>
+	<div class="header">
+		<a class="menu-button">
+			
+		</a>
+		<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+		<img class="black" src="../../img/logo-black-retina.png"/></a>
+
+
+		<a href="../../fr/technology" class="french">FR</a>
+	</div>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Home</a></li>
+			<li><a href="../about">About us</a></li>
+			<li><a href="../technology">Technology</a></li>
+			<li><a href="../projects">Projects</a></li>
+			<li><a href="../careers">Careers</a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Join the band</h2>
+				<p>Over 90 Montreal-based employees and growing. Come break some records with us!</p>	
+
+				<form id="menu">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">First Name</label>
+					<input required  type="text" placeholder="First Name" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Last Name</label>
+					<input required  type="text" placeholder="Last Name" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">City</label>
+					<input required  type="text" placeholder="City" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Country</label>
+					<input required  type="text" placeholder="Country" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Phone</label>
+					<input required  type="text" placeholder="Phone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Email</label>
+					<input required  type="text" placeholder="Email" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload resume</label>
+						<input  class="uploadFile" placeholder="Upload resume"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload Cover letter</label>
+						<input  class="uploadFile" placeholder="Upload Cover letter" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook-crew"  name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add attachment</label>
+						<input class="uploadFile" placeholder="Add attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Send Application" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Apply to TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Thank you for considering a career at Touchtunes. Please take a minute to fill out the following form. After you have completed your application an email will be sent to you with information about how to check the status of your application.</p>
+
+			<form id="modal-form">
+				<p>Personal information</p>
+				<span>* indicates a required field</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">First Name *</label>
+				<input type="text" placeholder="First Name *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Last Name *</label>
+				<input type="text" placeholder="Last Name *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">City *</label>
+				<input type="text" placeholder="City *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Country *</label>
+				<input type="text" placeholder="Country *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Email *</label>
+				<input type="text"placeholder="Email *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Phone *</label>
+				<input type="text" placeholder="Phone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload resume</label>
+					<input class="uploadFile" placeholder="Upload resume" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload Cover letter</label>
+					<input class="uploadFile" placeholder="Upload Cover letter" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" name="linkedin" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add Attachment</label>
+						<input class="uploadFile" placeholder="Add Attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Send Application"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="technology-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../fr/technology" class="french">FR</a>
+		</div>
+	<div class="banner">
+		<div class="gray-overlay"></div>
+		<div class="container">
+			<div class="text-container small">
+   				<h1 class="underline">Our favorite toys</h1>
+				<p>Music is the core of TouchTunes MTL and technologies are the instruments that drive us to continuously progress and innovate. Our Jukebox, Mobile, Platform and Attract TV teams strive to operate with the most cutting edge technologies in order to not only stay ahead of the curve, but also to create the curve that propels social change into social standards and to engage the millennial in ways. The way we see it, our limitations begin and end with the technologies that are available. The rest is up to you.</p>
+			</div>
+			<a class="cts button">See technologies</a>
+		</div>
+	</div>	
+	<div class="tech scroll-to">
+		<div class="wrap">
+			<div class="container">
+				<h2>Products</h2>
+				<div class="section">
+					<div class="images">
+						<img  src="../../img/tech-icon-6.png">
+						<img  src="../../img/tech-icon-7.png">
+						<img  src="../../img/tech-icon-8.png">
+					</div>
+						<p><span class="embed big-screen">Products</span>Our product engineers are the battle-tested storm chasers of the company, the elite unit we send in to engage seas of code, tsunamis of audio signals, and hurricanes of pixels. They have become Zen warriors in their fight for clean and intelligent design.
+These dedicated individuals come together to commune with the Linux kernel, be one with multimedia streams, and paint pixels with the expert hands of artists working with the most efficient tools to achieve the beauty of a piece of code.  Their missions result in parties continuing without a hitch, people dancing to the beat of millions of tracks being played every day, and lives made just a little brighter through the power of a great song.</p>
+				</div>	
+				<a class="more small-screen">Read more</a>
+				<div class="links">
+					<a>Linux, GStreamer, Clutter, DBus, EMacs & Vi(in equal doses)</a>
+				</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="container">
+				<h2>Data</h2>
+				<div class="section">
+					<div class="images">
+						<img src="../../img/tech-icon.png">
+						<img src="../../img/tech-icon-1.png">
+						<img src="../../img/tech-icon-2.png">
+					</div>
+					
+					<p><span class="embed big-screen">Data</span>"If a tree falls in a forest and nobody's around to hear it, does it make a sound?”  With our RabbitMQ server, the answer is yes - that falling tree notifies our messaging system so that everyone knows. Better yet, we know when every leaf falls and where it's going to hit the forest floor. We are not talking about one lonely zen tree of information here, picture a rain forest with a torrential downpour of data whirling around constantly. Our messaging strategy is the backbone of our platform.  Our platform is the foundation of our products.  Our products are everywhere.  Do the math.</p>
+				</div>
+				<a class="more small-screen">Read more</a>
+
+				<div class="links">
+					<a >RabbitMQ, Python, ELK, AWK, Redis, Awesome-Sauce</a>
+				</div>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="container">
+				<h2>Execution</h2>
+				<div class="section">
+					<div class="images">
+						<img src="../../img/tech-icon-3.png">
+						<img src="../../img/tech-icon-4.png">
+						<img src="../../img/tech-icon-5.png">
+					</div>
+					<p><span class="embed big-screen">Execution</span>Ever spent time watching an ant colony self-organize around obstacles? We did (on the Internet), and it gave us (mostly the Lego maniacs) a few ideas. We started thinking, if ants had Lego, they would rule the world. Trust us, this is going somewhere.
+We wanted to build resiliency and self-repair into our system, so we packed our code inside Docker images and let the containers re-arrange themselves so that we wouldn’t have to. It's like automated Lego construction with data. All hail our ingenious ant overlords!</p>
+				</div>
+				<a class="more small-screen">Read more</a>
+
+				<div class="links">
+					<a>Docker, Apache Mesos, Load Balancing, Service Discovery, Ansible, Jenkins, Epicness-As-A-Service</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="percentage">
+		<div class="container">
+
+			<h2 class="underline dark">Tech MVPs</h2>
+			<div class="text-container small">
+				<p >At Touchtunes MTL all techs are fair game. Here’s some of our chart toppers</p>
+				<a class="button big-screen" href="../projects">See our projects</a>
+			</div>
+			<div class="animation">
+				<div class="panel">
+					<div class="graph">
+						<div class="graph-bd">
+							<div class="graph-bd-md">
+								<svg id="svg"></svg>
+							</div>
+							<div data-pie-id="svg" class="graph-bd-text">
+								<ul data-pie-id="svg">
+									<li data-value="35"><span>35%</span> Java</li>
+									<li data-value="20"><span>20%</span> Python</li>
+									<li data-value="20"><span>20%</span> Amazon</li>
+									<li data-value="5"><span>5%</span> PowerPoint (to keep managers away from code)</li>
+									<li data-value="5"><span>5%</span> Air guitar</li>
+									<li data-value="15"><span>15%</span> Coffee</li>
+								</ul>
+								<div id="svg"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="employees">
+					<p><span>90+</span>Employees like working with our tech.</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+	<div class="contact">
+		<div class="container">
+			<h2 class="underline dark">Want to join?</h2>
+			<div class="text-container small">
+				<p>We are always looking to add new talent to our roster. </p>
+			</div>
+			<div class="big-screen">
+				<a class="button blue big-screen" href="../careers">Work with us</a>
+			</div>
+			<a class="button pink small-screen"  href="../careers">Work with us</a>
+		</div>
+	</div>
+</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Home</a></li>
+					<li class="active"><a href="../about">About us</a></li>
+					<li><a href="../technology">Technology</a></li>
+					<li><a href="../projects">Projects</a></li>
+					<li><a href="../careers">Careers</a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Contact</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Address</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>

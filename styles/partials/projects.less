@@ -1,0 +1,433 @@
+.project-wrapper {
+	.banner {
+		padding-bottom: 120px;
+		background: url(../img/error-banner.jpg) no-repeat center;
+		background-size: cover;
+
+		@media(max-width: 450px) {
+			background: white;
+		}
+	
+		.button {
+			margin-top: 30px;
+
+			@media(min-width: 940px) {
+				margin-top: 60px;
+			}
+		}
+	}
+
+	.tech {
+		.wrap {
+			background-color: @dirtywhite;
+			padding: 50px 0;
+			text-align: center;
+
+			@media(min-width: 1100px) {
+				padding: 100px 0 50px 0;
+			}
+
+			&:nth-child(even) {
+				background-color: white;
+			}
+
+			&.mobile {
+				
+				h2, .embed {
+					padding-left: 40px;
+					background: url(../img/stack-mobile-bg-dark.png) no-repeat center left;
+					background-size: auto 30px;
+
+					@media(max-width: 340px) {
+						background-size: auto 30px;
+					}
+				}
+			}
+
+			&.platform {
+				h2, .embed {
+					padding-right: 45px;
+					background: url(../img/stack-platform-bg.png) no-repeat center right;
+					background-size: auto 23px;
+
+					@media(max-width: 340px) {
+						background-size: auto 22px;
+					}
+				}
+
+				.embed {
+					background-position: left top 15px !important;
+					background-size: 40px !important;
+				}
+
+				.images {
+					@media(min-width: 1100px) {	
+						margin-right: -80px;
+						padding-right: 0;
+					}
+				}
+			}
+
+			&.tv {
+				h2, .embed {
+					padding-left: 45px;
+					background: url(../img/stack-attract-bg-dark.png) no-repeat center left;
+					background-size: auto 28px;
+
+					@media(max-width: 340px) {
+						background-size: auto 25px;
+					}
+				}
+
+				.embed {
+					background-position: left top 11px !important;
+					background-size: 35px !important;
+				}
+
+				.images {					
+					@media(min-width: 1100px) {	
+						margin-right: -70px;
+					}
+				}
+			}
+
+			&.jukebox {
+				h2, .embed {
+					padding-right: 45px;
+					background: url(../img/stack-jukebox-bg.png) no-repeat center right;
+					background-size: auto 28px;
+
+					@media(max-width: 340px) {
+						background-size: auto 26px;
+					}
+				}
+
+				.embed {
+					background-position: left top 11px !important;
+					background-size: 32px !important;
+				}
+			}
+
+			&.operations {
+				h2, .embed {
+					padding-left: 45px;
+					background: url(../img/stack-operations-bg-dark.png) no-repeat center left;
+					background-size: auto 28px;
+
+					@media(max-width: 340px) {
+						background-size: auto 26px;
+					}
+				}
+
+				.embed {
+					background-position: left top 16px !important;
+					background-size: 37px !important;
+				}
+
+				.images {
+					@media(min-width: 1100px) {						
+						margin-right: -40px;
+						padding-right: 0;
+					}
+				}
+			}
+
+			.additional {
+				text-align: left;
+
+				@media(min-width: 940px) {
+					padding-top: 20px;
+					max-width: 620px;
+					float: none;
+				}
+			}
+			
+			.embed {
+				float: left;
+				font-size: 42px;
+				font-family: @extrabold;
+				color: @darkgray;
+				padding: 0 20px 11px 50px !important;
+				margin-bottom: 5px;
+				background: url(../img/dark-underline.png) no-repeat left bottom;
+				background-position: left top 7px !important;
+				background-size: 30px !important;
+				margin: 0;
+			}
+
+			h2 {
+				text-align: center;
+				display: inline-block;
+				color: @darkgray;
+				margin: 0;
+			}
+
+			p {
+				@media(min-width: 940px) {
+					text-align: left;
+					font-size: 18px;
+					font-family: @semibold;
+				}
+
+				&.anthem, &.instruments {
+					margin-top: 25px;
+				}
+
+				&.instruments {
+					margin-bottom: 25px;
+				}
+			}
+
+			a.more {
+				font-size: 18px;
+				font-family: @bold;
+				color: @dark;
+
+				&:hover {
+					color: @dark;
+					text-decoration: none;
+				}
+			}
+
+			.links {
+				padding-top: 25px;
+				a {
+					color: @pink;
+					text-decoration: underline;
+					cursor: initial;
+				}
+			}
+
+			.section {
+				max-height: 410px;
+				overflow: hidden;
+				padding: 50px 0 0;
+				-webkit-transition: all 0.5s ease-in;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+				transition: all 0.5s ease-in;
+				text-overflow: ellipsis;
+				text-align: left;
+
+				@media(min-width: 1100px) {
+					overflow: visible;
+				}
+
+				@media(max-width: 350px) {
+					max-height: 394px;
+				}
+
+				&.mobile, &.jukebox {
+					.images {
+						width: 140px;
+						height: auto;
+						overflow: hidden;
+						float: right;
+						text-align: right;
+						padding-bottom: 0;
+						margin: 0;
+
+						@media(min-width: 1100px) {
+							float: right;
+							width: auto;
+							max-width: 35%;
+							height: 210px;
+							overflow: visible;
+						}
+
+						img {
+							width: 100%;
+							height: auto;
+							max-height: initial;
+
+							@media(min-width: 1100px) {
+								max-height: 400px;
+								width: auto;
+							}
+						}
+					}
+				}
+
+				&.jukebox {
+					@media(min-width: 1100px) {						
+						overflow: visible;
+						height: 200px;
+						position: relative;
+					}
+					.images {
+						float: left;
+
+						@media(min-width: 1100px) {
+							float: right;
+							position: absolute;
+							right: 30px;
+							width: auto;
+							max-width: 35%;
+							top: 50%;
+							margin-top: -100px;
+							margin-right: -40px;
+							padding-right: 0;
+
+							img {
+								max-width: 200px;
+								max-height: 300px;
+							}
+						}
+					}
+				}
+
+				&.mobile {
+
+					.images {
+						padding: 0 10px;
+					}
+
+					@media(min-width: 1100px) {
+						max-height: 250px;
+						overflow: visible;
+
+						img {
+							max-width: 200px;
+						}
+					}
+
+					@media(min-width: 768px) {
+						overflow: visible;
+					}
+				}
+
+				&.tv {
+					.images {
+						@media(min-width: 1100px){
+							padding: 0 0 0 30px;
+							margin-top: 5%;
+						}
+					}
+				}
+
+				&.operations {
+					.images {
+						@media(min-width: 1100px){
+							padding-left: 40px;
+							margin-top: 6%;	
+						}
+					}					
+				}
+
+				&.expand {
+					max-height: 1430px;
+				}
+
+				@media(min-width: 940px) {
+					padding: 0;
+				}
+
+				p {
+					font-size: 15px;
+					font-family: @regular;
+
+					@media(min-width: 940px) {
+						overflow: hidden;
+						font-size: 18px;
+						font-family: @semibold;
+					}
+
+					@media(max-width: 350px) {
+						font-size: 14px;
+					}
+				}
+
+				.text-container {
+					float: left;
+
+					@media(min-width: 1100px) {
+						width: 65%;
+					}
+				}
+
+				.images {
+					float: none;
+					width: 100%;
+					height: 210px;
+					padding: 0;
+					padding-bottom: 15px;
+					text-align: center;	
+
+					@media(min-width: 940px) {
+						float: none;
+						width: 100%;
+						padding: 0;
+						text-align: center;
+					}
+
+					@media(min-width: 1100px) {
+						float: right;
+						width: 35%;
+						padding: 0 20px 0 40px;
+					}
+
+					img {
+						width: auto;
+						height: 100%;
+						margin-bottom: 30px;
+
+						@media(min-width: 1100px) {
+							width: 100%;
+							margin: 0;
+							height: auto;
+							max-height: 400px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.contact {
+		padding: 145px 0;
+		text-align: center;
+
+		h2 {
+			@media(min-width: 768px) {
+				color: white;
+				padding-bottom: 20px;	
+
+				&.underline {
+					background: url(../img/white-underline.png) no-repeat bottom center;
+				}		
+			}
+
+			@media(min-width: 940px) {
+				font-size: 44px;
+				font-family: @extrabold;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+
+				&.underline {
+					background: url(../img/white-underline.png) no-repeat bottom left;
+				}
+			}
+		}
+
+		p {
+			@media(min-width: 768px) {
+				color: white;			
+			}
+
+			@media(min-width: 940px) {
+				text-align: left;
+				font-size: 20px;
+			}
+		}
+
+		@media(min-width: 768px) {
+			background: url(../img/home-contact-bg.png) no-repeat center;
+			background-size: cover;
+			text-align: center;
+		}
+
+		@media(min-width: 940px) {
+			text-align: left;
+			background: url(../img/home-contact-big-bg-retina.png) no-repeat center;;
+			background-size: cover;
+		}
+	}
+}

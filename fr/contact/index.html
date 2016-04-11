@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Communiquez avec nous</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div class="overlay"></div>
+	<div class="header">
+		<a class="menu-button">
+			
+		</a>
+		<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+		<img class="black" src="../../img/logo-black-retina.png"/></a>
+
+
+		<a href="../../en/contact" class="french">EN</a>
+	</div>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Accueil </a></li>
+			<li><a href="../about">À propos</a></li>
+			<li><a href="../technology">Technologies</a></li>
+			<li><a href="../projects">Projets</a></li>
+			<li><a href="../careers">Carrières </a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Faites partie du groupe</h2>
+				<p>Le studio de Montréal compte plus de 90 employés et leur nombre ne cesse de croître. Venez fracasser les records en notre compagnie!</p>	
+
+				<form id="menu" class="fr">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">Prénom</label>
+					<input required  type="text" placeholder="Prénom" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Surnom</label>
+					<input required  type="text" placeholder="Surnom" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">Ville</label>
+					<input required  type="text" placeholder="Ville" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Pays</label>
+					<input required  type="text" placeholder="Pays" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Téléphone</label>
+					<input required  type="text" placeholder="Téléphone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Courriel</label>
+					<input required  type="text" placeholder="Courriel" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+						<input  class="uploadFile" placeholder="Télécharger votre résumé"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+						<input  class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook-crew" name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Envoyer une demande d’emploi" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Postulez un emploi à TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Nous vous remercions d’envisager de faire carrière à Touchtunes.
+Prendre quelques minutes pour remplir le formulaire suivant. Quand vous
+aurez terminé, un courriel contenant tous les renseignements sur la
+manière de vérifier l’état de votre demande vous sera envoyé.</p>
+
+			<form id="modal-form" class="fr">
+				<p>Informations personnelles</p>
+				<span>* indique un champ obligatoire</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">Prénom *</label>
+				<input type="text" placeholder="Prénom *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Surnom *</label>
+				<input type="text" placeholder="Surnom *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">Ville *</label>
+				<input type="text" placeholder="Ville *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Pays *</label>
+				<input type="text" placeholder="Pays *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Courriel *</label>
+				<input type="text"placeholder="Courriel *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Téléphone *</label>
+				<input type="text" placeholder="Téléphone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+					<input class="uploadFile" placeholder="Télécharger votre résumé" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+					<input class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin" name="linkedin"/>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Envoyer une demande d’emploi"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="contact-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../en/contact" class="french">EN</a>
+		</div>
+	<div class="banner">
+		<div class="gray-overlay"></div>
+		<div class="container">
+			<div class="text-container small">
+   				<h1 class="underline">Avez-vous la Touche<span>Tunes</span>?</h1>
+   					<p class="small-screen">Vous avez des questions ou vous voulez en savoir plus sur TouchTunes Montréal? Communiquez avec nous! Nous voulons entendre ce que vous avez à dire.</p>
+   					<p class="medium-screen">Vous avez des questions ou vous voulez en savoir plus sur TouchTunes Montréal? Communiquez avec nous! Nous voulons entendre ce que vous avez à dire.</p>
+   					<a class="button medium-screen cts" href="javascript:void(0)">Pour nous joindre</a>
+			</div>
+
+			<div id="contact-map" class="contact-map"></div>
+			<div class="small-screen">
+				<div class="text-container small cont">
+					<h2>Bureau à Montréal</h2>
+					<span>Jusqu'à Juin 2016</span>
+					<p>400 Ste. Croix Avenue, Suite 200E</p>
+					<p>St. Laurent, Quebec </p>
+					<p>H4N 3L4 Canada</p>
+					<p>Fax: 514.762.6483</p>
+					<p>Tel: 514.762.6244</p>
+				</div>	
+				<div class="text-container small cont">
+					<h2>Nouveau bureau à Montréal</h2>
+					<span>À partir de Juin 2016</span>
+					<p>7250 Rue du Mile End</p>
+					<p>Montréal, Québec</p>
+					<p>H2R 3A4 Canada</p>
+				</div>	
+			</div>
+			<p class="cts small-screen">Envoyez-nous un message</p>
+		</div>
+	</div>
+	<div class="form">
+
+		<div class="addresses">
+			<div class="medium-screen">
+				<h2>Bureau à Montréal</h2>
+				<span>Jusqu'à Juin 2016</span>
+				<p>400 Ste. Croix Avenue, Suite 200E</p>
+				<p>St. Laurent, Quebec </p>
+				<p>H4N 3L4 Canada</p>
+				<p>Fax: 514.762.6483</p>
+				<p>Tel: 514.762.6244</p>
+			</div>
+			<div class="medium-screen">
+				<h2>Nouveau bureau à Montréal</h2>
+				<span>À partir de Juin 2016</span>
+				<p>7250 Rue du Mile End</p>
+				<p>Montréal, Québec</p>
+				<p>H2R 3A4 Canada</p>
+			</div>
+		</div>
+		
+		<div class="container scroll-to">
+			<h2 class=>Envoyez-nous un message</h2>
+			<form name="contact" id="contact" class="fr">
+				<div class="loader"></div>
+				<label class="ie-placeholder" style="">Prénom</label>
+				<input type="text" required placeholder="Prénom" name="first-contact" id="first-contact" />
+				<label class="ie-placeholder" style="">Surnom</label>
+				<input type="text" required  placeholder="Surnom"  name="last-contact" id="last-contact" />
+				<label class="ie-placeholder" style="">Adresse courriel</label>
+				<input type="email" required placeholder="Adresse courriel" name="email-contact" id="email-contact" />
+				<label class="ie-placeholder" style="">Message</label>
+				<textarea placeholder='Message' required name="message" id="message"></textarea>
+				<input  class="button" type="submit" id="submit-contact" value="Envoyer un message" />
+			</form>
+		</div>
+	</div>
+	<div class="devider"></div>
+	
+</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Accueil </a></li>
+					<li class="active"><a href="../about">À propos</a></li>
+					<li><a href="../technology">Technologies</a></li>
+					<li><a href="../projects">Projets</a></li>
+					<li><a href="../careers">Carrières </a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Envoyez-nous un message</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Coordonnées</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>

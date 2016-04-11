@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Home page</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Home</a></li>
+			<li><a href="../about">About us</a></li>
+			<li><a href="../technology">Technology</a></li>
+			<li><a href="../projects">Projects</a></li>
+			<li><a href="../careers">Careers</a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Join the band</h2>
+				<p>Over 90 Montreal-based employees and growing. Come break some records with us!</p>	
+
+				<form id="menu">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">First Name</label>
+					<input required  type="text" placeholder="First Name" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Last Name</label>
+					<input required  type="text" placeholder="Last Name" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">City</label>
+					<input required  type="text" placeholder="City" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Country</label>
+					<input required  type="text" placeholder="Country" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Phone</label>
+					<input required  type="text" placeholder="Phone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Email</label>
+					<input required  type="text" placeholder="Email" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload resume</label>
+						<input  class="uploadFile" placeholder="Upload resume"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload Cover letter</label>
+						<input  class="uploadFile" placeholder="Upload Cover letter" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook-crew"  name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add attachment</label>
+						<input class="uploadFile" placeholder="Add attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Send Application" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Apply to TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Thank you for considering a career at Touchtunes. Please take a minute to fill out the following form. After you have completed your application an email will be sent to you with information about how to check the status of your application.</p>
+
+			<form id="modal-form">
+				<p>Personal information</p>
+				<span>* indicates a required field</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">First Name *</label>
+				<input type="text" placeholder="First Name *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Last Name *</label>
+				<input type="text" placeholder="Last Name *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">City *</label>
+				<input type="text" placeholder="City *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Country *</label>
+				<input type="text" placeholder="Country *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Email *</label>
+				<input type="text"placeholder="Email *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Phone *</label>
+				<input type="text" placeholder="Phone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload resume</label>
+					<input class="uploadFile" placeholder="Upload resume" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload Cover letter</label>
+					<input class="uploadFile" placeholder="Upload Cover letter" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" name="linkedin" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add Attachment</label>
+						<input class="uploadFile" placeholder="Add Attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Send Application"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="home-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../fr/home" class="french">FR</a>
+		</div>
+	<div class="banner">
+		<div class="white-overlay">
+			<span class="ld">
+				
+			</span>
+		</div>
+		<div class="animation-placeholder"></div>
+	</div>
+	<div class="container">
+		<div class="work">
+			<h2>Work at Touchtunes MTL</h2>
+			<p>In tune with the digital revolution since 1998</p>
+			<a class="button" href="../about">Learn more</a>
+			<p class="learn-more cts">learn more</p>
+		</div>
+	</div>
+	<div class="about scroll-to">
+		<div class="container">
+			<img class="underline" src="../../img/logo-white-retina.png"/>
+			<div class="text-container small">
+				<p>Since introducing the first fully digital commercial jukebox, TouchTunes has become a go-to music and entertainment platform. Over the years as we have grown our network to over 71,000 product locations across North America and Europe, we have grown our numbers as well with powerhouse teams in Montreal, New York, Chicago and London. Our Montreal office is TouchTunes’ production and operations engine, and our squad shows no signs of slowing down while developing multiple interactive projects in a fast-paced era.</p>
+			</div>
+			<a class="button white" href="../about">About us</a>
+		</div>
+	</div>
+	<div class="technology">
+		<div class="container">
+			<h2 class="underline dark">Technology: <span>Le geek, c’est chic</span></h2>
+			<div class="text-container small">
+				<p>As self-proclaimed geeks, there’s nothing we love more than utilizing all the latest, most progressive technologies to optimize the quality of our projects.</p>
+			</div>
+			<div class="images">
+				
+			</div>
+			<a class="button blue" href="../technology">See more</a>
+		</div>
+	</div>
+	<div class="projects">
+		<div class="container">
+			<h2 class="underline dark">Projects</h2>
+			<div class="text-container small">
+				<p>TouchTunes has many working parts that fit together seamlessly to run an end-to-end interactive entertainment solution.</p>
+			</div>
+			<div class="stacks">
+				<a href="../projects/#mobile" class="stack mobile">
+					<span>Mobile</span>
+				</a>
+
+				<a href="../projects/#platform" class="stack platform">
+					<span>Platform</span>
+				</a>
+
+				<a href="../projects/#tv" class="stack attract">
+					<span>Attract <span class="light">TV<span></span>
+				</a>
+
+				<a href="../projects/#jukebox" class="stack jukebox">
+					<span>Jukebox</span>
+				</a>
+
+				<a href="../projects/#operations" class="stack operations">
+					<span>Operations</span>
+				</a>
+			</div>
+			<a class="button blue" href="../projects">See Projects</a>
+		</div>
+	</div>
+	<div class="opportunities">
+		<div class="container">
+			<h2 class="underline dark">Featured opportunities</h2>		
+			<p>We are always looking to add new talent to our roster. Check out our current opportunities below or fill out an application and tell us why we need you.</p>
+			<div class="positions">
+        		<div>
+        			<div class="text-container">
+						<p class="title">Producer, Mobile<span class="location"> - Montreal, QC</span></p>
+						<p>TouchTunes is looking for a battle-tested Producer to lead its mobile team and mobile app to new heights in 2016.
+TouchTunes’ mobile app is already one of TouchTunes’ primary growth levers and an essential element of the TouchTunes ecosystem. The Mobile Producer must therefore also possess the skill and ambition necessary to transform a monthly, multimillion dollar revenue stream, and team of thirteen technical experts, into a bona fide business unit within the company.
+This includes working closely with the Product Management team (based in New York) to plan out and execute the business strategy and product evolution of the Mobile App.</p>
+<h3 id="desired-skills-and-experience-">Desired Skills and Experience:</h3>
+<ul>
+<li>The Mobile Producer must bring with them a proven track record of charismatic leadership, technical expertise and business acumen.</li>
+<li>5 to 10 years of experience in project and team management, including working closely with other teams within an organization (Product, QA, Marketing, Sales, etc…)</li>
+<li>Technical expertise in mobile app development and online UI/UX design</li>
+<li>A strong understanding of client/server relationships, in order to work with the Platform Team in Montreal that develops TouchTunes’ APIs</li>
+<li>Mastery of the Agile development environment and the ability to handle the frequent changes it entails</li>
+<li>Experience with consumer-centric products and/or game development is a plus.</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Producer, Mobile - Montreal, QC" href="javascript:void(0)">Apply now</a>		
+				</div>
+        		<div>
+        			<div class="text-container">
+						<p class="title">Quality Assurance – Back-End Services<span class="location"> - Montreal, QC</span></p>
+						<p>If you have a proven track record testing world-class back-end applications and are excited about being part of a fast-paced culture, this position is for you. You are also driven to technical excellence and have a desire to be surrounded by a team of experienced, committed, and driven individuals. Working as part of the Service Operations team, your mission will be to ensure the quality of our back-end services through the use of test automation and load testing technologies.  </p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Provide technical input and feedback driving the quality of software deliverables both to those in the quality organization, development, and product management.</li>
+<li>Ensure a high quality user experience.</li>
+<li>Work closely with our Platform Development teams to assess testing feasibility and identify risks.</li>
+<li>Setup/configure/maintain automated testing environments in a continuous integration setting.</li>
+<li>Develop test documentation, execute tests, and monitor / report results.</li>
+<li>Review business and functional requirement documents in order to create appropriate test documentation.</li>
+<li>Transform API documentation into robust, efficient automated test scripts. </li>
+<li>Continuously improve upon the productivity and efficiency of our automated testing efforts using innovative tools and techniques.</li>
+<li>Adhere to and promote standards for test development best practices.</li>
+<li>Stay current on new technologies and evangelize future adoption of next-generation automation tools and best practices as appropriate.</li>
+<li>Use formal software QA methodologies to design product test environments that emulate typical customer use, configuration, and loads.</li>
+<li>Create, run, maintain, and report on all load testing initiatives for our back-end systems.
+Implement metrics for product and project quality measurement.</li>
+</ul>
+<h3 id="required-qualifications-">Required Qualifications:</h3>
+<ul>
+<li>DEC in Computer Science</li>
+<li>Minimum 2 years of experience related to software testing or relevant experience</li>
+<li>Experience with load / stress testing techniques</li>
+<li>Required Skills and Competencies: </li>
+<li>Excellent written and oral communication skills</li>
+<li>Good problem solving and analytical skills</li>
+<li>Ability to create and execute software / hardware tests</li>
+<li>Ability to create automated tests</li>
+<li>Knowledge of Databases and MySQL language</li>
+<li>Knowledge of Linux</li>
+<li>Bilingual French / English reading, writing, speaking</li>
+<li>Ability to learn quickly</li>
+<li>Keen attention to detail</li>
+<li>Ability to be autonomous and creative</li>
+<li>Selenium, PHPUnit, Javascript, Python, Jira, Jmeter, Bash shell scripting knowledge preferred</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Quality Assurance – Back-End Services - Montreal, QC" href="javascript:void(0)">Apply now</a>		
+				</div>
+        		<div>
+        			<div class="text-container">
+						<p class="title">Associate Producer, Platform Services<span class="location"> - Montreal, QC</span></p>
+						<p>The Associate Producer, Platform Services reporting to the Senior Producer, Platform Services, will assist with the production of our server software development team. The ideal candidate is a highly organized individual with outstanding communications abilities, hands on experience acting as a scrum master and a demonstrated aptitude for project management. </p>
+<p>The platform services team consists of 25 individuals, developers, testers and analysts in our Montreal offices and 13 offshore developers and testers.</p>
+<p>We are responsible for the creation and maintenance of the service infrastructure of TouchTunes client systems which currently consists of TouchTunes digital jukebox, the Attract TV, the TouchTunes mobile application and our B2B web services.</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Reporting to the Senior Producer,  Platform Services, the candidate will create and track schedules for software analysis, development, testing and delivery</li>
+<li>Manage the daily tracking of all development activities</li>
+<li>Host daily SCRUMs</li>
+<li>Help communicate roadblocks and that may prevent developers and or other TouchTunes  teams from achieving established goals in the allotted time</li>
+<li>Create and keep up to date detailed Jira tickets associated with development tasks</li>
+<li>Provide information to ensure that project goals, objectives, milestones, and deliverables are achieved</li>
+<li>Communicate frequently with the senior producer, directors and tech and test leads on project status, risks, and opportunities</li>
+<li>Schedule and attend meetings; take concise and comprehensive notes and distribute them to appropriate personnel.</li>
+<li>Perform other duties as assigned, including: clerical duties and help maintaining cohesion between production teams, operations and architecture teams.</li>
+<li>Skills and competencies:</li>
+<li>Bachelors of Art or Science (or equivalent)</li>
+<li>Scrum master</li>
+<li>Able to communicate effectively with programming, test, IT, analysts and architecture personnel</li>
+<li>Able to facilitate for and communicate with other TouchTunes groups (e.g. Jukebox, Mobile, Attract TV, International teams, etc.)</li>
+<li>Knowledge of software development process, project management, and performance management</li>
+<li>Exceptional oral and written communications skills</li>
+<li>Exceptional attention to detail</li>
+<li>Proven experience managing schedules and employees to achieve desired results</li>
+<li>Bilingual  (English/French)</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Associate Producer, Platform Services - Montreal, QC" href="javascript:void(0)">Apply now</a>		
+				</div>
+			</div>
+			<a class="button gray" href="../careers">Go to careers</a>
+		</div>
+	</div>
+	<div class="contact-mail">
+		<div class="container">
+			<h2 class="underline white">Get in Touch</h2>
+			<div class="big text-container">
+				<p> If you have any questions about TouchTunes MTL, we likely have the answers and if you’ve got ideas, we’re all ears. We want to hear from you.</p>
+			</div>
+			<a class="button blue" href="../contact">
+				<span class="small"><img src="../../img/mail-icon.png"/></span>
+				<span class="big">Contact us</span>
+			</a>
+		</div>	
+	</div>
+</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Home</a></li>
+					<li class="active"><a href="../about">About us</a></li>
+					<li><a href="../technology">Technology</a></li>
+					<li><a href="../projects">Projects</a></li>
+					<li><a href="../careers">Careers</a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Contact</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Address</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>

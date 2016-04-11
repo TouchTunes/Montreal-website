@@ -1,0 +1,170 @@
+.footer {
+	display: block;
+	position: relative;
+
+	@media(max-width: 768px) {
+		border-top: 2px solid @lightblue;
+	}
+
+	.top {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		padding: 39px 0;
+		border-bottom: 2px solid @lightblue;
+
+		@media(max-width: 768px) {
+			border: none;
+		}
+
+		ul {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			list-style-type: none;
+			padding: 0;
+			text-align: center;
+
+			li {
+				width: 15%;
+				display: inline-block;
+				padding: 0;
+				margin: 0;
+				font-family: @semibold;
+				text-align: center;
+
+				@media(max-width: 700px) {
+					width: 100%;
+					margin-bottom: 20px;
+				}
+
+				&.small {
+					display: none;
+					font-size: 15px;
+					color: @dark;
+
+					@media(max-width: 700px) {
+						display: block;
+					}
+				}
+
+				a {
+					color: @dark;
+					font-size: 18px;
+					text-decoration: none;
+
+					&:hover, &:focus {
+						text-decoration: none;
+						color: @dark;
+					}
+
+					@media(max-width: 700px) {
+						color: @medium-gray;
+						font-size: 15px;
+					}
+				}
+			}
+		}
+	}
+
+	.bottom {
+		display: block;
+		overflow: hidden;
+		position: relative;
+		padding: 90px 0;
+
+		p {
+			margin-bottom: 14px;
+		}
+
+		@media(max-width: 768px) {
+			display: none;
+		}
+
+		.half {
+			p.heading {
+				font-size: 14px;
+				font-family: @semibold;
+				color: @medium-gray;
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+
+				li {
+					font-family: @semibold;
+					font-size: 12px;
+					color: @dark;
+					margin-bottom: 14px;
+
+					@media(max-width: 1130px) {
+						font-size: 12px;
+					}
+
+					a {
+						font-family: @semibold;
+						font-size: 12px;
+						color: @dark;
+						text-decoration: none;
+
+						@media(max-width: 1130px) {
+							font-size: 12px;
+						}
+
+						&:focus, &:hover {
+							text-decoration: none;
+							outline: none;
+						}
+					}
+				}
+			}
+
+			.logo {
+				padding-top: 10px;
+				padding-left: 12px;
+
+				img {					
+					width: 200px;
+					height: 45px;
+
+					@media(min-width: 1400px) {
+						width: 80%;
+						height: auto;
+					}
+				}
+			}
+
+			.footer-contact {
+				padding-left: 60px;
+			}
+
+			.contact-address {
+				padding-left: 29px;
+			}
+
+			.copy {
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				text-align: right;
+
+				p {
+					font-size: 12px;
+					font-family: @regular;
+					text-indent: 30px;
+
+					&.lang {
+						display: inline-block;
+						font-family: @semibold;
+						color: @dark;
+						padding-right: 50px;
+						background: url(../img/canadian-flag.png) no-repeat right center;
+						text-indent: 0;
+					}
+				}
+			}
+		}
+	}
+}

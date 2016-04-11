@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Careers page</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Home</a></li>
+			<li><a href="../about">About us</a></li>
+			<li><a href="../technology">Technology</a></li>
+			<li><a href="../projects">Projects</a></li>
+			<li><a href="../careers">Careers</a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Join the band</h2>
+				<p>Over 90 Montreal-based employees and growing. Come break some records with us!</p>	
+
+				<form id="menu">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">First Name</label>
+					<input required  type="text" placeholder="First Name" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Last Name</label>
+					<input required  type="text" placeholder="Last Name" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">City</label>
+					<input required  type="text" placeholder="City" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Country</label>
+					<input required  type="text" placeholder="Country" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Phone</label>
+					<input required  type="text" placeholder="Phone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Email</label>
+					<input required  type="text" placeholder="Email" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload resume</label>
+						<input  class="uploadFile" placeholder="Upload resume"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Upload Cover letter</label>
+						<input  class="uploadFile" placeholder="Upload Cover letter" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook-crew"  name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add attachment</label>
+						<input class="uploadFile" placeholder="Add attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Send Application" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Apply to TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Thank you for considering a career at Touchtunes. Please take a minute to fill out the following form. After you have completed your application an email will be sent to you with information about how to check the status of your application.</p>
+
+			<form id="modal-form">
+				<p>Personal information</p>
+				<span>* indicates a required field</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">First Name *</label>
+				<input type="text" placeholder="First Name *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Last Name *</label>
+				<input type="text" placeholder="Last Name *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">City *</label>
+				<input type="text" placeholder="City *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Country *</label>
+				<input type="text" placeholder="Country *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Email *</label>
+				<input type="text"placeholder="Email *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Phone *</label>
+				<input type="text" placeholder="Phone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload resume</label>
+					<input class="uploadFile" placeholder="Upload resume" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Upload Cover letter</label>
+					<input class="uploadFile" placeholder="Upload Cover letter" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Social Profile</label>
+					<label class="ie-placeholder" style="">Add link (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: LinkedIn)" id="linkedin" name="linkedin" />
+					<label class="ie-placeholder" style="">Add link (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Add link (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Add Attachment</label>
+						<input class="uploadFile" placeholder="Add Attachment" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Send Application"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="careers-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../fr/careers" class="french">FR</a>
+		</div>
+	<div class="banner">
+		<div class="container">
+			<div class="text-container small">
+   				<h1 id="work-behind-the-music">Work behind the music</h1>
+<p>TouchTunes MTL recognizes the importance of strong team members and is always on the lookout for fresh thinkers. Our growth is based on the collaborative efforts and determination of our players. We are encouraged to challenge our own limits, to lean on each other’s experiences, and to absorb knowledge while growing amongst our ranks. We invite you to take part in an environment that will stimulate your curiosity and take your talent to the next level.</p>
+
+			</div>
+
+			<a class="button cts" href="javascript:void(0)">See available posts</a>		
+			<p class="cts learn-more small-screen">Learn more</p>
+		</div>
+	</div>
+	<div class="opportunities scroll-to">
+		<div class="container">
+			<h2 class="underline dark">All opportunities</h2>		
+			<p>We’re looking for some fresh talent. Take a look at our current openings in Montreal. </p>
+			<div class="positions">
+        <div>
+        	<div class="text-container">
+						<p class="title">Producer, Mobile<span class="location"> - Montreal, QC</span></p>
+						<p>TouchTunes is looking for a battle-tested Producer to lead its mobile team and mobile app to new heights in 2016.
+TouchTunes’ mobile app is already one of TouchTunes’ primary growth levers and an essential element of the TouchTunes ecosystem. The Mobile Producer must therefore also possess the skill and ambition necessary to transform a monthly, multimillion dollar revenue stream, and team of thirteen technical experts, into a bona fide business unit within the company.
+This includes working closely with the Product Management team (based in New York) to plan out and execute the business strategy and product evolution of the Mobile App.</p>
+<h3 id="desired-skills-and-experience-">Desired Skills and Experience:</h3>
+<ul>
+<li>The Mobile Producer must bring with them a proven track record of charismatic leadership, technical expertise and business acumen.</li>
+<li>5 to 10 years of experience in project and team management, including working closely with other teams within an organization (Product, QA, Marketing, Sales, etc…)</li>
+<li>Technical expertise in mobile app development and online UI/UX design</li>
+<li>A strong understanding of client/server relationships, in order to work with the Platform Team in Montreal that develops TouchTunes’ APIs</li>
+<li>Mastery of the Agile development environment and the ability to handle the frequent changes it entails</li>
+<li>Experience with consumer-centric products and/or game development is a plus.</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Producer, Mobile - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">Quality Assurance – Back-End Services<span class="location"> - Montreal, QC</span></p>
+						<p>If you have a proven track record testing world-class back-end applications and are excited about being part of a fast-paced culture, this position is for you. You are also driven to technical excellence and have a desire to be surrounded by a team of experienced, committed, and driven individuals. Working as part of the Service Operations team, your mission will be to ensure the quality of our back-end services through the use of test automation and load testing technologies.  </p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Provide technical input and feedback driving the quality of software deliverables both to those in the quality organization, development, and product management.</li>
+<li>Ensure a high quality user experience.</li>
+<li>Work closely with our Platform Development teams to assess testing feasibility and identify risks.</li>
+<li>Setup/configure/maintain automated testing environments in a continuous integration setting.</li>
+<li>Develop test documentation, execute tests, and monitor / report results.</li>
+<li>Review business and functional requirement documents in order to create appropriate test documentation.</li>
+<li>Transform API documentation into robust, efficient automated test scripts. </li>
+<li>Continuously improve upon the productivity and efficiency of our automated testing efforts using innovative tools and techniques.</li>
+<li>Adhere to and promote standards for test development best practices.</li>
+<li>Stay current on new technologies and evangelize future adoption of next-generation automation tools and best practices as appropriate.</li>
+<li>Use formal software QA methodologies to design product test environments that emulate typical customer use, configuration, and loads.</li>
+<li>Create, run, maintain, and report on all load testing initiatives for our back-end systems.
+Implement metrics for product and project quality measurement.</li>
+</ul>
+<h3 id="required-qualifications-">Required Qualifications:</h3>
+<ul>
+<li>DEC in Computer Science</li>
+<li>Minimum 2 years of experience related to software testing or relevant experience</li>
+<li>Experience with load / stress testing techniques</li>
+<li>Required Skills and Competencies: </li>
+<li>Excellent written and oral communication skills</li>
+<li>Good problem solving and analytical skills</li>
+<li>Ability to create and execute software / hardware tests</li>
+<li>Ability to create automated tests</li>
+<li>Knowledge of Databases and MySQL language</li>
+<li>Knowledge of Linux</li>
+<li>Bilingual French / English reading, writing, speaking</li>
+<li>Ability to learn quickly</li>
+<li>Keen attention to detail</li>
+<li>Ability to be autonomous and creative</li>
+<li>Selenium, PHPUnit, Javascript, Python, Jira, Jmeter, Bash shell scripting knowledge preferred</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Quality Assurance – Back-End Services - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">Associate Producer, Platform Services<span class="location"> - Montreal, QC</span></p>
+						<p>The Associate Producer, Platform Services reporting to the Senior Producer, Platform Services, will assist with the production of our server software development team. The ideal candidate is a highly organized individual with outstanding communications abilities, hands on experience acting as a scrum master and a demonstrated aptitude for project management. </p>
+<p>The platform services team consists of 25 individuals, developers, testers and analysts in our Montreal offices and 13 offshore developers and testers.</p>
+<p>We are responsible for the creation and maintenance of the service infrastructure of TouchTunes client systems which currently consists of TouchTunes digital jukebox, the Attract TV, the TouchTunes mobile application and our B2B web services.</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Reporting to the Senior Producer,  Platform Services, the candidate will create and track schedules for software analysis, development, testing and delivery</li>
+<li>Manage the daily tracking of all development activities</li>
+<li>Host daily SCRUMs</li>
+<li>Help communicate roadblocks and that may prevent developers and or other TouchTunes  teams from achieving established goals in the allotted time</li>
+<li>Create and keep up to date detailed Jira tickets associated with development tasks</li>
+<li>Provide information to ensure that project goals, objectives, milestones, and deliverables are achieved</li>
+<li>Communicate frequently with the senior producer, directors and tech and test leads on project status, risks, and opportunities</li>
+<li>Schedule and attend meetings; take concise and comprehensive notes and distribute them to appropriate personnel.</li>
+<li>Perform other duties as assigned, including: clerical duties and help maintaining cohesion between production teams, operations and architecture teams.</li>
+<li>Skills and competencies:</li>
+<li>Bachelors of Art or Science (or equivalent)</li>
+<li>Scrum master</li>
+<li>Able to communicate effectively with programming, test, IT, analysts and architecture personnel</li>
+<li>Able to facilitate for and communicate with other TouchTunes groups (e.g. Jukebox, Mobile, Attract TV, International teams, etc.)</li>
+<li>Knowledge of software development process, project management, and performance management</li>
+<li>Exceptional oral and written communications skills</li>
+<li>Exceptional attention to detail</li>
+<li>Proven experience managing schedules and employees to achieve desired results</li>
+<li>Bilingual  (English/French)</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Associate Producer, Platform Services - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">Build Master / Configuration Specialist<span class="location"> - Montreal, QC</span></p>
+						<p>TouchTunes is looking for a Software Build Master / Configuration Specialist to work in our Services Platform Team.</p>
+<p>The Build Master will work with architects, production leads, technical leads, developers and IT staff to analyze, develop and create the development infrastructures, code repository and review systems, containerization and deployment software for the TouchTunes Services Platform.</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Maintain and evolve various build processes: Mobile Application, Backend Server and REST APIs on AWS</li>
+<li>Help design, build, test and configure our next generation containerized micro services platform (Docker)</li>
+<li>Maintain and update the build tools (Java, php, rpm, Git,  JHBuild, Maven, Jenkins, Gerrit) and create tools to report the status of builds and their content</li>
+<li>Create and maintain puppet configurations</li>
+<li>Create tools to provide adequate documentation for managers and developers</li>
+<li>Administrate a knowledge-based (Confluence) site that is used by 5 development groups (Montreal, Chicago, New York, Russia) and develop plugins (Java) to enhance functionality</li>
+<li>Enforce the &quot;continuous integration&quot; paradigm for every development team</li>
+<li>Support various development and operations groups by providing them a standardized process, from code push to deployment</li>
+<li>Skills and competencies:</li>
+<li>D.E.C. or BAC in computer science or engineering
+2-5 + years of experience</li>
+<li>Excellent knowledge of Amazon AWS services and management systems</li>
+<li>Good knowledge of Linux and how distributions are made</li>
+<li>Good knowledge of containerization technologies (Docker, Mesos, LXC, jails)</li>
+<li>Good software development and scripting skills (Python, Php, Java, bash)</li>
+<li>Experience in build systems and revision control tools (GIT), in-depth knowledge of Gerrit, Jenkins, understanding of branching techniques and best practices</li>
+<li>Experience in medium to large development group, especially in respect to source code management</li>
+<li>Self-motivated, able to work without direct supervision</li>
+<li>Bilingualism (written and spoken)</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Build Master / Configuration Specialist - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">DevOps/Linux Systems and Cloud Automation Engineer<span class="location"> - Montreal, QC</span></p>
+						<p>The Linux Systems and Cloud Automation Engineer is responsible for finding innovative ways to further automate and improve resiliency and performance of our online product platform. TouchTunes infrastructure is composed mainly of Linux systems running Oracle, apache, Tomcat, MySQL and many in-house developed applications written in Java, PHP, Python etc. </p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Maintain and improve applications developed in Perl, Python or Java by the IT department for automation of processes</li>
+<li>Work with the Linux system administration team to develop and integrate solution to automate IT processes</li>
+<li>Troubleshooting and implement solutions in the application to resolve major stability or performance issues.</li>
+<li>Act as a senior resource assisting internal teams in delivering automated infrastructure using Jenkins, Puppet and AWS technologies</li>
+<li>Improve the monitoring systems to detect problems faster and have actions automatically taken, including auto-scaling</li>
+<li>Act as a senior resource on the team and insure proper problem follow up and leadership on larger projects</li>
+<li>Support the infrastructure outside of business hours (oncall)</li>
+<li>Responsible to produce post-mortems of outages and performance issues to create action items to improve the infrastructure</li>
+<li>Participate in design and architecture of all information systems</li>
+<li>Prepare proposals and designs present them to the upper management when required.</li>
+<li>Improve and optimize servers and application performances</li>
+<li>Document all aspects of work done.</li>
+<li>Maintain appropriate communication with all customers and internal teams</li>
+</ul>
+<h3 id="requirements-">Requirements:</h3>
+<ul>
+<li>Bachelors’ degree in Computer Science or equivalent technology degree</li>
+<li>3+ years  experience in a System Administration or equivalent role in a large infrastructure Linux environments with custom in-house applications</li>
+<li>Strong knowledge of automation and configuration management applications with puppet experience</li>
+<li>Experience with AWS cloud technology such as RDS, EC2, S3, DynamoDB and CloudFormation</li>
+<li>Dynamic, autonomous, a team player and having a strong communication skill</li>
+<li>Strong analytical and troubleshooting skills</li>
+<li>Bilingual (French and English)</li>
+</ul>
+<h3 id="preferences-">Preferences:</h3>
+<ul>
+<li>Experience in developing and operationalizing RESTful APIs in PHP/Python/JAVA for a high traffic service (&gt; 150 requests per seconds)</li>
+<li>Experience with multiple database vendors, such as Oracle, Mysql and NoSQL</li>
+<li>Experience with building and analyzing system performance metrics</li>
+<li>Experience in deploying complex events monitoring systems or other ITOA technologies</li>
+<li>Fluent in PHP, Python &amp; Java development with Spring &amp; Hibernate</li>
+<li>Jenkins experience a major plus</li>
+</ul>
+<h3 id="special-position-requirements-">Special Position Requirements:</h3>
+<ul>
+<li>Light travel, when necessary</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="DevOps/Linux Systems and Cloud Automation Engineer - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">Platform Web Developer<span class="location"> - Montreal, QC</span></p>
+						<p>The Platform Web Developer is responsible for developing web applications for a wide array of clients and purposes. He/she will have to interface closely with other teams to research, design, develop and maintain existing or new web-based applications to support various products and clients. The ideal candidate is a self-starter with the ability to work both independently and as part of a team, on multiple projects in a fast paced development environment.</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Reporting to the Director, Platform Services, the candidate will be involved in most of the software development life cycle of web applications</li>
+<li>Analyze &amp; break down technical specifications into work items</li>
+<li>Evaluate work effort associated with development tasks</li>
+<li>Work with product managers, technical analysts and technical leaders to refine and improve specifications</li>
+<li>Research technical solutions &amp; build quick proof-of-concepts</li>
+<li>Create and keep up to date detailed Jira tickets associated with development tasks</li>
+<li>Participate in the design and development of web applications, new and existing</li>
+<li>Review code submitted by fellow developers, ensuring software is developed to acceptable quality levels according to acknowledged best practices</li>
+<li>Work with software quality assurance teams to facilitate the testing of web applications</li>
+</ul>
+<h3 id="skills-and-competencies-">Skills and competencies:</h3>
+<ul>
+<li>Degree in computer science or similar discipline
+5+ years developing for the web: JavaScript, HTML5, CSS, Java</li>
+<li>Strong understanding of software development principles and methodology, including Agile and software design patterns</li>
+<li>Experience working with RESTful APIs (experience designing APIs an asset)</li>
+<li>Experience working with MySQL, Oracle, NoSQL</li>
+<li>Development: Gerrit/Git, Eclipse/IntelliJ, Jira, Confluence</li>
+<li>Agile processes, unit testing, use of mocks, continuous integration</li>
+<li>Excellent interpersonal and communication skills</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Platform Web Developer - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">QA Lead,  Mobile<span class="location"> - Montreal, QC</span></p>
+						<p>TouchTunes is looking for a charismatic and motivated individual to lead its Mobile Quality Control team.  Are you calm under pressure? A fast learner who is motivated to continue your career arc? If so, read on!</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Ensuring the stewardship and quality of TouchTunes Mobile App, as well as the coordination of work among its internal and external QC technicians.</li>
+</ul>
+<h3 id="required-qualifications-">Required Qualifications:</h3>
+<ul>
+<li>Bachelor’s or DEC in Computer Science or relevant diploma</li>
+<li>Minimum 5 years in software QC with 3 years in Mobile Applications</li>
+<li>Experience managing external resources</li>
+<li>Required Skills/Competencies: </li>
+<li>Extensive knowledge in mobile testing techniques, including test automation tools</li>
+<li>Test case writing and execution</li>
+<li>Proficiency in JIRA</li>
+<li>Tracking project status against delivery timelines</li>
+<li>Good understanding of the Agile development environment</li>
+<li>Knowledge of databases, SQL and Linux</li>
+<li>Experience with REST API testing</li>
+<li>Bash scripting experience an asset</li>
+<li>Spoken and written English, French an asset</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="QA Lead,  Mobile - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+        <div>
+        	<div class="text-container">
+						<p class="title">Technical Lead, Platform Services<span class="location"> - Montreal, QC</span></p>
+						<p>The Service Platform Technical Lead is responsible for supervising the development of RESTFUL web services for a wide array of applications client (Mobile, Jukeboxes, Websites).  Working with both internal and external resources, the tech lead is responsible of supervising and validating their work. Working with the technical writer and the architecture team, the Technical Lead is in charge of making sure all development follow Touchtunes’s standards and the industry’s best practices. The Technical Lead will also work closely with the quality assurance team to ensure the quality and scalability of all deliverables. The Technical Lead will also be in charge of sprint planning, daily scrums and sprint review.</p>
+<p>The backend infrastructure is mainly built on Java, Spring, hibernate and running on Amazon Web Services (cloud). Every day, the backend infrastructure serves several million of requests and therefore, the ideal candidate needs to fully understand how to build highly scalable systems with redundancy, master AWS services and successfully managed development and delivery of high volume systems.</p>
+<p>The candidate will also be involved in the transition of legacy systems into this new architecture.</p>
+<h3 id="responsibilities-">Responsibilities:</h3>
+<ul>
+<li>Reporting to the Director of Service Platform, the candidate will be involved in designing and building the new RESTful API service platform</li>
+<li>Analyze &amp; break down technical specifications into work items</li>
+<li>Evaluate work effort associated with development tasks</li>
+<li>Work with product managers, technical analysts and technical leaders to refine and improve specifications</li>
+<li>Create and keep up to date detailed Jira tickets associated with development tasks</li>
+<li>Research technical solutions &amp; build quick proof-of-concepts</li>
+<li>Supervise internal and external developers</li>
+<li>Review code submitted by fellow developers, ensuring software is developed to acceptable quality levels according to acknowledged best practices</li>
+<li>Work with software quality assurance teams to facilitate the testing of the APIs</li>
+</ul>
+<h3 id="skills-and-competencies-">Skills and Competencies:</h3>
+<ul>
+<li>Degree in computer science or similar discipline</li>
+<li>7+ years professional experience in software development</li>
+<li>Strong understanding of software development principles and methodology, including Agile and software design patterns</li>
+<li>Experience designing and building RESTful APIs</li>
+<li>Experience working with MySQL, Oracle, NoSQL</li>
+<li>Knowledge of  Java (Gerrit/Git, Maven, Jira, Agile processes, unit testing, use of mocks, continuous integration, HazelCast, - Eclipse or IntelliJ</li>
+<li>Excellent interpersonal and communication skills</li>
+<li>Experience with TDD</li>
+<li>Experience in managing offshore teams would be an asset</li>
+<li>Ability to work independently and in a team</li>
+<li>Bilingual English/French</li>
+</ul>
+
+					</div>
+					<a class="more" href="javascript:void(0)">Read more</a>
+					<a class="button apply" data-title="Technical Lead, Platform Services - Montreal, QC" href="javascript:void(0)">Apply now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="process">
+		<div class="container">
+			<h2 class="underline">Our process</h2>
+			<p>There’s method to our madness. We’re not looking for temporary fixes but rather long-term contributors who will feel comfortable as one of our own. Don't sweat it, we're not into interrogations we just want to get to know you.  </p>	
+			<div class="devider">
+				<div class="quarter">
+					<span class="circle">1</span>
+					<h3>Lets talk</h3>
+					<p>We start with a phone call for a first chat so we can introduce TouchTunes and get to know more about you. </p>
+				</div>
+				<div class="quarter">
+					<span class="circle">2</span>
+					<h3>Come for a visit</h3>
+					<p>Come visit our offices for a 2nd chat and get a feel for our company culture. </p>
+				</div>
+				<div class="quarter">
+					<span class="circle">3</span>
+					<h3>Meet the crew</h3>
+					<p>The 3rd meet is all about you. You can request to meet specific players and potential teammates and see what they are working on. </p>
+				</div>
+				<div class="quarter">
+					<span class="circle">4</span>
+					<h3>Join us</h3>
+					<p>You like us. We like you. Welcome aboard!</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="container">
+			<div class="text-container">
+				<h2 class="underline">Don’t see your specialty in our openings?</h2>
+				<p>If your skillset doesn’t correspond to any of the current opportunities, apply anyway! Be the player we never knew we needed!</p>
+				<a class="button blue apply" data-title="" >Work with us</a>
+			</div>			
+		</div>
+	</div>	
+</div>
+
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Home</a></li>
+					<li class="active"><a href="../about">About us</a></li>
+					<li><a href="../technology">Technology</a></li>
+					<li><a href="../projects">Projects</a></li>
+					<li><a href="../careers">Careers</a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Contact</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Address</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>

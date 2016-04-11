@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>À propos de nous</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+	<div class="overlay"></div>
+	<div class="header">
+		<a class="menu-button">
+			
+		</a>
+		<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+		<img class="black" src="../../img/logo-black-retina.png"/></a>
+
+
+		<a href="../../en/about" class="french">EN</a>
+	</div>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Accueil </a></li>
+			<li><a href="../about">À propos</a></li>
+			<li><a href="../technology">Technologies</a></li>
+			<li><a href="../projects">Projets</a></li>
+			<li><a href="../careers">Carrières </a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Faites partie du groupe</h2>
+				<p>Le studio de Montréal compte plus de 90 employés et leur nombre ne cesse de croître. Venez fracasser les records en notre compagnie!</p>	
+
+				<form id="menu" class="fr">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">Prénom</label>
+					<input required  type="text" placeholder="Prénom" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Surnom</label>
+					<input required  type="text" placeholder="Surnom" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">Ville</label>
+					<input required  type="text" placeholder="Ville" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Pays</label>
+					<input required  type="text" placeholder="Pays" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Téléphone</label>
+					<input required  type="text" placeholder="Téléphone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Courriel</label>
+					<input required  type="text" placeholder="Courriel" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+						<input  class="uploadFile" placeholder="Télécharger votre résumé"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+						<input  class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook-crew" name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Envoyer une demande d’emploi" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Postulez un emploi à TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Nous vous remercions d’envisager de faire carrière à Touchtunes.
+Prendre quelques minutes pour remplir le formulaire suivant. Quand vous
+aurez terminé, un courriel contenant tous les renseignements sur la
+manière de vérifier l’état de votre demande vous sera envoyé.</p>
+
+			<form id="modal-form" class="fr">
+				<p>Informations personnelles</p>
+				<span>* indique un champ obligatoire</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">Prénom *</label>
+				<input type="text" placeholder="Prénom *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Surnom *</label>
+				<input type="text" placeholder="Surnom *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">Ville *</label>
+				<input type="text" placeholder="Ville *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Pays *</label>
+				<input type="text" placeholder="Pays *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Courriel *</label>
+				<input type="text"placeholder="Courriel *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Téléphone *</label>
+				<input type="text" placeholder="Téléphone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+					<input class="uploadFile" placeholder="Télécharger votre résumé" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+					<input class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin" name="linkedin"/>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Envoyer une demande d’emploi"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="about-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../en/about" class="french">EN</a>
+		</div>
+	<div class="banner">
+		<div class="container">
+			<div class="text-container small">
+   				<h1 class="underline">Qui nous sommes vraiment</h1>
+   				<div class="text-container small">
+   					<p>Tout a commencé ici même, à Montréal, en 1998, lors de la sortie du premier juke-box numérique fonctionnant selon le principe de l’utilisateur payeur. Depuis, nous l’avons transformé en une plateforme à applications multiples qui offre diverses expériences participatives et interactives. TouchTunes est l’une des seules plateformes offrant un système interactif complet de divertissement à l’intérieur des établissements qui prend en compte le matériel, les logiciels et les opérations en réseau.</p>
+   				</div>
+			</div>
+
+			<a class="button" target="_blank" href="http://touchtunes.com/">Visitez le site TouchTunes.com </a>		
+			<p class="small-screen learn-more cts">Pour en apprendre davantage</p>
+		</div>
+	</div>
+	<div class="staff scroll-to">
+		<div class="container">
+
+			<h2 class="underline dark">L’équipe du studio de Montréal</h2>
+			<div class="text-container small">
+				<p >TouchTunes Montréal est le moteur de la production et des opérations de TouchTunes Corp. et ses activités sont plus ou moins réparties de la manière suivante :</p>
+				<a class="button big-screen" href="../careers">Rejoindre l'équipage</a>
+			</div>
+			<div class="animation">
+				<div class="panel">
+					<div class="graph">
+						<div class="graph-bd">
+							<div class="graph-bd-md">
+								<svg id="svg"></svg>
+							</div>
+							<div class="graph-bd-text">
+								<ul>
+									<li class="js-graphItem" data-val="70" data-color="#36abdc"><span>65%</span> Ingénierie</li>
+									<li class="js-graphItem" data-val="40" data-color="#65bde2"><span>12%</span>  Contenu et opérations</li>
+									<li class="js-graphItem" data-val="30" data-color="#93cee7"><span>18%</span> TI et infrastructure</li>
+									<li class="js-graphItem" data-val="15" data-color="#c1dfed"><span>5%</span> Ressources humaines et finance</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="worldwide">
+		<div class="container">
+			<h2>Comme nous avons plus de 60 000 juke-boxes opérationnels en Amérique du Nord, nous sommes présents dans plus d’endroits que McDonald’s et Starbucks combinés.</h2>
+		</div>
+	</div>
+	<div class="band">
+		<div class="container">
+			<h2 class="underline dark">Faites connaissance avec les membres du groupe</h2>
+			<div class="text-container small"></div>
+			<p>TouchTunes Montréal est une entreprise collaborative de plus de 90 employés. Faites la connaissance de quelques-uns des membres de notre groupe!</p>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-malena.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen"  src="../../img/member-malena.jpg">
+					<p><span>Malena</span></p>
+					<p><span>Montoya</span></p>
+					<p><span class="position"> - Développeuse sénior d'applications mobiles</span></p>
+					<p>Sur une île déserte, tout ce dont Malena aurait vraiment besoin pour survivre se résume ainsi : un cocktail à la noix de coco et la chanson Kokomo, des Beach Boys. Et encore, les secours pourraient prendre leur temps! Si ce n’était que d’elle, tous les Montréalais auraient droit à une journée de congé ainsi qu’à la gratuité illimitée le jour de leur anniversaire. Votez pour Malena! Malena a aussi un cœur en or et rêve sérieusement de devenir une superhéroïne. D’ailleurs, si on ne lui accordait ne serait-ce qu’une journée d’immortalité, elle utiliserait son superpouvoir pour agir en tant que bouclier humain afin de protéger les autres. En ce moment, Malena mène une opération de cueillette de renseignements afin de découvrir QUI est Charlie avant de se lancer à sa recherche...</p>
+					<p class="bio big-screen"><span>Biographie :</span>  Une personnalité toute en nuances
+					</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span>  Une personnalité toute en nuances
+				</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-naeija.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-naeija.jpg">
+					<p><span>Najeia</span></p>
+					<p><span>Khan</span></p>
+					<p><span class="position"> - Analyste Attract TV</span></p>
+					<p>La maîtresse zen Najeia aimerait pouvoir méditer au son apaisant la chanson Desert Rose, de Sting, sur une île déserte. Même les animaux sortiraient de leur cachette pour entonner Kumbaya en sa compagnie tant elle est de nature douce! Si on lui accordait une journée d’immortalité, elle attendrait probablement que celle-ci soit terminée. Ça, c’est ce qui s’appelle avoir atteint le niveau d’illumination 500! Najeia n’a toujours pas trouvé Charlie, mais elle soupçonne fortement qu’il se trouve à Vegas, parce que ce qui se passe à Vegas… (roulement de tambour)</p>
+					<p class="bio big-screen"><span>Biographie :</span> Papillon</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Papillon</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-pascal.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-pascal.jpg">
+					<p><span>Pascal</span></p>
+					<p><span>Haché</span></p>
+					<p><span class="position"> - Responsable technique, juke-box
+					</span></p>
+					<p>En grand optimiste qu’il est, si Pascal se retrouvait coincé sur une île déserte, il allumerait un feu en frottant des branches au rythme de Never give you up, de Rick Astley. Il dit que le pire cadeau qu’il a reçu à ce jour est un couteau suisse. « À quoi ça sert? », demande-t-il! Gageons que ce cadeau aurait été utile sur une île déserte. N’est-ce pas, Pascal?! Par contre, il n’a pas eu besoin de ce couteau pour trouver Charlie. Selon lui, il est juste derrière vous!</p>
+					<p class="bio big-screen"><span>Biographie :</span> Victoire épique</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Victoire épique</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-remi.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-remi.jpg">
+					<p><span>Rémi</span></p>
+					<p><span>Desmarais</span></p>
+					<p><span class="position"> - Directeur de plateforme</span></p>
+					<p>Si jamais vous cherchez Rémi par un beau dimanche pas si tranquille à Montréal, il est probablement en train de jouer au ultimate Frisbee dans l’un des nombreux parcs de la ville. Vous n’avez qu’à suivre le son de DJ Easy Rock ou de toute chanson de rap ou de ska jamaïcain des années 80 jouant à tue-tête, et vous le trouverez. Rémi dit que le pire cadeau qu’il n’ait jamais reçu est son mal de dos (merci, Maman!). Dommage que les gênes ne viennent pas avec une facture permettant de les échanger. Pour ce qui est de Charlie, il pense qu’il pourrait se trouver quelque part avec toutes les chaussettes manquantes de l’univers, dans le trou noir du sèche-linge…</p>
+					<p class="bio big-screen"><span>Biographie :</span> Est-il vraiment nécessaire d’en choisir une seule?</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Est-il vraiment nécessaire d’en choisir une seule?</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-ben.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-ben.jpg">
+					<p><span>Benjamin</span></p>
+					<p><span> H.J Nettleship</span></p>
+					<p><span class="position"> - Technicien en qualité des logiciels – Opérations liées aux produits
+					</span></p>
+					<p>Avide de connaissances, si Ben pouvait faire adopter une loi municipale, il exigerait que chaque personne lise au moins un nouveau livre par mois. Vous ne lisez pas vite? Bonne chance! S’il pouvait être immortel pendant une journée, il vêtirait une armure, monterait en selle et participerait à quelques rondes d’une joute. Deux contre un pour Ben! Ben n’en peut plus qu’on se demande où est Charlie. Pourquoi n’y a-t-il personne qui demande COMMENT va Charlie? N’y a-t-il donc personne qui se soucie de son bien-être? Ne t’en fais pas, Charlie. Ben est là pour toi.</p>
+					<p class="bio big-screen"><span>Biographie :</span> Testeur professionnel, écrivain à temps partiel et rêveur à temps plein</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Testeur professionnel, écrivain à temps partiel et rêveur à temps plein</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-yien.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-yien.jpg">
+					<p><span>Yien </span></p>
+					<p><span> You Truang</span></p>
+					<p><span class="position"> - Chef de projet, Assurance de la qualité – Opérations liées aux services aux plateformes
+					</span></p>
+					<p>Pour retrouver le Mexicain en lui, Yien You aime aller aux 3 Amigos lors d’un #dimanchetranquille, car rien n’est synonyme d’un petit dimanche tranquille à Montréal comme des nachos et des sombreros. Si on lui accordait 24 heures d’immortalité, il combattrait Floyd Mayweather. « Ne serait-ce que pour avoir la chance de lui donner un bon coup, je suis prêt à me faire mettre KO. » Il a déjà reçu un parapluie troué en cadeau. Vraiment pas génial. Yien You pense que Charlie est retraité et qu’il se la coule douce sur une plage, quelque part.</p>
+					<p class="bio big-screen"><span>Biographie :</span> Le parcours du prodige</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Le parcours du prodige</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-patrice.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-patrice.jpg">
+					<p><span>Patrice</span></p>
+					<p><span> Mondor</span></p>
+					<p><span class="position"> - Producteur, Jukebox OS</span></p>
+					<p>S’il y a une chose que souhaite Patrice dans la vie, c’est de pouvoir tourner à droite aux feux rouges à Montréal! D’ailleurs, s’il avait la chance d’être immortel pendant 24 heures, il passerait la journée entière à tourner à droite à tous les feux rouges. Il a déjà eu la bonne idée de dire à son professeur qu’il n’avait pas fait ses devoirs à cause du passage à l’heure d’été. Il était certain d’avoir une journée de plus (pourquoi se contenter d’une heure?). Inutile de dire que le professeur n’a pas cru son histoire, mais a bien ri. Patrice est certain d’avoir vu Charlie en compagnie de Carmen Sandiego. Chose certaine, ces deux-là savent comment passer inaperçu.</p>
+					<p class="bio big-screen"><span>Biographie :</span> La vie, entre autres</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> La vie, entre autres</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-ken.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-ken.jpg">
+					<p><span>Ken </span></p>
+					<p><span>Phillips</span></p>
+					<p><span class="position"> - Producteur senior, Plateforme</span></p>
+					<p>S’il était perdu sur une île déserte, Ken opterait, en toute logique, pour la chanson thème des Joyeux naufragés. Vous ne trouvez pas que c’est plein de bon sens? S’il pouvait être immortel l’espace d’une journée, il utiliserait tout simplement son état divin pour récupérer d’une nuit passée à un concert de retrouvailles du groupe Me, Mom and Morgentaler. Pour ce qui est de la recherche de Charlie, Ken a invoqué le cinquième amendement. (Nous pensons qu’il est un agent double…)</p>
+					<p class="bio big-screen"><span>Biographie :</span> Comme un foutu rayon de soleil</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Comme un foutu rayon de soleil</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-ludwig.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-ludwig.jpg">
+					<p><span>Ludwig</span></p>
+					<p><span> Gamache</span></p>
+					<p><span class="position"> - Directeur du système d’information</span></p>
+					<p>Ludwig est un homme de famille. Ça ne lui dérangerait pas vraiment d’être perdu sur une île déserte, tant que ses enfants sont là pour qu’il puisse s’amuser avec eux et que la chanson Piano Man, de Billy Joel, joue en boucle. S’il pouvait faire passer une loi municipale, il éliminerait tous les véhicules à moteur de la ville de Montréal. Adieu bouchons de circulation! Quelqu’un est partant pour une petite séance de jogging en groupe? D’après Ludwig, si vous cherchez toujours Charlie, vous feriez mieux de demander à Waldo.</p>
+					<p class="bio big-screen"><span>Biographie :</span> Comment en faire plus</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Comment en faire plus</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-quentin.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-quentin.jpg">
+					<p><span>Quentin</span></p>
+					<p><span> Gallet</span></p>
+					<p><span class="position"> - VP Production</span></p>
+					<p>Quentin, s’il se retrouvait perdu sur une île déserte, passerait ses journées à jouer à Monopoly (édition classique) avec ses deux enfants et ses nuits à se laisser bercer au doux son de la chanson Strangers In The Night, de Frank Sinatra. Si on lui en donnait la chance, il passerait une loi à Montréal exigeant de tous les citoyens qu’ils possèdent « au moins un vélo », la prochaine étape consistant bien sûr à les inciter à l’utiliser… Il est en outre convaincu que si personne ne trouve Charlie, c’est tout simplement parce qu’il est resté coincé en 1984.</p>
+					<p class="bio big-screen"><span>Biographie :</span>  M**de. Je me lance!</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span>  M**de. Je me lance!</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-jerry.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-jerry.jpg">
+					<p><span>Jerry</span></p>
+					<p><span> Bowskill</span></p>
+					<p><span class="position"> - Dirigeant principal de la technologie</span></p>
+					<p>Pour Jerry, ce qui importe, ce sont les petites choses simples de la vie. Il ferait adopter une loi permettant à tous ceux qui portent des chaussures Chuck Taylor (totalement justifiable) et qui dansent au son de classiques des années 80 de Queen de prendre le métro gratuitement. Il est en faveur des vibrations positives, mais ne lui offrez surtout pas une audiocassette des plus grands succès des Beach Boys, même si elle comprend le titre Good Vibrations (ce n’était pas beau à voir). Jerry a trouvé Charlie à l’endroit suivant : 44,4800° de latitude N. et 69,1200° de longitude O.</p>
+					<p class="bio big-screen"><span>Biographie :</span> Ouvert, comme dans Open (désolé, Agassi)</p>
+				</div>
+				<a href="javascript:void(0)" class="more small-screen">En savoir plus</a>
+				<p class="bio small-screen"><span>Biographie :</span> Ouvert, comme dans Open (désolé, Agassi)</p>
+			</div>
+
+			<div class="member">
+				<div class="half img">
+					<img src="../../img/member-placeholder.jpg">
+				</div>
+				<div class="half">
+					<img class="small-screen" src="../../img/member-placeholder.jpg">
+					<p><span class="other">90 + membres</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="counter">
+		<div class="container">
+			<div class="text-container small">
+				<h3><span class="count">26</span> De chansons de TouchTunes qui ont commencé à jouer depuis que vous êtes arrivé sur la présente page
+				</h3>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Accueil </a></li>
+					<li class="active"><a href="../about">À propos</a></li>
+					<li><a href="../technology">Technologies</a></li>
+					<li><a href="../projects">Projets</a></li>
+					<li><a href="../careers">Carrières </a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Envoyez-nous un message</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Coordonnées</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>

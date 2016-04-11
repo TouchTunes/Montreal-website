@@ -1,0 +1,741 @@
+.home-wrapper {
+	@media(max-width: 940px) {
+		padding-top: 40px;
+	}
+
+	@media(min-width: 940px) and (max-width: 1100px) {
+		padding-top: 50px
+	}
+
+	.header {
+
+		.black {
+			display: block;
+		}
+
+		.white {
+			display: none;
+		}
+		
+		.menu-button {
+			@media(min-width: 450px) {
+				background-image: url(../img/menu-icon.png);
+			}
+		}
+
+		.french {
+			color: black;
+		}
+	}
+
+	.banner {
+		overflow: hidden;
+		width: 100%;
+		height: 325px;
+		padding-top: 0;
+		padding-bottom: 0;
+		border-bottom: 3px solid @dirtywhite;
+		background-size: cover;
+		background: white;
+		position: relative;
+
+		@media(min-width: 1100px) {
+			position: relative;
+			height: 650px;
+			z-index: 0;
+		}
+
+		img.single-member {
+			position: absolute;
+			left: 60%;
+			top: -15%;
+			max-height: 120%;
+			width: auto;
+			margin-left: -125px;
+
+		}
+
+		.ld {
+
+			background: white url(../img/rolling.gif) no-repeat center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			display: block;
+			height: 80px;
+			width: 80px;
+			background-size: cover;
+		}
+
+
+
+		.animation-placeholder {
+			position: absolute;
+			width: 2000%;
+			height: 80%;
+			background: url(../img/banner.jpg) repeat-x center left -100px;
+			background-size: auto 700px;
+			top: 100px;
+			left: 100%;
+			display: none;	
+			user-drag: none; 
+			-moz-user-select: none;
+			-webkit-user-drag: none;
+
+			@media(max-width: 1100px) {
+				width: 2000%;
+				height: 100%;
+				top: 0;
+				left: 0;
+				background-size: auto 400px;
+				
+				&.android {
+					width: 2000%;
+					height: 100%;
+					top: 0;
+					background: url(../img/banner-android.png);
+					background-repeat: repeat-x;
+					background-size: auto 90%;
+				}
+			}		
+
+			&.slide {
+				transform: translateX(-100%);
+				-webkit-transform: translateX(-100%);
+				 -ms-transform: translateX(-100%);
+	    		transition: all 300s linear;
+	    		-webkit-transition: all 300s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 200s linear;
+		    		-webkit-transition: all 200s linear;
+	    		}
+
+	    		@media(max-width: 700px) {
+		    		transition: all 150s linear;
+		    		-webkit-transition: all 150s linear;
+	    		}
+			}
+
+			&.swipe {				
+				transform: translateX(-150%);
+				-webkit-transform: translateX(-150%);
+				 -ms-transform: translateX(-150%);
+	    		transition: all 50s linear;
+	    		-webkit-transition: all 50s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 20s linear;
+		    		-webkit-transition: all 20s linear;
+	    		}
+			}
+
+			&.back {				
+				transform: translateX(150%);
+				-webkit-transform: translateX(150%);
+				 -ms-transform: translateX(150%);
+	    		transition: all 80s linear;
+	    		-webkit-transition: all 80s linear;
+
+	    		@media(max-width: 1100px) {
+		    		transition: all 20s linear;
+		    		-webkit-transition: all 20s linear;
+	    		}
+			}
+		}
+
+		.animation-holder {
+			width: 1000%;
+			height: 100%;
+			margin: 0;
+			overflow: hidden;
+			-webkit-transition: all .5s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+			transition: all .5s linear;
+
+
+			img {
+				position: absolute;
+				transform: translateX(800%);
+				top: 10%;
+				z-index: 1;
+				width: 290px;
+				height: auto;
+				margin-top: -50px;
+
+				&.slide {
+					transform: translateX(-300px);
+					-webkit-transform: translateX(-300px);
+					 -ms-transform: translateX(-300px);
+					-webkit-transition: all 27s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+					transition: all 27s linear;
+					margin-left: 0!important;
+				}
+
+				&.superslide {
+					transform: translateX(-2500px);
+					-webkit-transition: all 7s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
+					transition: all 7s linear;
+				}
+			}
+		}
+
+		.white-overlay {
+			position: absolute;
+			display: none;
+			width: 100%;
+			height: 100%;
+			z-index: 2;
+			background: url(../img/white-overlay.png) no-repeat left top;
+			background-size: cover;
+
+			@media(min-width: 1100px) {
+				display: block;
+			}
+		}
+	}
+
+	.work {
+		padding-top: 35px;
+		padding-bottom: 50px;
+
+		@media(min-width: 450px) {
+			text-align: center;
+		}
+
+		@media(min-width: 1100px) {
+			position: absolute;
+			width: 450px;
+			left: 120px;
+			top: 220px;
+			padding: 0;
+			text-align: left;
+			z-index: 2;
+
+			&.single {
+				width: 550px;
+			}
+		}
+
+		.learn-more {
+			@media(min-width: 1100px) {
+				display: none;
+			}
+		}
+
+		.button {
+			margin-top: 30px;
+		}
+
+		h2 {
+			@media(min-width: 1100px) {
+				font-size: 46px;
+				font-family: @extrabold;
+				color: @darkgray;
+			}
+		}
+
+		p {
+			@media(min-width: 768px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+			@media(min-width: 1100px) {
+				font-size: 18px;
+				font-family: @semibold;
+				color: @darkgray;
+			}
+		}
+	}
+
+	.about {
+		overflow: hidden;
+		padding-top: 50px;
+		padding-bottom: 50px;
+		background-color: @lightblue;
+		text-align: center;
+
+		@media(min-width: 940px) {
+			padding: 115px 0;
+		}
+
+		.text-container {
+			@media(min-width: 940px) {
+				margin: 0 auto;
+			}
+		}
+
+		img {
+			width: 50%;
+			display: block;
+			margin: 0 auto 25px;
+			padding-bottom: 25px;
+			
+			@media(min-width: 450px) {
+				width: 175px;
+				height: 40px;
+			}
+
+			@media(min-width: 700px) {
+				height: 70px;
+			}
+
+			@media(min-width: 940px) {
+				width: 270px;
+				height: auto;
+				background-position: center bottom;
+				padding-bottom: 30px;
+				margin-bottom: 25px;
+			}
+		}
+
+		p {
+			font-size: 15px;
+			font-family: @regular;
+			color: white;
+			text-align: center;
+			line-height: 20px;
+
+			@media(min-width: 768px) {
+				font-size: 18px;
+				line-height: 26px;
+				font-family: @semibold;
+			}
+		}
+
+		.button {
+			margin: 40px auto 0;
+
+			@media(min-width: 940px) {
+				margin-top: 70px;
+			}
+		}
+	}
+
+	.technology {
+		padding: 75px 0 50px;
+		text-align: center;
+
+		@media(min-width: 768px) {
+			padding-top: 50px;
+		}
+
+		@media(min-width: 940px) {
+			text-align: left;
+			padding: 160px 0;
+			background: url(../img/technology-big-screen.png) no-repeat center;
+			background-position: right 10% center;
+			background-size: 350px 120px;
+		}
+
+		@media(min-width: 1100px) {			
+			background-size: 450px 205px;
+		}
+
+		.text-container {
+			@media(min-width: 940px) {
+				max-width: 50%;
+				float: left;
+			}
+		}
+
+		h2 {
+			font-size: 30px;
+			font-family: @extrabold;
+			padding-bottom: 20px;
+			margin-bottom: 25px;
+			color: @darkgray;
+
+			@media(min-width: 768px) {
+				font-size: 42px;
+			}
+
+			@media(min-width: 940px) {
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+			}
+
+			span {
+				display: block;
+				font-size: 15px;
+				line-height: 13px;
+
+				@media(min-width: 768px) {
+					font-size: 20px;
+					line-height: 17px;
+				}
+
+				@media(min-width: 940px) {
+					display: inline;
+					font-size: 42px;
+					line-height: 42px;
+				}
+			}
+		}
+
+		p {
+			font-size: 15px;
+			font-family: @regular;
+			line-height: 20px;
+			color: @darkgray;
+
+			@media(min-width: 768px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+			@media(min-width: 940px) {
+				font-size: 18px;
+				font-family: @semibold;
+			}
+		}
+
+		.images {
+			overflow: hidden;
+			height: 130px;
+			background: url(../img/technology-big-screen.png) no-repeat center bottom;
+			background-size: contain;
+		    margin-top: 30px;
+
+			@media(min-width: 768px) {
+				background-size: 80%;
+			}
+
+			@media(min-width: 940px) {
+				display: block;
+				float: left;
+				width: 50%;
+				height: 130px;
+				background: none;
+				margin-top: 0;
+			}
+		}
+
+		.button {
+			@media(min-width: 940px) {
+				margin-top: 10px;
+				background: @pink;
+			}
+		}
+	}
+
+	.projects {
+		overflow: hidden;
+		padding-top: 80px;
+		padding-bottom: 45px;
+		text-align: center;
+		background: @dirtywhite;
+
+		@media(min-width: 768px) {
+			padding-top: 50px;
+		}
+
+		@media(min-width: 940px) {
+			padding: 110px 0;
+			text-align: center;
+		}
+
+		.text-container {
+			margin: 0 auto;
+		}
+
+		h2 {
+			padding-bottom: 20px;
+
+			@media(min-width: 768px) {
+				font-size: 42px;
+				background-position: center bottom;
+			}
+
+			@media(min-width: 940px) {
+				padding-bottom: 25px;
+				margin-bottom: 25px;
+			}
+		}
+
+		p {
+			@media(min-width: 768px) {
+				font-size: 20px;
+				line-height: 26px;
+			}
+
+			@media(min-width: 940px) {
+				font-family: @semibold;
+			}
+		}
+
+		.stacks {
+			padding-top: 25px;
+
+			@media(min-width: 768px) {
+				text-align: center;
+				padding-top: 50px;
+			}
+
+			@media(min-width: 940px) {
+				padding-top: 75px;
+			}
+
+			.stack {
+				display: block;
+				overflow: hidden;
+				height: 95px;
+				width: 100%;
+				padding: 30px 0;
+				margin-bottom: 15px;
+				background: @dark;
+				-webkit-box-shadow: 0px -2px 11px -2px rgba(112,111,112,1);
+				-moz-box-shadow: 0px -2px 11px -2px rgba(112,111,112,1);
+				box-shadow: 0px -2px 11px -2px rgba(112,111,112,1);
+				text-decoration: none;
+
+				@media(min-width: 768px) {
+					display: inline-block;
+					position: relative;
+					overflow: visible;
+					height: 120px;
+					width: 120px;
+					border-radius: 50%;
+					padding: 0;
+					margin-right: 20px;
+
+					&:nth-child(5) {
+						margin-right: 0;
+					}
+				}
+
+				@media(min-width: 940px) {
+					height: 140px;
+					width: 140px;
+					margin-right: 30px;
+				}
+
+				@media(min-width: 1100px) {
+					margin-right: 60px;
+				}
+
+				@media(min-width: 1200px) {
+					margin-right: 95px;
+				}
+
+				&:nth-child(even) {
+					background: white;
+
+					span {
+						color: @dark;
+						padding-left: 0;
+						padding-right: 50px;
+
+						@media(min-width: 768px) {
+							padding: 0;
+						}
+					}
+				}
+
+				&.mobile {
+					@media(min-width: 768px) {
+						background: @dark url(../img/stack-mobile-bg.png) no-repeat center;
+						background-size: 29px;
+					}
+
+					span {
+						background: url(../img/stack-mobile-bg.png) no-repeat left center;
+						background-size: 25px;
+
+						@media(max-width: 350px) {
+							background-size: 20px;
+						}
+					}
+				}
+
+				&.platform {
+					@media(min-width: 768px) {
+						background: white url(../img/stack-platform-bg.png) no-repeat center;
+						background-size: 44px;
+					}
+
+					span {
+						background: url(../img/stack-platform-bg.png) no-repeat right center;
+						background-size: 25px;
+					}
+				}
+
+				&.attract {
+					@media(min-width: 768px) {
+						background: @dark url(../img/stack-attract-bg.png) no-repeat center;
+						background-size: 46px;
+					}
+
+					> span {
+						background: url(../img/stack-attract-bg.png) no-repeat left center;
+						background-size: 30px;
+					}
+				}
+
+				&.jukebox {
+					@media(min-width: 768px) {
+						background: white url(../img/stack-jukebox-bg.png) no-repeat center;
+						background-size: 42px;
+					}
+
+					span {
+						background: url(../img/stack-jukebox-bg.png) no-repeat right center;
+						background-size: 30px;
+					}
+				}
+
+				&.operations {
+					@media(min-width: 768px) {
+						background: @dark url(../img/stack-operations-bg.png) no-repeat center;
+						background-size: 52px;
+					}
+
+					span {
+						background: url(../img/stack-operations-bg.png) no-repeat left center;
+						background-size: 30px;
+					}
+				}
+
+				> span {
+					font-size: 30px;
+					font-family: @extrabold;
+					color: white;
+					text-align: center;
+					padding-left: 50px;
+
+					.light {
+						font-family: @light;
+					}
+
+					@media(max-width: 350px) {
+						font-size: 25px;
+					}
+
+					@media(min-width: 768px) {
+						display: block;
+						background: none !important;
+						color: @dark;
+						margin-top: 160px;
+						padding: 0;
+						font-size: 20px;
+					}
+
+					@media(min-width: 1100px) {
+						margin-top: 170px;
+					}
+				}
+			}
+		}
+
+		.button {
+			@media(min-width: 768px) {
+				background: @pink;
+				color: white;
+			}
+
+			@media(min-width: 940px) {
+				margin-top: 70px;
+			}
+		}
+	}
+
+	.opportunities {
+		background: white;
+		padding-bottom: 50px;
+
+		.positions {
+			> div {
+				background: @dirtywhite;
+			}
+		}
+
+		.button {
+
+			&.gray {		
+				margin-top: 30px;		
+
+				@media(min-width: 1100px) {
+					background: transparent;
+				}
+			}
+		}
+	}
+
+	.contact-mail {
+		overflow: hidden;
+		padding-top: 110px;
+		padding-bottom: 115px;
+		border-boottom: 3px solid @lightblue;
+		background: url(../img/home-contact-bg-retina.png) no-repeat center;
+		background-size: cover;
+		text-align: center;
+
+		@media(min-width: 940px) {
+			text-align: left;
+			background: url(../img/home-contact-big-bg-retina.png) no-repeat center;;
+			background-size: cover;
+		}
+	
+		h2 {
+			color: white;
+			padding-bottom: 20px;
+
+			@media(min-width: 940px) {
+				font-size: 44px;
+				font-family: @extrabold;
+				padding-bottom: 30px;
+				margin-bottom: 30px;
+			}
+		}
+		.button {
+			margin-top: 0;
+
+			@media(min-width: 768px) {
+				 margin-top: 50px;
+			}
+
+			@media(min-width: 940px) {
+				margin-top: 65px;
+			}
+
+			img {
+				height: 15px;
+				width: 22px;
+			}
+		}
+
+		.big {
+			display: none;
+
+			@media(min-width: 768px) {
+				display: block;
+
+				&.button {
+					display: inline-block;
+				}
+
+				p {
+					font-size: 20px;
+					font-family: @regular;
+					color: white;
+
+					@media(min-width: 940px) {
+						font-family: @semibold;
+					}
+				}
+			}
+		}
+
+		.small {
+			display: block;
+
+			@media(min-width: 768px) {
+				display: none;
+			}
+
+			img {
+				margin-top: -3px;
+			}
+		}
+	}
+}

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon" />
+    <title>Projets</title>
+    <link rel="stylesheet" type="text/css" href="../../styles/fonts/stylesheet.css">     
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../../styles/vendor/bootstrap-select.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+    <link rel="stylesheet" type="text/css" href="../../styles/index.css"> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  </head>
+  <body>
+<div class="menu">
+	<div class="container">
+		<div class="menu-header">
+			<a class="close menu-button" href="javascript:void(0)"></a>	
+		</div>
+	</div>
+	<div class="content">
+		<ul class="list">
+			<li><a href="../home" class="">Accueil </a></li>
+			<li><a href="../about">À propos</a></li>
+			<li><a href="../technology">Technologies</a></li>
+			<li><a href="../projects">Projets</a></li>
+			<li><a href="../careers">Carrières </a></li>
+			<li><a href="../contact">Contact</a></li>
+		</ul>
+		<div class="container">
+			<div class="application">
+				<h2 class="underline">Faites partie du groupe</h2>
+				<p>Le studio de Montréal compte plus de 90 employés et leur nombre ne cesse de croître. Venez fracasser les records en notre compagnie!</p>	
+
+				<form id="menu" class="fr">
+					<div class="loader"></div>
+					<label class="ie-placeholder" style="">Prénom</label>
+					<input required  type="text" placeholder="Prénom" name="first-crew" id="first-crew"/>
+					<label class="ie-placeholder" style="">Surnom</label>
+					<input required  type="text" placeholder="Surnom" name="last-crew" id="last-crew"/>
+					<label class="ie-placeholder" style="">Ville</label>
+					<input required  type="text" placeholder="Ville" name="city-crew" id="city-crew"/>
+					<label class="ie-placeholder" style="">Pays</label>
+					<input required  type="text" placeholder="Pays" name="country-crew" id="country-crew"/>
+					<label class="ie-placeholder" style="">Téléphone</label>
+					<input required  type="text" placeholder="Téléphone" name="phone-crew" id="phone-crew"/>
+					<label class="ie-placeholder" style="">Courriel</label>
+					<input required  type="text" placeholder="Courriel" name="email-crew" id="email-crew" />
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+						<input  class="uploadFile" placeholder="Télécharger votre résumé"  />
+						<div class="fileUpload">
+						    <span></span>
+						    <input required type="file" class="upload uploadBtn" name="resume" id="resume-crew"/>
+						</div>
+					</div>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+						<input  class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="coverletter" id="cover-crew" />
+						</div>
+					</div>
+
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin-crew" name="linkedin-crew" />
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook-crew" name="facebook-crew"/>
+
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment-crew"/>
+						</div>
+					</div>
+
+					<input type="submit" class="button" id="submit-crew" value="Envoyer une demande d’emploi" />
+				</form>		
+			</div>
+		</div>
+	</div>
+</div>
+<div class="job-modal">
+	<div class="container">
+		<a class="close modal" href="javascript:void(0)"></a>
+		<h2>Postulez un emploi à TouchTunes</h2>
+		<p class="title"></p>
+		<div class="content">
+			<p>Nous vous remercions d’envisager de faire carrière à Touchtunes.
+Prendre quelques minutes pour remplir le formulaire suivant. Quand vous
+aurez terminé, un courriel contenant tous les renseignements sur la
+manière de vérifier l’état de votre demande vous sera envoyé.</p>
+
+			<form id="modal-form" class="fr">
+				<p>Informations personnelles</p>
+				<span>* indique un champ obligatoire</span>
+				<div class="loader"></div>
+
+				<input type="hidden" class="apply-for" value="" id="job" />
+				<label class="ie-placeholder" style="">Prénom *</label>
+				<input type="text" placeholder="Prénom *" name="first-app" id="first-app" />
+				<label class="ie-placeholder" style="">Surnom *</label>
+				<input type="text" placeholder="Surnom *" name="last-app" id="last-app" />
+				<label class="ie-placeholder" style="">Ville *</label>
+				<input type="text" placeholder="Ville *" name="city-app" id="city-app" />
+				<label class="ie-placeholder" style="">Pays *</label>
+				<input type="text" placeholder="Pays *" name="country-app" id="country-app" />
+				<label class="ie-placeholder" style="">Courriel *</label>
+				<input type="text"placeholder="Courriel *" name="email-app" id="email-app" />
+				<label class="ie-placeholder" style="">Téléphone *</label>
+				<input type="text" placeholder="Téléphone *" name="phone-app" id="phone" />
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre résumé</label>
+					<input class="uploadFile" placeholder="Télécharger votre résumé" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input required type="file" class="upload uploadBtn" name="resume-app" id="resume-app" />
+					</div>
+				</div>
+
+				<div class="file-wrapper">
+					<label class="ie-placeholder" style="">Télécharger votre lettre de présentation</label>
+					<input class="uploadFile" placeholder="Télécharger votre lettre de présentation" />
+					<div class="fileUpload">
+					    <span></span>
+					    <input type="file" class="upload uploadBtn" name="cover" id="cover" />
+					</div>
+				</div>
+
+				<div class="social-info">
+					<label>Réseaux sociaux</label>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: LinkedIn)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: LinkedIn)" id="linkedin" name="linkedin"/>
+					<label class="ie-placeholder" style="">Ajouté lien (i.e.: Facebook)</label>
+					<input class="link" type="url" placeholder="Ajouté lien (i.e.: Facebook)" id="facebook" name="facebook" />
+				</div>
+				<div class="bottom">
+					<div class="file-wrapper">
+						<label class="ie-placeholder" style="">Ajouté des documents</label>
+						<input class="uploadFile" placeholder="Ajouté des documents" />
+						<div class="fileUpload">
+						    <span></span>
+						    <input type="file" class="upload uploadBtn" name="attachment" id="attachment" />
+						</div>
+					</div>
+					<input type="submit" class="button pink" id="submit-application" value="Envoyer une demande d’emploi"/>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<div class="project-wrapper">
+		<div class="overlay"></div>
+		<div class="header">
+			<a class="menu-button">
+				
+			</a>
+			<a href="../home"><img class="white" src="../../img/logo-white-retina.png"/>
+			<img class="black" src="../../img/logo-black-retina.png"/></a>
+	
+	
+			<a href="../../en/projects" class="french">EN</a>
+		</div>
+	<div class="banner">
+		<div class="gray-overlay"></div>
+		<div class="container">
+			<div class="text-container small">
+   				<h1 class="underline">Projets – Les vedettes</h1>
+				<p>TouchTunes Montréal a fait entrer le monde dans une nouvelle ère musicale sur une note classique. Au fil des années, nos juke-boxes ont évolué non seulement en termes de matériel, mais aussi en termes d’interactivité, passant d’une cabine photographique intégrée à un système de karaoké commercial disposant des permis nécessaires, et même plus. Le juke-box TouchTunes est devenu le catalyseur de projets parallèles qui ont vu le jour en tant que précieux compléments, mais qui constituent maintenant des produits à part entière, des équipes entières leur étant dédiées, chacune vouée à mettre en œuvre notre mission qui consiste à partager une vision et un son et à connecter le monde à coups de millions de chansons</p>
+			</div>
+			<a class="cts button">Voir nos projets</a>
+		</div>
+	</div>	
+	<div class="tech scroll-to">
+		<div class="wrap mobile" id="mobile">
+			<div class="container">
+				<h2 class="small-screen">Mobile</h2>
+				<div class="section mobile">
+					<div class="images">
+						<img src="../../img/mobile.png">
+					</div>
+
+					<p class="small-screen">L’application de musique mobile TouchTunes est un complément qui est là pour vous. Nous l’avons créée pour aider les amateurs de musique à trouver les meilleurs établissements à proximité et à ajouter leurs chansons favorites à la liste de lecture sans qu’ils aient à se lever. Nous l’avons aussi conçue de manière à ce que les recommandations s’améliorent au fil de l’utilisation. Ce concept intelligent découle de notre maîtrise de Java et d’Objective-C. Avons-nous mentionné les interfaces de programmation d’applications (API) des réseaux sociaux (Facebook, Twitter) et les balises BLE (BLE Beacons)? Oui, nous les utilisons aussi, et elles nous permettent de nous rapprocher davantage de la perfection en matière d’expérience des utilisateurs. Ajoutez-y notre processus de développement exceptionnel Agile, le fait que nous tenions mordicus à l’automatisation et notre esprit ludique à l’égard des plus récentes technologies à notre disposition, et vous obtiendrez un service qui peut être présent partout en tout temps tout en s’amusant.</p>
+					<div class="text-container">
+						<p class="big-screen"><span class="embed">Mobile</span>L’application de musique mobile TouchTunes est un complément qui est là pour vous. Nous l’avons créée pour aider les amateurs de musique à trouver les meilleurs établissements à proximité et à ajouter leurs chansons favorites à la liste de lecture sans qu’ils aient à se lever. Nous l’avons aussi conçue de manière à ce que les recommandations s’améliorent au fil de l’utilisation. Ce concept intelligent découle de notre maîtrise de Java et d’Objective-C. Avons-nous mentionné les interfaces de programmation d’applications (API) des réseaux sociaux (Facebook, Twitter) et les balises BLE (BLE Beacons)? Oui, nous les utilisons aussi, et elles nous permettent de nous rapprocher davantage de la perfection en matière d’expérience des utilisateurs. Ajoutez-y notre processus de développement exceptionnel Agile, le fait que nous tenions mordicus à l’automatisation et notre esprit ludique à l’égard des plus récentes technologies à notre disposition, et vous obtiendrez un service qui peut être présent partout en tout temps tout en s’amusant.</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="additional">
+					<a class="more small-screen">En savoir plus</a>
+					<p class="anthem">Notre hymne: “Weapon of Choice” - Fat Boy Slim</p>
+					<p class="instruments">Nos instruments Java, Objective-C, Bash, Mixpanel, BLE Beacon, RESTful API, Social Networks, Agents of S.H.I.E.L.D</p>
+				</div>
+			</div>
+		</div>
+		<div class="wrap platform" id="platform">
+			<div class="container">
+				<h2 class="small-screen">Plateforme</h2>
+				<div class="section">
+					<div class="images">
+						<img src="../../img/platform-image.png">
+					</div>
+
+					<p class="small-screen">La plateforme de services Touchtunes est le cerveau de toute l’opération. Cachée quelque part dans un terrier secret, la plateforme est passée d’une architecture client-serveur ne supportant que les juke-boxes à un important groupe d’interfaces de programmation d’applications (API) RESTful hautement disponibles et modulables qui supportent maintenant notre application mobile et nos systèmes AttractTV et qui assurent l’intégration de produits tiers avec certains des meilleurs services de musique mobiles au monde. Notre devise consiste à ne jamais nous faire appeler sur notre téléavertisseur quand nous sommes à une fête. Nous avons maîtrisé l’art des microservices en compartimentant nos applications, en les déplaçant dans des grappes (clusters), en nous assurant de pouvoir exercer une surveillance et en veillant à ce que l’autorétablissement se fasse automatiquement.
+</p>
+									<div class="text-container">					
+					<p class="big-screen"><span class="embed">Plateforme</span>La plateforme de services Touchtunes est le cerveau de toute l’opération. Cachée quelque part dans un terrier secret, la plateforme est passée d’une architecture client-serveur ne supportant que les juke-boxes à un important groupe d’interfaces de programmation d’applications (API) RESTful hautement disponibles et modulables qui supportent maintenant notre application mobile et nos systèmes AttractTV et qui assurent l’intégration de produits tiers avec certains des meilleurs services de musique mobiles au monde. Notre devise consiste à ne jamais nous faire appeler sur notre téléavertisseur quand nous sommes à une fête. Nous avons maîtrisé l’art des microservices en compartimentant nos applications, en les déplaçant dans des grappes (clusters), en nous assurant de pouvoir exercer une surveillance et en veillant à ce que l’autorétablissement se fasse automatiquement.
+</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="additional">
+					<a class="more small-screen">En savoir plus</a>
+					<p class="anthem">Notre hymne: Platform: "Renegades of Funk" - Rage Against the Machine</p>
+					<p class="instruments">Nos instruments Spring, Python, Node.js, Docker, AngularJS, Apache Mesos, Redis, PHP, AWS, RabbitMQ, Spark, Sharks with Freakin’ lasers.</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap tv" id="tv">
+			<div class="container">
+				<h2 class="small-screen">Attract TV</h2>
+				<div class="section tv">
+					<div class="images">
+						<img src="../../img/attractTV.png">
+					</div>
+
+					<p class="small-screen">Contenu : Attract TV, c’est le petit dernier de l’équipe TouchTunes, qui fait de la prochaine génération de plateformes de signalisation numérique et intègre une expérience de contenu novatrice et interactive qui permet à la clientèle d’interagir avec les contenus télé au moyen de leurs appareils mobiles. Nous utilisons HTML5, CSS3, WebGL et Canvas comme s’il s’agissait de prolongations de nous-mêmes. Notre matériel utilise Linux intégré créé à l’aide du Yocto Project, ce qui nous permet d’obtenir un niveau très fin de personnalisation du système d’opération. Nous tirons parti de décodeurs vidéo matériels et de GPU pour assurer une lecture fluide et développons des outils SDK pour le développement par des tiers. Nous suivons la méthodologie Agile afin de publier régulièrement des améliorations de contenu à la vitesse de l’éclair. L’équipe s’efforce de créer du contenu et des expériences exceptionnels et à l’aspect unique. Nous nous déployons et ne faisons pas de quartier.
+</p>
+									<div class="text-container">
+					<p class="big-screen"><span class="embed">Attract TV</span>Contenu : Attract TV, c’est le petit dernier de l’équipe TouchTunes, qui fait de la prochaine génération de plateformes de signalisation numérique et intègre une expérience de contenu novatrice et interactive qui permet à la clientèle d’interagir avec les contenus télé au moyen de leurs appareils mobiles. Nous utilisons HTML5, CSS3, WebGL et Canvas comme s’il s’agissait de prolongations de nous-mêmes. Notre matériel utilise Linux intégré créé à l’aide du Yocto Project, ce qui nous permet d’obtenir un niveau très fin de personnalisation du système d’opération. Nous tirons parti de décodeurs vidéo matériels et de GPU pour assurer une lecture fluide et développons des outils SDK pour le développement par des tiers. Nous suivons la méthodologie Agile afin de publier régulièrement des améliorations de contenu à la vitesse de l’éclair. L’équipe s’efforce de créer du contenu et des expériences exceptionnels et à l’aspect unique. Nous nous déployons et ne faisons pas de quartier.
+</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="additional">
+					<a class="more small-screen">En savoir plus</a>
+					<p class="anthem">Notre hymne: "Video Killed The Radio Star" - The Buggles</p>
+					<p class="instruments">Nos instruments HTML5, CSS3 and CSS3 Animations, WebGL, AJAX, Canvas, JQuery, JavaScript, Grunt, Yocto, Freescale, every Internet meme ever invented</p>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="wrap jukebox" id="jukebox">
+			<div class="container">
+				<h2 class="small-screen">Juke-box</h2>
+				<div class="section jukebox">
+					<div class="images">
+						<img src="../../img/jukebox.png">
+					</div>
+
+					<p class="small-screen">C’est l’équipe à l’origine de tout. Nous sommes le rock classique de la société, les esprits libres qui développent le logiciel et l’interface utilisateur du juke-box TouchTunes, et qui le font drôlement bien. L’équipe a une foi inébranlable dans les éléments suivants : système d’exploitation, programme de contrôle résident, gestionnaires de périphériques, client/serveurs et traitement des vidéos/du son/des images. Pas un jour ne passe sans que nous ayons une discussion animée au sujet de la technologie, de la meilleure manière de piéger un collègue et de la dernière saveur étrange de croustilles que nous avons essayée. Repas du midi en groupe et activités après le travail inclus; personnalités excentriques vendues séparément.
+</p>
+									<div class="text-container">
+					<p class="big-screen"><span class="embed">Juke-box</span>C’est l’équipe à l’origine de tout. Nous sommes le rock classique de la société, les esprits libres qui développent le logiciel et l’interface utilisateur du juke-box TouchTunes, et qui le font drôlement bien. L’équipe a une foi inébranlable dans les éléments suivants : système d’exploitation, programme de contrôle résident, gestionnaires de périphériques, client/serveurs et traitement des vidéos/du son/des images. Pas un jour ne passe sans que nous ayons une discussion animée au sujet de la technologie, de la meilleure manière de piéger un collègue et de la dernière saveur étrange de croustilles que nous avons essayée. Repas du midi en groupe et activités après le travail inclus; personnalités excentriques vendues séparément. 
+</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="additional">
+					<a class="more small-screen">En savoir plus</a>
+					<p class="anthem">Notre hymne: "Get Up, Stand Up” - Bob Marley</p>
+					<p class="instruments">Nos instruments Linux, C, GStreamer, D-Bus, Clutter, Jabber, ALSA, JACK, Jenkins, Yocto, the One Ring</p>
+				</div>
+			</div>
+		</div>
+
+		<div class="wrap operations" id="operations">
+			<div class="container">
+				<h2 class="small-screen">Opérations</h2>
+				<div class="section operations">
+					<div class="images">
+						<img src="../../img/platform.png">
+					</div>
+
+					<p class="small-screen">Les équipes d’opérations de TouchTunes sont les bêtes de somme de la société. Elles comprennent les experts en bases de données, les analystes en assurance de la qualité et les ninjas du SQL.
+L’équipe des services d’information est le fondement technologique de la société, l’équipe de renseignement et de reconnaissance qui transforme les données en information. Nous mettons de l’ordre dans le flux généré par chaque interaction par un client au moyen de diverses technologies afin de surveiller les flux d’information entrants et sortants de la société.
+L’équipe des services aux plateformes conçoit, développe et assure le maintien du serveur, des systèmes de microservices et des interfaces de programmation d’applications (API) de TouchTunes pour notre juke-box, notre application mobile, Attract TV et les applications interentreprises. Nous sommes fiers de construire et de veiller au maintien de la technologie sous-jacente au cœur du temps de fonctionnement et de la fiabilité de nos produits. Nous tirons parti de technologies à la fine pointe pour nous assurer que le fondement de tous les produits TouchTunes est solide comme du roc. Muscler les biceps est chose facile; avoir de beaux abdominaux, c’est une autre histoire.
+L’équipe des opérations liées aux produits constitue les gardiens de l’expérience client qui s’occupent des produits TouchTunes destinés aux clients, comme le juke-box, l’application mobile et AttractTV, afin de veiller à ce que la vision de nos concepteurs soit transmise aux clients lors de chaque interaction. Nous sommes une espèce rare pour laquelle la philosophie d’assurance de la qualité se compose des éléments suivants : une part de jeu de rôle, une part de planification et deux parts de Sherlock Holmes. Il faut avoir du matériel fiable et des logiciels sans bogue en plus de s’assurer que les « piles incluses » sont véritablement incluses? Nous nous en occupons.
+</p>
+									<div class="text-container">
+					<p class="big-screen"><span class="embed">Opérations</span>Les équipes d’opérations de TouchTunes sont les bêtes de somme de la société. Elles comprennent les experts en bases de données, les analystes en assurance de la qualité et les ninjas du SQL.
+L’équipe des services d’information est le fondement technologique de la société, l’équipe de renseignement et de reconnaissance qui transforme les données en information. Nous mettons de l’ordre dans le flux généré par chaque interaction par un client au moyen de diverses technologies afin de surveiller les flux d’information entrants et sortants de la société.
+L’équipe des services aux plateformes conçoit, développe et assure le maintien du serveur, des systèmes de microservices et des interfaces de programmation d’applications (API) de TouchTunes pour notre juke-box, notre application mobile, Attract TV et les applications interentreprises. Nous sommes fiers de construire et de veiller au maintien de la technologie sous-jacente au cœur du temps de fonctionnement et de la fiabilité de nos produits. Nous tirons parti de technologies à la fine pointe pour nous assurer que le fondement de tous les produits TouchTunes est solide comme du roc. Muscler les biceps est chose facile; avoir de beaux abdominaux, c’est une autre histoire.
+L’équipe des opérations liées aux produits constitue les gardiens de l’expérience client qui s’occupent des produits TouchTunes destinés aux clients, comme le juke-box, l’application mobile et AttractTV, afin de veiller à ce que la vision de nos concepteurs soit transmise aux clients lors de chaque interaction. Nous sommes une espèce rare pour laquelle la philosophie d’assurance de la qualité se compose des éléments suivants : une part de jeu de rôle, une part de planification et deux parts de Sherlock Holmes. Il faut avoir du matériel fiable et des logiciels sans bogue en plus de s’assurer que les « piles incluses » sont véritablement incluses? Nous nous en occupons.
+</p>
+					</div>
+				</div>
+				<div class="clear"></div>
+				<div class="additional">
+					<a class="more small-screen">En savoir plus</a>
+					<p class="anthem">Notre hymne: “This Is How We Do It” by Montel Jordan  </p>
+					<p class="instruments">Nos instruments Oracle SQL, Oracle BI, Cloud, Java, PHP and Python, DynamoDB, RabbitMQ, Amazon Web Services</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="contact">
+		<div class="container">
+			<h2 class="underline dark">Vous voulez faire partie de notre équipe?</h2>
+			<div class="text-container small">
+				<p>Nous sommes toujours à la recherche de nouveaux talents.</p>
+			</div>
+			<div class="big-screen">
+				<a class="button blue big-screen" href="../careers">Travailler avec nous</a>
+			</div>
+			<a class="button pink small-screen" href="../careers">Travailler avec nous</a>
+		</div>
+	</div>
+</div>
+
+	<div class="footer">
+		<div class="top">
+			<div class="container">
+				<ul>
+					<li class="small">Touchtunes</li>
+					<li><a href="../home">Accueil </a></li>
+					<li class="active"><a href="../about">À propos</a></li>
+					<li><a href="../technology">Technologies</a></li>
+					<li><a href="../projects">Projets</a></li>
+					<li><a href="../careers">Carrières </a></li>
+					<li><a href="../contact">Contact</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="bottom">
+			<div class="container">
+				<div class="half left">
+					<div class="half logo">
+						<img src="../../img/logo-black-retina.png"/>
+					</div>
+					<div class="half footer-contact">
+						<p class="heading">Envoyez-nous un message</p>
+						<ul>
+							<li><a href="tel:5147626244">Tel: 514.762.6244</a></li>
+							<li><a href="tel:5147626483">Fax: 514.762.6483</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="half right">
+					<div class="half contact-address">
+						<p class="heading">Coordonnées</p>
+						<ul>
+							<li>400 Ste. Croix Avenue, Suite 200E</li>
+							<li>St. Laurent, Quebec H4N 3L4 Canada</li>
+						</ul>
+					</div>
+					<div class="half copy">
+						<p class="lang">English - Canada</p>
+						<p>© 2016 TouchTunes</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="../../js/vendor/jquery-1.11.0.min.js"></script>
+	<script src="../../js/vendor/modernizr-2.8.0.dev.js"></script>
+	<script src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/snap.svg-min.js'></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/snap.svg/0.1.0/snap.svg-min.js"></script>
+	<script src="../../js/vendor/jquery.touchSwipe.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>	
+	<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/jquery.validate.min.js"></script>
+	<script src="../../js/vendor/bootstrap-select.min.js"></script>
+	<script src="../../js/vendor/additional-methods.min.js"></script>
+	<script src="../../js/graphs.js"></script>
+	<script src="../../js/main.js"></script>
+
+	</body>
+	
+</html>
