@@ -3,6 +3,7 @@
 // Require all modules we need
 const metalsmith    = require('metalsmith'),
       path          = require('path'),
+      fs            = require('fs'),
       ifThen        = require('metalsmith-if'),
       argv          = require('optimist').argv,
       ghPages       = require('gh-pages'),
@@ -61,13 +62,22 @@ metalsmith(__dirname)
   // And do a final build
   .build(err => {
     if (err) throw err
- 
-    if (argv.publish)
-      ghPages.publish(path.join(__dirname, 'dist'), {
-        message: 'chore(dist): auto-publish on Github pages'
-      }, err => {
-        if (err) throw err
 
-        console.log('Website is published on GH pages branch!')
-      })
+    fs.readdir(path.join(__dirname, 'static'), (err, list) => {
+      list.forEach(file => 
+        fs.createReadStream(path.join(__dirname, 'static', file))
+          .pipe(fs.createWriteStream(path.join(__dirname, 'dist', file)))
+      )
+
+      if (argv.publish)
+        setTimeout(() => 
+          ghPages.publish(path.join(__dirname, 'dist'), {
+            message: 'chore(dist): auto-publish on Github pages'
+          }, err => {
+            if (err) throw err
+
+            console.log('Website is published on GH pages branch!')
+          })
+        , 300)
+    })
   })

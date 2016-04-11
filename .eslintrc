@@ -19,6 +19,11 @@
   },
   "globals": {
     "$": true,
-    "jQuery": true
+    "jQuery": true,
+    "graph": true,
+    "google": true,
+    "mina": true,
+    "Snap": true,
+    "Pizza": true
   }
 }

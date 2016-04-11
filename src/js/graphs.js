@@ -1,3 +1,4 @@
+/* exported graph */
 (function ($, window, document, undefined) {
   'use strict';
 
@@ -85,8 +86,7 @@
     build: function (legends, options) {
       var self = this;
 
-      var legend = legends,
-        graph;
+      var legend = legends;
 
       legend.data('settings', $.extend({}, self.settings, options, legend.data('options')));
       self.data(legend, options || {});
@@ -95,8 +95,7 @@
     },
 
     data: function (legend, options) {
-      var data = [],
-        count = 0;
+      var data = [];
 
       $('li', legend).each(function () {
         var segment = $(this);
@@ -141,11 +140,11 @@
         total += data[i].value;
       }
 
-      for (var i = 0; i < data.length; i++) {
+      for (i = 0; i < data.length; i++) {
         angles[i] = data[i].value / total * Math.PI * 2;
       }
 
-      for (var i = 0; i < data.length; i++) {
+      for (i = 0; i < data.length; i++) {
         var end_angle = start_angle + angles[i];
         var cx = (base / 2),
           cy = (base / 2),
@@ -176,10 +175,11 @@
 
         var existing_path = $('path[data-id="s' + i + '"]', svg.node);
 
+        var path;
         if (existing_path.length > 0) {
-          var path = Snap(existing_path[0]);
+          path = Snap(existing_path[0]);
         } else {
-          var path = svg.path();
+          path = svg.path();
         }
 
         var percent = (data[i].value / total) * 100.0;
@@ -194,7 +194,7 @@
             y: cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2))
           });
         } else {
-          var text = path.paper.text(cx + (r + settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2)),
+          text = path.paper.text(cx + (r + settings.percent_offset) * Math.sin(start_angle + (angles[i] / 2)),
             cy - (r + settings.percent_offset) * Math.cos(start_angle + (angles[i] / 2)), Math.ceil(percent) + '%');
         }
 
@@ -242,7 +242,7 @@
     },
 
     animate: function (el, cx, cy, settings) {
-      var self = this;
+      // var self = this;
 
       el.hover(function (e) {
         var path = Snap(e.target),
@@ -497,11 +497,12 @@ function graph() {
     var endx = this.centre + this.radius * Math.cos(radians);
     var endy = this.centre + this.radius * Math.sin(radians);
     var largeArc = d > 180 ? 1 : 0;
+    var path;
 
     if (endx === 99.99999999999999) {
-      var path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 99.99999,' + endy + ' Z';
+      path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 99.99999,' + endy + ' Z';
     } else {
-      var path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 ' + endx + ',' + endy;
+      path = 'M' + this.centre + ',' + this.startY + ' A' + this.radius + ',' + this.radius + ' 0 ' + largeArc + ',1 ' + endx + ',' + endy;
     }
     return path;
   };
