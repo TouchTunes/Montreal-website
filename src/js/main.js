@@ -995,3 +995,7 @@ $('.more').on('click', function() {
     $(this).text('Read more');
   }
 });
+
+function goBack() {
+  window.history.back();
+}
