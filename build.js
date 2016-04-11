@@ -2,6 +2,9 @@
 
 // Require all modules we need
 const metalsmith    = require('metalsmith'),
+      ifThen        = require('metalsmith-if'),
+      argv          = require('optimist').argv,
+      ghPages       = require('gh-pages'),
       markdown      = require('metalsmith-markdown'),
       layouts       = require('metalsmith-layouts'),
       less          = require('metalsmith-less'),
@@ -13,7 +16,7 @@ const metalsmith    = require('metalsmith'),
       uglify        = require('metalsmith-uglify'),
       multiLanguage = require('metalsmith-multi-language'),
       Handlebars    = require('handlebars'),
-       _            = require('lodash')
+      _             = require('lodash')
 
 Handlebars.registerHelper('ifCond', (v1, v2, options) => {
   if(v1 === v2)
@@ -53,9 +56,17 @@ metalsmith(__dirname)
   // Minify JS code
   .use(uglify())
   // Use browsersync for local watch of all files
-  .use(browsersync(require('./config/browsersync')))
+  .use(ifThen(argv.watch, browsersync(require('./config/browsersync'))))
   // And do a final build
   .build(err => {
-    console.log(err);
     if (err) throw err
+ 
+    if (argv.publish)
+      ghpages.publish(path.join(__dirname, 'dist'), {
+        message: 'chore(dist): auto-publish on Github pages'
+      }, err => {
+        if (err) throw err
+
+        console.log('Website is published on GH pages branch!')
+      })
   })
