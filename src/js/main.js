@@ -611,7 +611,7 @@ if ($('.counter .count').length) {
 function contactMap() {
   var mapCanvas = document.getElementById('contact-map');
 
-  var myLatLng = {lat: 45.509258, lng: -73.669293};
+  var myLatLng = {lat: 45.531688, lng: -73.622692};
 
   var mapOptions = {
     center: myLatLng,
