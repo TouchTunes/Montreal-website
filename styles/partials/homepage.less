@@ -7,190 +7,20 @@
 		padding-top: 50px
 	}
 
-	.header {
-
-		.black {
-			display: block;
-		}
-
-		.white {
-			display: none;
-		}
-		
-		.menu-button {
-			@media(min-width: 450px) {
-				background-image: url(../img/menu-icon.png);
-			}
-		}
-
-		.french {
-			color: black;
-		}
-	}
-
 	.banner {
 		overflow: hidden;
 		width: 100%;
 		height: 325px;
 		padding-top: 0;
 		padding-bottom: 0;
-		border-bottom: 3px solid @dirtywhite;
+		background: url(../img/touchtunes-home.jpg) no-repeat center;
 		background-size: cover;
-		background: white;
 		position: relative;
 
 		@media(min-width: 1100px) {
 			position: relative;
 			height: 650px;
 			z-index: 0;
-		}
-
-		img.single-member {
-			position: absolute;
-			left: 60%;
-			top: -15%;
-			max-height: 120%;
-			width: auto;
-			margin-left: -125px;
-
-		}
-
-		.ld {
-
-			background: white url(../img/rolling.gif) no-repeat center;
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			display: block;
-			height: 80px;
-			width: 80px;
-			background-size: cover;
-		}
-
-
-
-		.animation-placeholder {
-			position: absolute;
-			width: 2000%;
-			height: 80%;
-			background: url(../img/banner.jpg) repeat-x center left -100px;
-			background-size: auto 700px;
-			top: 100px;
-			left: 100%;
-			display: none;	
-			user-drag: none; 
-			-moz-user-select: none;
-			-webkit-user-drag: none;
-
-			@media(max-width: 1100px) {
-				width: 2000%;
-				height: 100%;
-				top: 0;
-				left: 0;
-				background-size: auto 400px;
-				
-				&.android {
-					width: 2000%;
-					height: 100%;
-					top: 0;
-					background: url(../img/banner-android.png);
-					background-repeat: repeat-x;
-					background-size: auto 90%;
-				}
-			}		
-
-			&.slide {
-				transform: translateX(-100%);
-				-webkit-transform: translateX(-100%);
-				 -ms-transform: translateX(-100%);
-	    		transition: all 300s linear;
-	    		-webkit-transition: all 300s linear;
-
-	    		@media(max-width: 1100px) {
-		    		transition: all 200s linear;
-		    		-webkit-transition: all 200s linear;
-	    		}
-
-	    		@media(max-width: 700px) {
-		    		transition: all 150s linear;
-		    		-webkit-transition: all 150s linear;
-	    		}
-			}
-
-			&.swipe {				
-				transform: translateX(-150%);
-				-webkit-transform: translateX(-150%);
-				 -ms-transform: translateX(-150%);
-	    		transition: all 50s linear;
-	    		-webkit-transition: all 50s linear;
-
-	    		@media(max-width: 1100px) {
-		    		transition: all 20s linear;
-		    		-webkit-transition: all 20s linear;
-	    		}
-			}
-
-			&.back {				
-				transform: translateX(150%);
-				-webkit-transform: translateX(150%);
-				 -ms-transform: translateX(150%);
-	    		transition: all 80s linear;
-	    		-webkit-transition: all 80s linear;
-
-	    		@media(max-width: 1100px) {
-		    		transition: all 20s linear;
-		    		-webkit-transition: all 20s linear;
-	    		}
-			}
-		}
-
-		.animation-holder {
-			width: 1000%;
-			height: 100%;
-			margin: 0;
-			overflow: hidden;
-			-webkit-transition: all .5s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-			transition: all .5s linear;
-
-
-			img {
-				position: absolute;
-				transform: translateX(800%);
-				top: 10%;
-				z-index: 1;
-				width: 290px;
-				height: auto;
-				margin-top: -50px;
-
-				&.slide {
-					transform: translateX(-300px);
-					-webkit-transform: translateX(-300px);
-					 -ms-transform: translateX(-300px);
-					-webkit-transition: all 27s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-					transition: all 27s linear;
-					margin-left: 0!important;
-				}
-
-				&.superslide {
-					transform: translateX(-2500px);
-					-webkit-transition: all 7s linear;  /* Android 2.1+, Chrome 1-25, iOS 3.2-6.1, Safari 3.2-6  */
-					transition: all 7s linear;
-				}
-			}
-		}
-
-		.white-overlay {
-			position: absolute;
-			display: none;
-			width: 100%;
-			height: 100%;
-			z-index: 2;
-			background: url(../img/white-overlay.png) no-repeat left top;
-			background-size: cover;
-
-			@media(min-width: 1100px) {
-				display: block;
-			}
 		}
 	}
 
@@ -230,7 +60,7 @@
 			@media(min-width: 1100px) {
 				font-size: 46px;
 				font-family: @extrabold;
-				color: @darkgray;
+				color: white;
 			}
 		}
 
@@ -238,12 +68,14 @@
 			@media(min-width: 768px) {
 				font-size: 20px;
 				line-height: 26px;
+				color: white;
 			}
 
 			@media(min-width: 1100px) {
 				font-size: 18px;
 				font-family: @semibold;
 				color: @darkgray;
+				color: white;
 			}
 		}
 	}
@@ -672,7 +504,7 @@
 
 		@media(min-width: 940px) {
 			text-align: left;
-			background: url(../img/home-contact-big-bg-retina.png) no-repeat center;;
+			background: url(../img/home-contact-big-bg-retina.png) no-repeat center;
 			background-size: cover;
 		}
 	
