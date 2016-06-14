@@ -612,9 +612,10 @@ function contactMap() {
   var mapCanvas = document.getElementById('contact-map');
 
   var myLatLng = {lat: 45.531688, lng: -73.622692};
+  var mapCent = {lat: 45.531786, lng: -73.625964};
 
   var mapOptions = {
-    center: myLatLng,
+    center: mapCent,
     zoom: 17,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollwheel: false,
