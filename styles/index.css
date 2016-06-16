@@ -1821,6 +1821,29 @@ a.more:hover {
     padding-top: 50px;
   }
 }
+.home-wrapper.member .work p {
+  color: black;
+}
+.home-wrapper.member .work h2 {
+  color: black;
+}
+.home-wrapper.member .banner {
+  background: white;
+}
+.home-wrapper.member .header .black {
+  display: block;
+}
+.home-wrapper.member .header .white {
+  display: none;
+}
+@media (min-width: 450px) {
+  .home-wrapper.member .header .menu-button {
+    background-image: url(../img/menu-icon.png);
+  }
+}
+.home-wrapper.member .header .french {
+  color: black;
+}
 .home-wrapper .banner {
   overflow: hidden;
   width: 100%;
@@ -1837,6 +1860,14 @@ a.more:hover {
     height: 650px;
     z-index: 0;
   }
+}
+.home-wrapper img.single-member {
+  position: absolute;
+  left: 60%;
+  top: -15%;
+  max-height: 120%;
+  width: auto;
+  margin-left: -125px;
 }
 .home-wrapper .work {
   padding-top: 35px;
