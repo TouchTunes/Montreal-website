@@ -1,7 +1,7 @@
 ---
 title: Technology page
+description: Touchtunes is one of the leading innovators in the music industry. Learn more about our technologies and how you can work with us.
 page: technology
-description: This is some meta description
 layout: technology.html
 ---
 
