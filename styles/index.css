@@ -571,7 +571,7 @@ input:disabled {
 }
 @media (min-width: 450px) {
   .banner {
-    background: url(../img/TouchTunes_about~banner.jpg) no-repeat center;
+    background: url(../img/new_about_banner.jpg) no-repeat center;
     background-size: cover;
     padding-bottom: 35px;
     padding-top: 115px;
@@ -1211,13 +1211,13 @@ a.more:hover {
 .about-wrapper .counter {
   padding: 110px 0 120px;
   text-align: center;
-  background: url(../img/TouchTunes_about~footer.jpg) no-repeat center;
+  background: url(../img/new_about_footer.jpg) no-repeat center;
   background-size: cover;
 }
 @media (min-width: 940px) {
   .about-wrapper .counter {
     clear: both;
-    background: url(../img/TouchTunes_about~footer.jpg) no-repeat center;
+    background: url(../img/new_about_footer.jpg) no-repeat center;
     background-size: cover;
     text-align: left;
     padding: 190px 0;
@@ -1243,7 +1243,7 @@ a.more:hover {
   }
 }
 .careers-wrapper .banner {
-  background: url(../img/careers-banner.jpg) no-repeat center bottom;
+  background: url(../img/new_careers_banner.jpg) no-repeat center bottom;
   background-size: initial;
 }
 @media (max-width: 450px) {
@@ -1850,7 +1850,7 @@ a.more:hover {
   height: 325px;
   padding-top: 0;
   padding-bottom: 0;
-  background: url(../img/touchtunes-home.jpg) no-repeat center;
+  background: url(../img/new_home_banner.jpg) no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -2701,7 +2701,7 @@ a.more:hover {
 }
 .technology-wrapper .banner {
   padding-bottom: 120px;
-  background: url(../img/technologies-banner.jpg) no-repeat center top 85%;
+  background: url(../img/new_technology_banner.jpg) no-repeat center top 85%;
   background-size: cover;
 }
 @media (max-width: 450px) {
@@ -3240,7 +3240,7 @@ ul[data-pie-id] {
 }
 .project-wrapper .banner {
   padding-bottom: 120px;
-  background: url(../img/error-banner.jpg) no-repeat center;
+  background: url(../img/new_projects_banner.jpg) no-repeat center;
   background-size: cover;
 }
 @media (max-width: 450px) {
