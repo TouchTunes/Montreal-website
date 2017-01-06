@@ -1,5 +1,5 @@
 ---
-title: Communiquez avec nous
+title: Communiquez avec nous | montreal.touchtunes.com
 description: Contactez-nous pour en savoir plus sur TouchTunes et de nouvelles possibilités de carrière à notre bureau de Montréal.
 page: contact
 layout: contact_fr.html

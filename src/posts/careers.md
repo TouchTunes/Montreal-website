@@ -1,5 +1,5 @@
 ---
-title: Careers page
+title: Careers | montreal.touchtunes.com
 description: TouchTunes is an amazing company that offers endless opportunities for engineers and designers to grow and advance while surrounded by great individuals.
 page: careers
 layout: careers.html
