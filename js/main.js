@@ -35,7 +35,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('html, body').css('overflow', 'initial');
+        $('html, body').css('overflow', 'hidden');
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -51,7 +51,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {        
-        $('html, body').css('overflow', 'initial');
+        $('html, body').css('overflow', 'hidden');
       } else {
         setTimeout(sandboxIframe, 100);
       }
