@@ -31,11 +31,11 @@ $(document).ready(function() {
 
   if ($('.careers-wrapper').length) {
 
+    $('html, body').css('overflow', 'hidden');
+
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        var frm = document.getElementById('gnewtonIframe');
-        var win = frm.contentWindow || (frm.contentDocument && frm.contentDocument.parentWindow) || (frm.document && frm.document.parentWindow);
-        if (win) win.parent = null;
+        $('html, body').css('overflow', 'initial');
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -47,11 +47,11 @@ $(document).ready(function() {
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
 
+    $('html, body').css('overflow', 'hidden');
+
     function sandboxIframe() {
-      if($('#gnewtonIframe').length) {
-        var frm = document.getElementById('gnewtonIframe');
-        var win = frm.contentWindow || (frm.contentDocument && frm.contentDocument.parentWindow) || (frm.document && frm.document.parentWindow);
-        if (win) win.parent = null;
+      if($('#gnewtonIframe').length) {        
+        $('html, body').css('overflow', 'initial');
       } else {
         setTimeout(sandboxIframe, 100);
       }
