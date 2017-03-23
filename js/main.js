@@ -35,7 +35,10 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('html, body').css('overflow', 'hidden');
+        $('html, body').animate({
+          scrollTop: 0
+        }, 30);
+        $('html, body').css('overflow', 'initial');
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -47,11 +50,15 @@ $(document).ready(function() {
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
 
+
     $('html, body').css('overflow', 'hidden');
 
     function sandboxIframe() {
-      if($('#gnewtonIframe').length) {        
-        $('html, body').css('overflow', 'hidden');
+      if($('#gnewtonIframe').length) {       
+      $('html, body').animate({
+          scrollTop: 0
+        }, 30); 
+        $('html, body').css('overflow', 'initial');
       } else {
         setTimeout(sandboxIframe, 100);
       }
