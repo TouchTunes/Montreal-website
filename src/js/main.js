@@ -33,7 +33,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', '');
+        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts');
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', '');
+        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts');
       } else {
         setTimeout(sandboxIframe, 100);
       }
