@@ -33,7 +33,9 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts');
+        var frm = document.getElementById('gnewtonIframe');
+        var win = frm.contentWindow || (frm.contentDocument && frm.contentDocument.parentWindow) || (frm.document && frm.document.parentWindow);
+        if (win) win.parent = null;
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -47,7 +49,9 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin');
+        var frm = document.getElementById('gnewtonIframe');
+        var win = frm.contentWindow || (frm.contentDocument && frm.contentDocument.parentWindow) || (frm.document && frm.document.parentWindow);
+        if (win) win.parent = null;
       } else {
         setTimeout(sandboxIframe, 100);
       }
