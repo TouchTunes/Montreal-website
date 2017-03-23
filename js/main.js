@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts');
+        $('#gnewtonIframe').attr('sandbox', 'allow-forms allow-pointer-lock allow-popups allow-same-origin');
       } else {
         setTimeout(sandboxIframe, 100);
       }
