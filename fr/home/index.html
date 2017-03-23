@@ -347,6 +347,21 @@ Le Build Master collabore avec les architectes, les responsables de production, 
 	</div>
 </div>
 
+<script type="text/javascript">
+	$(window).load(function() {
+		function sandboxIframe() {
+		  if($('#gnewtonIframe').length) {
+		    $('#gnewtonIframe').attr('sandbox', true);
+		  } else {
+		    setTimeout(sandboxIframe, 100);
+		  }
+		}
+
+		sandboxIframe();
+	});
+
+</script>
+
 	<div class="footer">
 		<div class="top">
 			<div class="container">
