@@ -28,12 +28,12 @@ if (is_firefox == true) {
 }
 
 $(document).ready(function() {
-  
-  if ($('.home-wrapper').length) {
+
+  if ($('.careers-wrapper').length) {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', true);
+        $('#gnewtonIframe').attr('sandbox', '');
       } else {
         setTimeout(sandboxIframe, 100);
       }
@@ -47,7 +47,7 @@ $(document).ready(function() {
 
     function sandboxIframe() {
       if($('#gnewtonIframe').length) {
-        $('#gnewtonIframe').attr('sandbox', true);
+        $('#gnewtonIframe').attr('sandbox', '');
       } else {
         setTimeout(sandboxIframe, 100);
       }
