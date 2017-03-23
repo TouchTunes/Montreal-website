@@ -29,42 +29,8 @@ if (is_firefox == true) {
 
 $(document).ready(function() {
 
-  if ($('.careers-wrapper').length) {
-
-    $('html, body').css('overflow', 'hidden');
-
-    function sandboxIframe() {
-      if($('#gnewtonIframe').length) {
-        $('html, body').animate({
-          scrollTop: 0
-        }, 30);
-        $('html, body').css('overflow', 'initial');
-      } else {
-        setTimeout(sandboxIframe, 100);
-      }
-    }
-
-    sandboxIframe();
-  }
-
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
-
-
-    $('html, body').css('overflow', 'hidden');
-
-    function sandboxIframe() {
-      if($('#gnewtonIframe').length) {       
-      $('html, body').animate({
-          scrollTop: 0
-        }, 30); 
-        $('html, body').css('overflow', 'initial');
-      } else {
-        setTimeout(sandboxIframe, 100);
-      }
-    }
-
-    sandboxIframe();
 
     setTimeout(function() {
       $('.animation-placeholder').fadeIn();
