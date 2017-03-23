@@ -28,8 +28,33 @@ if (is_firefox == true) {
 }
 
 $(document).ready(function() {
+  
+  if ($('.home-wrapper').length) {
+
+    function sandboxIframe() {
+      if($('#gnewtonIframe').length) {
+        $('#gnewtonIframe').attr('sandbox', true);
+      } else {
+        setTimeout(sandboxIframe, 100);
+      }
+    }
+
+    sandboxIframe();
+  }
+
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
+
+    function sandboxIframe() {
+      if($('#gnewtonIframe').length) {
+        $('#gnewtonIframe').attr('sandbox', true);
+      } else {
+        setTimeout(sandboxIframe, 100);
+      }
+    }
+
+    sandboxIframe();
+
     setTimeout(function() {
       $('.animation-placeholder').fadeIn();
 
