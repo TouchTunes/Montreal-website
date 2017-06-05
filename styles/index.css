@@ -1251,6 +1251,11 @@ a.more:hover {
     background: white;
   }
 }
+@media (min-width: 450px) and (max-width: 485px) {
+  .careers-wrapper .banner {
+    margin-top: -12px;
+  }
+}
 @media (min-width: 1400px) {
   .careers-wrapper .banner {
     background-size: cover;
