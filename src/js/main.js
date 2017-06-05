@@ -29,6 +29,14 @@ if (is_firefox == true) {
 
 $(document).ready(function() {
 
+	//Leverage browser caching
+	app.use(function (req, res, next) {
+    if (req.url.match(/^\/(css|js|img|font)\/.+/)) {
+        res.setHeader('Cache-Control', 'public, max-age=3600')
+    }
+    next();
+    });
+
   //Calls the scrolling function repeatedly
   if ($('.home-wrapper').length) {
 

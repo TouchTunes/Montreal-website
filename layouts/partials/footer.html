@@ -55,7 +55,24 @@
 	<script src="../../js/vendor/bootstrap-select.min.js"></script>
 	<script src="../../js/vendor/additional-methods.min.js"></script>
 	<script src="../../js/graphs.js"></script>
-	<script src="../../js/main.js"></script>
+	<script src="../../js/main.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+	<script>
+	window.addEventListener("load", function(){
+	window.cookieconsent.initialise({
+	  "palette": {
+	    "popup": {
+	      "background": "#237afc"
+	    },
+	    "button": {
+	      "background": "#fff",
+	      "text": "#237afc"
+	    }
+	  },
+	  "theme": "classic",
+	  "position": "bottom-right"
+	})});
+	</script>
 
 	<!-- Google Analytics -->
 	<script>
