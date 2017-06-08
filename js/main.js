@@ -29,43 +29,6 @@ if (is_firefox == true) {
 
 $(document).ready(function() {
 
-	//Leverage browser caching
-	app.use(function (req, res, next) {
-    if (req.url.match(/^\/(css|js|img|font)\/.+/)) {
-        res.setHeader('Cache-Control', 'public, max-age=3600')
-    }
-    next();
-    });
-
-  //Calls the scrolling function repeatedly
-  if ($('.home-wrapper').length) {
-
-    setTimeout(function() {
-      $('.animation-placeholder').fadeIn();
-
-      setTimeout(function() {
-        $('.animation-placeholder').addClass('slide');
-        $('.ld').hide();
-      }, 2000);
-    }, 3000);
-    resetAnimation();
-  }
-
-  function resetAnimation() {
-    var time = 300000;
-    if ($(window).width() <= 940) {
-      time = 150000;
-    }
-
-    setTimeout(function() {
-      $('.animation-placeholder').removeClass('slide');
-      setTimeout(function() {
-        $('.animation-placeholder').addClass('slide');
-      }, 1000);
-      resetAnimation();
-    }, time);
-  }
-
   if ($('.header').offset().top > 50) {
     $('.header').addClass('scrolled');
   }

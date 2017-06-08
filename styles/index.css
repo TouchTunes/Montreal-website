@@ -1741,7 +1741,7 @@ a.more:hover {
   overflow: hidden;
   width: 100%;
   height: 90px;
-  background: url(../img/logo-white-retina.png) no-repeat center;
+  background: url(../img/logo-white.png) no-repeat center;
   background-size: 55%;
 }
 .menu .list {
@@ -1855,7 +1855,7 @@ a.more:hover {
   height: 325px;
   padding-top: 0;
   padding-bottom: 0;
-  background: url(../img/new_home_banner.jpg) no-repeat center;
+  background: url(../img/new_home_banner-optimized.jpg) no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -2338,14 +2338,14 @@ a.more:hover {
   padding-top: 110px;
   padding-bottom: 115px;
   border-boottom: 3px solid #40abdc;
-  background: url(../img/home-contact-bg-retina.png) no-repeat center;
+  background: url(../img/home-contact-bg.png) no-repeat center;
   background-size: cover;
   text-align: center;
 }
 @media (min-width: 940px) {
   .home-wrapper .contact-mail {
     text-align: left;
-    background: url(../img/home-contact-big-bg-retina.png) no-repeat center;
+    background: url(../img/home-contact-big-bg.jpg) no-repeat center;
     background-size: cover;
   }
 }
