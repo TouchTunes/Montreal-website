@@ -1855,7 +1855,7 @@ a.more:hover {
   height: 325px;
   padding-top: 0;
   padding-bottom: 0;
-  background: url(../img/new_home_banner-optimized.jpg) no-repeat center;
+  background: url(../img/new_technology_banner.jpg) no-repeat center;
   background-size: cover;
   position: relative;
 }
@@ -2706,7 +2706,7 @@ a.more:hover {
 }
 .technology-wrapper .banner {
   padding-bottom: 120px;
-  background: url(../img/new_technology_banner.jpg) no-repeat center top 85%;
+  background: url(../img/new_home_banner.jpg) no-repeat center top 85%;
   background-size: cover;
 }
 @media (max-width: 450px) {
