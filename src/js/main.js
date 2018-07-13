@@ -581,40 +581,6 @@ if ($('.counter .count').length) {
   setInterval(counter, interval);
 }
 
-function contactMap() {
-  var mapCanvas = document.getElementById('contact-map');
-
-  var myLatLng = {lat: 45.531688, lng: -73.622692};
-  var mapCent = {lat: 45.531786, lng: -73.625964};
-
-  var mapOptions = {
-    center: mapCent,
-    zoom: 17,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollwheel: false,
-    draggable: false,
-    streetViewControl: false,
-    zoomControl : false,
-    mapTypeControl: false
-  }
-
-  var map = new google.maps.Map(mapCanvas, mapOptions);
-
-  new google.maps.Marker({
-    position: myLatLng,
-    map: map
-  });
-
-  // var currCenter = map.getCenter();
-}
-
-if ($('.contact-map').length) {
-  setTimeout(function() {
-    $('#contact').validate().form();
-  }, 500);
-  google.maps.event.addDomListener(window, 'load', contactMap);
-}
-
 $('.cts').click(function() {
   $('html, body').animate({
     scrollTop: $('.scroll-to').offset().top - 75
